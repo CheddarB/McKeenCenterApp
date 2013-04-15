@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		202CA217171B4996008BFB8C /* locations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 202CA216171B4996008BFB8C /* locations.txt */; };
+		207AD0EF171B231900529449 /* partnerships.txt in Resources */ = {isa = PBXBuildFile; fileRef = 207AD0EE171B231900529449 /* partnerships.txt */; };
+		207AD0F1171B240F00529449 /* social_issues.txt in Resources */ = {isa = PBXBuildFile; fileRef = 207AD0F0171B240F00529449 /* social_issues.txt */; };
 		208B77CC17170CC900E9511B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CB17170CC900E9511B /* UIKit.framework */; };
 		208B77CE17170CC900E9511B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CD17170CC900E9511B /* Foundation.framework */; };
 		208B77D017170CC900E9511B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CF17170CC900E9511B /* CoreGraphics.framework */; };
@@ -18,14 +21,31 @@
 		208B77E217170CC900E9511B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77E117170CC900E9511B /* Default-568h@2x.png */; };
 		208B77E517170CC900E9511B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208B77E317170CC900E9511B /* MainStoryboard.storyboard */; };
 		208B77E817170CC900E9511B /* McKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77E717170CC900E9511B /* McKFirstViewController.m */; };
-		208B77EA17170CC900E9511B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77E917170CC900E9511B /* first.png */; };
-		208B77EC17170CC900E9511B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77EB17170CC900E9511B /* first@2x.png */; };
 		208B77EF17170CC900E9511B /* McKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77EE17170CC900E9511B /* McKSecondViewController.m */; };
-		208B77F117170CC900E9511B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77F017170CC900E9511B /* second.png */; };
-		208B77F317170CC900E9511B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77F217170CC900E9511B /* second@2x.png */; };
+		208B77FE1717107D00E9511B /* McKThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77FD1717107D00E9511B /* McKThirdViewController.m */; };
+		208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B780017173F1E00E9511B /* McKFourthViewController.m */; };
+		208B780417173FA100E9511B /* McKFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B780317173FA100E9511B /* McKFifthViewController.m */; };
+		208B780E17174A3500E9511B /* fifth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B780D17174A3500E9511B /* fifth@2x.png */; };
+		208B781517174C0C00E9511B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781317174C0B00E9511B /* second@2x.png */; };
+		208B781617174C0C00E9511B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781417174C0B00E9511B /* second.png */; };
+		208B781917174DAF00E9511B /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781717174DAF00E9511B /* first.png */; };
+		208B781A17174DAF00E9511B /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781817174DAF00E9511B /* first@2x.png */; };
+		208B781D17174EC300E9511B /* fourth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781B17174EC300E9511B /* fourth.png */; };
+		208B781E17174EC300E9511B /* fourth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781C17174EC300E9511B /* fourth@2x.png */; };
+		208B78201717501F00E9511B /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781F1717501F00E9511B /* fifth.png */; };
+		20948EDC171C4C0A00E194CE /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20948EDA171C4C0A00E194CE /* third.png */; };
+		20948EDD171C4C0A00E194CE /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20948EDB171C4C0A00E194CE /* third@2x.png */; };
+		20A478601719158E0017E940 /* doorDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A4785E1719158E0017E940 /* doorDark.jpg */; };
+		20A478611719158E0017E940 /* doorLight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A4785F1719158E0017E940 /* doorLight.jpg */; };
+		20A47863171915AA0017E940 /* 3-bowdoin-chapel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */; };
+		20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */; };
+		20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E6CAA81718E9CE002EFBCE /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		202CA216171B4996008BFB8C /* locations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = locations.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/locations.txt"; sourceTree = "<group>"; };
+		207AD0EE171B231900529449 /* partnerships.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = partnerships.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/partnerships.txt"; sourceTree = "<group>"; };
+		207AD0F0171B240F00529449 /* social_issues.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = social_issues.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/social_issues.txt"; sourceTree = "<group>"; };
 		208B77C817170CC900E9511B /* McKeenCenterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McKeenCenterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208B77CB17170CC900E9511B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		208B77CD17170CC900E9511B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,12 +62,30 @@
 		208B77E417170CC900E9511B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		208B77E617170CC900E9511B /* McKFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = McKFirstViewController.h; sourceTree = "<group>"; };
 		208B77E717170CC900E9511B /* McKFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = McKFirstViewController.m; sourceTree = "<group>"; };
-		208B77E917170CC900E9511B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		208B77EB17170CC900E9511B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		208B77ED17170CC900E9511B /* McKSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = McKSecondViewController.h; sourceTree = "<group>"; };
 		208B77EE17170CC900E9511B /* McKSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = McKSecondViewController.m; sourceTree = "<group>"; };
-		208B77F017170CC900E9511B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		208B77F217170CC900E9511B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		208B77FC1717107D00E9511B /* McKThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKThirdViewController.h; sourceTree = "<group>"; };
+		208B77FD1717107D00E9511B /* McKThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKThirdViewController.m; sourceTree = "<group>"; };
+		208B77FF17173F1E00E9511B /* McKFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKFourthViewController.h; sourceTree = "<group>"; };
+		208B780017173F1E00E9511B /* McKFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKFourthViewController.m; sourceTree = "<group>"; };
+		208B780217173FA100E9511B /* McKFifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKFifthViewController.h; sourceTree = "<group>"; };
+		208B780317173FA100E9511B /* McKFifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKFifthViewController.m; sourceTree = "<group>"; };
+		208B780D17174A3500E9511B /* fifth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fifth@2x.png"; sourceTree = "<group>"; };
+		208B781317174C0B00E9511B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		208B781417174C0B00E9511B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
+		208B781717174DAF00E9511B /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
+		208B781817174DAF00E9511B /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		208B781B17174EC300E9511B /* fourth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fourth.png; sourceTree = "<group>"; };
+		208B781C17174EC300E9511B /* fourth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fourth@2x.png"; sourceTree = "<group>"; };
+		208B781F1717501F00E9511B /* fifth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth.png; sourceTree = "<group>"; };
+		20948EDA171C4C0A00E194CE /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = third.png; path = "../../../icons for McK/third.png"; sourceTree = "<group>"; };
+		20948EDB171C4C0A00E194CE /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "third@2x.png"; path = "../../../icons for McK/third@2x.png"; sourceTree = "<group>"; };
+		20A4785E1719158E0017E940 /* doorDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = doorDark.jpg; path = "../../../icons for McK/doorDark.jpg"; sourceTree = "<group>"; };
+		20A4785F1719158E0017E940 /* doorLight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = doorLight.jpg; path = "../../../icons for McK/doorLight.jpg"; sourceTree = "<group>"; };
+		20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "3-bowdoin-chapel.jpg"; path = "../../../icons for McK/3-bowdoin-chapel.jpg"; sourceTree = "<group>"; };
+		20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPartnershipsTableView.h; sourceTree = "<group>"; };
+		20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPartnershipsTableView.m; sourceTree = "<group>"; };
+		20E6CAA81718E9CE002EFBCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */,
 				208B77CC17170CC900E9511B /* UIKit.framework in Frameworks */,
 				208B77CE17170CC900E9511B /* Foundation.framework in Frameworks */,
 				208B77D017170CC900E9511B /* CoreGraphics.framework in Frameworks */,
@@ -94,17 +133,32 @@
 		208B77D117170CC900E9511B /* McKeenCenterApp */ = {
 			isa = PBXGroup;
 			children = (
+				20E6CAA81718E9CE002EFBCE /* MapKit.framework */,
 				208B77DA17170CC900E9511B /* McKAppDelegate.h */,
 				208B77DB17170CC900E9511B /* McKAppDelegate.m */,
 				208B77E317170CC900E9511B /* MainStoryboard.storyboard */,
 				208B77E617170CC900E9511B /* McKFirstViewController.h */,
 				208B77E717170CC900E9511B /* McKFirstViewController.m */,
-				208B77E917170CC900E9511B /* first.png */,
-				208B77EB17170CC900E9511B /* first@2x.png */,
+				208B781717174DAF00E9511B /* first.png */,
+				208B781817174DAF00E9511B /* first@2x.png */,
 				208B77ED17170CC900E9511B /* McKSecondViewController.h */,
 				208B77EE17170CC900E9511B /* McKSecondViewController.m */,
-				208B77F017170CC900E9511B /* second.png */,
-				208B77F217170CC900E9511B /* second@2x.png */,
+				208B781417174C0B00E9511B /* second.png */,
+				208B781317174C0B00E9511B /* second@2x.png */,
+				208B77FC1717107D00E9511B /* McKThirdViewController.h */,
+				208B77FD1717107D00E9511B /* McKThirdViewController.m */,
+				20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */,
+				20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */,
+				20948EDA171C4C0A00E194CE /* third.png */,
+				20948EDB171C4C0A00E194CE /* third@2x.png */,
+				208B77FF17173F1E00E9511B /* McKFourthViewController.h */,
+				208B780017173F1E00E9511B /* McKFourthViewController.m */,
+				208B781B17174EC300E9511B /* fourth.png */,
+				208B781C17174EC300E9511B /* fourth@2x.png */,
+				208B780217173FA100E9511B /* McKFifthViewController.h */,
+				208B780317173FA100E9511B /* McKFifthViewController.m */,
+				208B781F1717501F00E9511B /* fifth.png */,
+				208B780D17174A3500E9511B /* fifth@2x.png */,
 				208B77D217170CC900E9511B /* Supporting Files */,
 			);
 			path = McKeenCenterApp;
@@ -113,7 +167,13 @@
 		208B77D217170CC900E9511B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				207AD0EE171B231900529449 /* partnerships.txt */,
+				207AD0F0171B240F00529449 /* social_issues.txt */,
+				202CA216171B4996008BFB8C /* locations.txt */,
 				208B77D317170CC900E9511B /* McKeenCenterApp-Info.plist */,
+				20A4785E1719158E0017E940 /* doorDark.jpg */,
+				20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */,
+				20A4785F1719158E0017E940 /* doorLight.jpg */,
 				208B77D417170CC900E9511B /* InfoPlist.strings */,
 				208B77D717170CC900E9511B /* main.m */,
 				208B77D917170CC900E9511B /* McKeenCenterApp-Prefix.pch */,
@@ -181,10 +241,22 @@
 				208B77E017170CC900E9511B /* Default@2x.png in Resources */,
 				208B77E217170CC900E9511B /* Default-568h@2x.png in Resources */,
 				208B77E517170CC900E9511B /* MainStoryboard.storyboard in Resources */,
-				208B77EA17170CC900E9511B /* first.png in Resources */,
-				208B77EC17170CC900E9511B /* first@2x.png in Resources */,
-				208B77F117170CC900E9511B /* second.png in Resources */,
-				208B77F317170CC900E9511B /* second@2x.png in Resources */,
+				208B780E17174A3500E9511B /* fifth@2x.png in Resources */,
+				208B781517174C0C00E9511B /* second@2x.png in Resources */,
+				208B781617174C0C00E9511B /* second.png in Resources */,
+				208B781917174DAF00E9511B /* first.png in Resources */,
+				208B781A17174DAF00E9511B /* first@2x.png in Resources */,
+				208B781D17174EC300E9511B /* fourth.png in Resources */,
+				208B781E17174EC300E9511B /* fourth@2x.png in Resources */,
+				208B78201717501F00E9511B /* fifth.png in Resources */,
+				20A478601719158E0017E940 /* doorDark.jpg in Resources */,
+				20A478611719158E0017E940 /* doorLight.jpg in Resources */,
+				20A47863171915AA0017E940 /* 3-bowdoin-chapel.jpg in Resources */,
+				207AD0EF171B231900529449 /* partnerships.txt in Resources */,
+				207AD0F1171B240F00529449 /* social_issues.txt in Resources */,
+				202CA217171B4996008BFB8C /* locations.txt in Resources */,
+				20948EDC171C4C0A00E194CE /* third.png in Resources */,
+				20948EDD171C4C0A00E194CE /* third@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +271,10 @@
 				208B77DC17170CC900E9511B /* McKAppDelegate.m in Sources */,
 				208B77E817170CC900E9511B /* McKFirstViewController.m in Sources */,
 				208B77EF17170CC900E9511B /* McKSecondViewController.m in Sources */,
+				208B77FE1717107D00E9511B /* McKThirdViewController.m in Sources */,
+				208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */,
+				208B780417173FA100E9511B /* McKFifthViewController.m in Sources */,
+				20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +397,7 @@
 				208B77F817170CC900E9511B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

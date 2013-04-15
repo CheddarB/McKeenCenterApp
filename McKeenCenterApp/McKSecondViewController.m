@@ -5,6 +5,7 @@
 //  Created by Evan Hoyt on 4/11/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
+// <a href="http://thenounproject.com/noun/star/#icon-No431" target="_blank">Star</a>  from The Noun Project
 
 #import "McKSecondViewController.h"
 
