@@ -30,7 +30,8 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad]; 
+    [super viewDidLoad];
+    feedbackTextView.delegate = (id)self;
     
 }
 
