@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
-		20866D24171CEB5D00DC0147 /* locations in Resources */ = {isa = PBXBuildFile; fileRef = 20866D21171CEB5C00DC0147 /* locations */; };
-		20866D25171CEB5D00DC0147 /* partnerships.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20866D22171CEB5C00DC0147 /* partnerships.txt */; };
-		20866D26171CEB5D00DC0147 /* social_issues in Resources */ = {isa = PBXBuildFile; fileRef = 20866D23171CEB5C00DC0147 /* social_issues */; };
 		20866D29171CEB8700DC0147 /* artvanpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D27171CEB8700DC0147 /* artvanpic.jpg */; };
 		20866D2A171CEB8700DC0147 /* quadPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D28171CEB8700DC0147 /* quadPic.jpg */; };
 		20866D2E171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */; };
 		20866D2F171CEBFE00DC0147 /* doorDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2C171CEBFE00DC0147 /* doorDark.jpg */; };
 		20866D30171CEBFE00DC0147 /* doorLight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2D171CEBFE00DC0147 /* doorLight.jpg */; };
+		20866D34171CF14300DC0147 /* locations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20866D31171CF14300DC0147 /* locations.txt */; };
+		20866D35171CF14300DC0147 /* partnerships.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20866D32171CF14300DC0147 /* partnerships.txt */; };
+		20866D36171CF14300DC0147 /* social_issues.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20866D33171CF14300DC0147 /* social_issues.txt */; };
 		208B77CC17170CC900E9511B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CB17170CC900E9511B /* UIKit.framework */; };
 		208B77CE17170CC900E9511B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CD17170CC900E9511B /* Foundation.framework */; };
 		208B77D017170CC900E9511B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CF17170CC900E9511B /* CoreGraphics.framework */; };
@@ -50,14 +50,14 @@
 /* Begin PBXFileReference section */
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
-		20866D21171CEB5C00DC0147 /* locations */ = {isa = PBXFileReference; lastKnownFileType = file; path = locations; sourceTree = "<group>"; };
-		20866D22171CEB5C00DC0147 /* partnerships.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = partnerships.txt; sourceTree = "<group>"; };
-		20866D23171CEB5C00DC0147 /* social_issues */ = {isa = PBXFileReference; lastKnownFileType = file; path = social_issues; sourceTree = "<group>"; };
 		20866D27171CEB8700DC0147 /* artvanpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = artvanpic.jpg; sourceTree = "<group>"; };
 		20866D28171CEB8700DC0147 /* quadPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quadPic.jpg; sourceTree = "<group>"; };
 		20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-bowdoin-chapel.jpg"; sourceTree = "<group>"; };
 		20866D2C171CEBFE00DC0147 /* doorDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doorDark.jpg; sourceTree = "<group>"; };
 		20866D2D171CEBFE00DC0147 /* doorLight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doorLight.jpg; sourceTree = "<group>"; };
+		20866D31171CF14300DC0147 /* locations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = locations.txt; sourceTree = "<group>"; };
+		20866D32171CF14300DC0147 /* partnerships.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = partnerships.txt; sourceTree = "<group>"; };
+		20866D33171CF14300DC0147 /* social_issues.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = social_issues.txt; sourceTree = "<group>"; };
 		208B77C817170CC900E9511B /* McKeenCenterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McKeenCenterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208B77CB17170CC900E9511B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		208B77CD17170CC900E9511B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -182,11 +182,11 @@
 				20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */,
 				20866D2C171CEBFE00DC0147 /* doorDark.jpg */,
 				20866D2D171CEBFE00DC0147 /* doorLight.jpg */,
-				20866D21171CEB5C00DC0147 /* locations */,
-				20866D22171CEB5C00DC0147 /* partnerships.txt */,
-				20866D23171CEB5C00DC0147 /* social_issues */,
 				20866D27171CEB8700DC0147 /* artvanpic.jpg */,
 				20866D28171CEB8700DC0147 /* quadPic.jpg */,
+				20866D31171CF14300DC0147 /* locations.txt */,
+				20866D32171CF14300DC0147 /* partnerships.txt */,
+				20866D33171CF14300DC0147 /* social_issues.txt */,
 				208B77D217170CC900E9511B /* Supporting Files */,
 			);
 			path = McKeenCenterApp;
@@ -272,14 +272,14 @@
 				208B78201717501F00E9511B /* fifth.png in Resources */,
 				20866D1F171CEAA800DC0147 /* third.png in Resources */,
 				20866D20171CEAA800DC0147 /* third@2x.png in Resources */,
-				20866D24171CEB5D00DC0147 /* locations in Resources */,
-				20866D25171CEB5D00DC0147 /* partnerships.txt in Resources */,
-				20866D26171CEB5D00DC0147 /* social_issues in Resources */,
 				20866D29171CEB8700DC0147 /* artvanpic.jpg in Resources */,
 				20866D2A171CEB8700DC0147 /* quadPic.jpg in Resources */,
 				20866D2E171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg in Resources */,
 				20866D2F171CEBFE00DC0147 /* doorDark.jpg in Resources */,
 				20866D30171CEBFE00DC0147 /* doorLight.jpg in Resources */,
+				20866D34171CF14300DC0147 /* locations.txt in Resources */,
+				20866D35171CF14300DC0147 /* partnerships.txt in Resources */,
+				20866D36171CF14300DC0147 /* social_issues.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
