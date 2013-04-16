@@ -192,7 +192,7 @@
 }
 
 #pragma mark - Table view delegate
-
+//make popover viewcontroller
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString * headerTitle = [self tableView:tableView titleForHeaderInSection:indexPath.section];

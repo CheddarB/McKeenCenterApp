@@ -31,12 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [feedbackTextView setReturnKeyType: UIReturnKeyDone];
-    if ([feedbackTextView isFirstResponder]){
-        CGRect frame = feedbackTextView.frame;
-        frame.origin.y = frame.origin.y+300;
-        feedbackTextView.frame = frame;
-    }
+ 
     
 	// Do any additional setup after loading the view.
 }
@@ -47,23 +42,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)textView: (UITextView*)textView shouldChangeTextInRange: (NSRange*)range
-{
-    
-}
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    NSLog(@"touchesBegan:withEvent:");
-    [feedbackTextView endEditing:YES];
-    [super touchesBegan:touches withEvent:event];
-}
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
-    if([text isEqualToString:@"\n"]) {
-        [textView resignFirstResponder];
-        return NO;
-    }
-    
-    return YES;
-}
+
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface McKContactViewController : UIViewController
+- (IBAction)phoneButton:(UIButton *)sender;
 
 @end
