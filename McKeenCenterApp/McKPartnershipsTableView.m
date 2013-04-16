@@ -36,7 +36,6 @@
 {
     [super viewDidLoad];
         
-    printf("specific social issue: %s.\nspecific location: %s.\n", [specificSocialIssue UTF8String], [specificLocation UTF8String]);
     selectPrograms =[[NSMutableDictionary alloc]init];
     allPrograms = [[NSDictionary alloc]init];
     //read parnerships file in programTitles
@@ -89,7 +88,6 @@
         if ([locationsIteration isEqualToString:specificLocation]){
             specificLocationKey = i + 1;                 }
     }
-    printf("specific social issue key: %d.\nspecific location key: %d.\n", specificSocialIssueKey, specificLocationKey);
     
     // iterate through NSArray to make dictionary with first letter as Key
     NSString * mostRecentlyAddedProgramTitle = NULL;
@@ -201,16 +199,12 @@
     NSString * programName = [[allPrograms valueForKey:headerTitle] objectAtIndex:indexPath.row];
     if ([programName characterAtIndex:programName.length-3] == ',')
         programName = [programName substringToIndex:(programName.length-6)];
+
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"You selected %@!", programName] delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
     [alert show];
     
-    // Navigation logic may go here. Create and push another view controller.
     
-    // UIViewController *detailViewController = [[UIViewController alloc] initWithNibName:@"programInfo" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    // [self.navigationController pushViewController:alert animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
@@ -243,12 +237,12 @@
     }else return true;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
 {
     McKProgramInfoViewController *programInfoDestinataion;
     if ([segue.identifier isEqualToString:@"programInfo"]){
         programInfoDestinataion = (McKProgramInfoViewController*)segue.destinationViewController;
-        programInfoDestinataion->title = @"title";
+                programInfoDestinataion->title = @"title";
     }
 }
 @end

@@ -67,7 +67,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     McKPartnershipsTableView *tableDelegate;
-    printf("%s\n", [segue.identifier UTF8String]);
     if ([segue.identifier isEqualToString:@"browse2"]){
         tableDelegate = (McKPartnershipsTableView*)segue.destinationViewController;
         tableDelegate->specificLocation = location;
