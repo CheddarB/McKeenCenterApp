@@ -10,8 +10,8 @@
 		202CA217171B4996008BFB8C /* locations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 202CA216171B4996008BFB8C /* locations.txt */; };
 		207AD0EF171B231900529449 /* partnerships.txt in Resources */ = {isa = PBXBuildFile; fileRef = 207AD0EE171B231900529449 /* partnerships.txt */; };
 		207AD0F1171B240F00529449 /* social_issues.txt in Resources */ = {isa = PBXBuildFile; fileRef = 207AD0F0171B240F00529449 /* social_issues.txt */; };
-		20866D19171CE95500DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D17171CE95500DC0147 /* third.png */; };
-		20866D1A171CE95500DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D18171CE95500DC0147 /* third@2x.png */; };
+		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
+		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
 		208B77CC17170CC900E9511B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CB17170CC900E9511B /* UIKit.framework */; };
 		208B77CE17170CC900E9511B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CD17170CC900E9511B /* Foundation.framework */; };
 		208B77D017170CC900E9511B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CF17170CC900E9511B /* CoreGraphics.framework */; };
@@ -51,8 +51,8 @@
 		202CA216171B4996008BFB8C /* locations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = locations.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/locations.txt"; sourceTree = "<group>"; };
 		207AD0EE171B231900529449 /* partnerships.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = partnerships.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/partnerships.txt"; sourceTree = "<group>"; };
 		207AD0F0171B240F00529449 /* social_issues.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = social_issues.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/social_issues.txt"; sourceTree = "<group>"; };
-		20866D17171CE95500DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = third.png; path = "../../../icons for McK/third.png"; sourceTree = "<group>"; };
-		20866D18171CE95500DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "third@2x.png"; path = "../../../icons for McK/third@2x.png"; sourceTree = "<group>"; };
+		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
+		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
 		208B77C817170CC900E9511B /* McKeenCenterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McKeenCenterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208B77CB17170CC900E9511B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		208B77CD17170CC900E9511B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -166,8 +166,8 @@
 				20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */,
 				20948EED171C9A5100E194CE /* McKProgramInfoViewController.h */,
 				20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */,
-				20866D17171CE95500DC0147 /* third.png */,
-				20866D18171CE95500DC0147 /* third@2x.png */,
+				20866D1D171CEAA800DC0147 /* third.png */,
+				20866D1E171CEAA800DC0147 /* third@2x.png */,
 				208B77FF17173F1E00E9511B /* McKFourthViewController.h */,
 				208B780017173F1E00E9511B /* McKFourthViewController.m */,
 				208B781B17174EC300E9511B /* fourth.png */,
@@ -278,8 +278,8 @@
 				202CA217171B4996008BFB8C /* locations.txt in Resources */,
 				20948EE7171C908E00E194CE /* artvanpic.jpg in Resources */,
 				20948EE9171C916200E194CE /* quadPic.jpg in Resources */,
-				20866D19171CE95500DC0147 /* third.png in Resources */,
-				20866D1A171CE95500DC0147 /* third@2x.png in Resources */,
+				20866D1F171CEAA800DC0147 /* third.png in Resources */,
+				20866D20171CEAA800DC0147 /* third@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
