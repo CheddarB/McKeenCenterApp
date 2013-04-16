@@ -31,17 +31,26 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
+    feedbackTextView.delegate = (id)self;
     
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+- (BOOL)textFieldShouldReturn:(UITextView *)textField
+{
+    NSLog(@"Getting Called...");
+    [feedbackTextView setUserInteractionEnabled:YES];
+    [feedbackTextView resignFirstResponder];
+    return YES;
 }
 
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    NSLog(@"Called");
+}
 
 
 @end
