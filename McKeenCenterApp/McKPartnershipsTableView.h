@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "McKThirdViewController.h"
-#import "McKProgramInfoViewController.h"
-
+#import "McKPopoverController.h"
 
 @interface McKPartnershipsTableView : UITableViewController{
     @public
@@ -23,7 +22,7 @@
 @property (nonatomic) NSArray *locations;
 @property (nonatomic) NSArray *programTitles;
 
-
+@property (weak, nonatomic) McKPopoverController* programInfoView;
 
 
 @end

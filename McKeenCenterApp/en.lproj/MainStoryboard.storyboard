@@ -15,11 +15,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="artvanpic.jpg" id="inr-fP-54p">
                                 <rect key="frame" x="0.0" y="290" width="320" height="165"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quadPic.jpg" id="oc9-nl-xqU">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quadPic.jpg" id="uo4-GD-9ZV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VJd-iR-uun">
-                                <rect key="frame" x="76" y="367" width="167" height="34"/>
+                                <rect key="frame" x="76" y="367" width="167" height="46"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="browse all">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -41,13 +42,13 @@
                                 </connections>
                             </pickerView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="narrow your search to one social issue:" textAlignment="center" id="Erg-sP-oNd">
-                                <rect key="frame" x="33" y="7" width="240" height="65"/>
+                                <rect key="frame" x="33" y="6" width="240" height="65"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="f0d-ts-Ip8">
-                                <rect key="frame" x="92" y="327" width="111" height="45"/>
+                                <rect key="frame" x="92" y="333" width="111" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,14 +75,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="browse parter programs" id="ggX-22-wdc"/>
+                    <navigationItem key="navigationItem" title="browse parter programs" id="ggX-22-wdc">
+                        <barButtonItem key="backBarButtonItem" title="back" id="G26-Hg-aGv"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="servicePicker" destination="Zie-VN-pvz" id="VFF-3O-00g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HB3-nJ-gcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="1329"/>
+            <point key="canvasLocation" x="1923" y="944"/>
         </scene>
         <!--McK Partnerships Table View - Partnered Programs-->
         <scene sceneID="7OP-7s-7UA">
@@ -114,9 +117,6 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <connections>
-                                    <segue destination="JXI-xG-U6l" kind="push" identifier="programInfo" id="dYN-vj-Hm4"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -126,42 +126,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bql-rN-zgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2211" y="1329"/>
-        </scene>
-        <!--McK Program Info View Controller-->
-        <scene sceneID="oLN-n9-nUQ">
-            <objects>
-                <viewController id="JXI-xG-U6l" customClass="McKProgramInfoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Rc-WJ-vhV">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="YYs-zj-ego">
-                                <rect key="frame" x="0.0" y="20" width="320" height="101"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NNd-FK-qoL">
-                                <rect key="frame" x="0.0" y="141" width="320" height="101"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Ulh-fs-tFs">
-                        <barButtonItem key="backBarButtonItem" title="back" id="TIO-M1-KDq"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="subtitleView" destination="NNd-FK-qoL" id="Bqx-2A-ep0"/>
-                        <outlet property="titleView" destination="YYs-zj-ego" id="IhL-GB-ZnK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ts0-8V-yA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2747" y="1717"/>
+            <point key="canvasLocation" x="3067" y="1009"/>
         </scene>
         <!--Navigation Controller - Partnerships-->
         <scene sceneID="d2z-O2-Fcg">
@@ -207,56 +172,56 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="j3p-oB-dC6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="755"/>
+                                <rect key="frame" x="-1" y="-133" width="321" height="892"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Have you been doing community service?Tell the McKeen Center!" textAlignment="center" id="UU5-6M-C4G">
-                                        <rect key="frame" x="-3" y="-3" width="320" height="59"/>
+                                        <rect key="frame" x="-4" y="129" width="320" height="59"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textView>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Name:" id="mhm-PN-cAm">
-                                        <rect key="frame" x="9" y="45" width="102" height="36"/>
+                                        <rect key="frame" x="8" y="177" width="102" height="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" size="system"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textView>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="* Date:" id="MgE-VA-caa">
-                                        <rect key="frame" x="0.0" y="80" width="80" height="36"/>
+                                        <rect key="frame" x="-1" y="212" width="80" height="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" size="system"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textView>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="* Program:" id="LRL-tF-zzq">
-                                        <rect key="frame" x="0.0" y="110" width="102" height="36"/>
+                                        <rect key="frame" x="-1" y="242" width="102" height="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" size="system"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textView>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="* Tell us about it OR suggest a project or provide feedback:" id="zka-ec-sf3">
-                                        <rect key="frame" x="3" y="180" width="288" height="50"/>
+                                        <rect key="frame" x="2" y="312" width="288" height="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" size="system"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="dv7-mQ-kiv">
-                                        <rect key="frame" x="78" y="45" width="226" height="30"/>
+                                        <rect key="frame" x="77" y="177" width="226" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="hFf-cL-ty1">
-                                        <rect key="frame" x="78" y="80" width="226" height="30"/>
+                                        <rect key="frame" x="77" y="212" width="226" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="G7p-KS-x2C">
-                                        <rect key="frame" x="98" y="113" width="206" height="30"/>
+                                        <rect key="frame" x="97" y="245" width="206" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="keS-TZ-VzD">
-                                        <rect key="frame" x="16" y="234" width="282" height="103"/>
+                                        <rect key="frame" x="15" y="366" width="282" height="103"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -265,7 +230,7 @@
                                         </connections>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qKZ-Ek-nri">
-                                        <rect key="frame" x="81" y="339" width="152" height="63"/>
+                                        <rect key="frame" x="138" y="471" width="152" height="63"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                         <state key="normal" title="submit">
                                             <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -275,24 +240,31 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9ss-zG-9Fr">
+                                        <rect key="frame" x="19" y="471" width="152" height="63"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                        <state key="normal" title="cancel">
+                                            <color key="titleColor" red="0.5" green="0.035024948510000001" blue="0.076346962690000006" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="* Trough the McKeen Center?" id="GUS-ef-Iq9">
-                                        <rect key="frame" x="0.0" y="154" width="211" height="36"/>
+                                        <rect key="frame" x="-1" y="286" width="211" height="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" size="system"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="pUV-dy-s2k">
-                                        <rect key="frame" x="211" y="157" width="89" height="30"/>
+                                        <rect key="frame" x="210" y="289" width="89" height="30"/>
                                         <segments>
                                             <segment title="yes"/>
                                             <segment title="no"/>
                                         </segments>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </segmentedControl>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="8Tl-Ql-384">
-                                        <rect key="frame" x="37" y="367" width="240" height="518"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -338,7 +310,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                             </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="&quot;The Joseph McKeen Center for the Common Good provides " id="Fzb-7v-Jhz" userLabel="Mission Quote 1">
-                                <rect key="frame" x="0.0" y="0.0" width="271" height="52"/>
+                                <rect key="frame" x="0.0" y="5" width="271" height="57"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -393,7 +365,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" id="ox8-Ov-KIt" userLabel="Mission Quote">
-                                <rect key="frame" x="0.0" y="40" width="240" height="162"/>
+                                <rect key="frame" x="0.0" y="45" width="240" height="162"/>
                                 <string key="text">opportunities for students to discover the ways in which their talents, passions and academic pursuits can be used for the benefit of society through             public engagement."</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
@@ -440,7 +412,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIl-bC-MZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2589" y="834"/>
+            <point key="canvasLocation" x="2845" y="186"/>
         </scene>
         <!--McK Second View Controller - Second-->
         <scene sceneID="13">
@@ -502,11 +474,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="3-bowdoin-chapel.jpg" id="wzc-s7-5ol">
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" image="3-bowdoin-chapel.jpg" id="wzc-s7-5ol">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="doorLight.jpg" id="8bq-hb-kES">
-                                <rect key="frame" x="158" y="9" width="149" height="181"/>
+                                <rect key="frame" x="149" y="9" width="163" height="194"/>
                             </imageView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="mMe-bb-NeV">
                                 <rect key="frame" x="7" y="211" width="305" height="237"/>
@@ -550,7 +522,7 @@ Fx: (207) 798-4120       </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDq-JK-HCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241" y="1194"/>
+            <point key="canvasLocation" x="3417" y="537"/>
         </scene>
         <!--McK Fifth View Controller - About-->
         <scene sceneID="VaP-EO-Vmw">
@@ -560,7 +532,7 @@ Fx: (207) 798-4120       </string>
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="3-bowdoin-chapel.jpg" id="sa9-9d-2Hf">
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" image="3-bowdoin-chapel.jpg" id="sa9-9d-2Hf">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="z82-s1-3ip" userLabel="Mission Statement">
@@ -588,7 +560,7 @@ McKeen Center Goals
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7y-ce-TFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241" y="548"/>
+            <point key="canvasLocation" x="3417" y="-109"/>
         </scene>
         <!--McK Location Selector - browse parter programs-->
         <scene sceneID="GxM-fg-HeU">
@@ -598,11 +570,12 @@ McKeen Center Goals
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quadPic.jpg" id="ldj-v4-XKM">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="artvanpic.jpg" id="edf-Bi-rJd">
                                 <rect key="frame" x="0.0" y="290" width="320" height="165"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="quadPic.jpg" id="fic-UG-uq2">
+                                <rect key="frame" x="-1" y="-1" width="320" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R0P-k9-Lpo">
                                 <rect key="frame" x="76" y="356" width="167" height="34"/>
@@ -666,7 +639,7 @@ McKeen Center Goals
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="1667" y="910"/>
+            <point key="canvasLocation" x="2463" y="525"/>
         </scene>
     </scenes>
     <resources>
@@ -712,13 +685,6 @@ McKeen Center Goals
         <class className="McKPartnershipsTableView" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/McKPartnershipsTableView.h"/>
         </class>
-        <class className="McKProgramInfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKProgramInfoViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="subtitleView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="titleView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
         <class className="McKSecondViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/McKSecondViewController.h"/>
         </class>
@@ -735,8 +701,8 @@ McKeen Center Goals
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dP9-Wp-Gbo"/>
-        <segue reference="GDz-2H-9mK"/>
         <segue reference="aOS-WL-Yi6"/>
+        <segue reference="GDz-2H-9mK"/>
+        <segue reference="coh-xO-NAd"/>
     </inferredMetricsTieBreakers>
 </document>

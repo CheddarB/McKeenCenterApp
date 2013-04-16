@@ -22,6 +22,7 @@
 @synthesize socialIssues;
 @synthesize locations;
 @synthesize programTitles;
+@synthesize programInfoView;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -199,13 +200,24 @@
     NSString * programName = [[allPrograms valueForKey:headerTitle] objectAtIndex:indexPath.row];
     if ([programName characterAtIndex:programName.length-3] == ',')
         programName = [programName substringToIndex:(programName.length-6)];
+    UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:programInfoView];
 
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    CGRect rect=CGRectMake(cell.bounds.origin.x+600, cell.bounds.origin.y+10, 50, 30);
+    [popover presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"You selected %@!", programName] delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
-    [alert show];
-    
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+//    
+//    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"You selected %@!", programName] delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
+//    CGRect popRect = CGRectMake(0, 0, 200, 300);
+//
+//    
+//    [popover presentPopoverFromRect:popRect
+//                                       inView:self.view
+//                     permittedArrowDirections:UIPopoverArrowDirectionAny
+//                                     animated:YES];
+//    
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 - (BOOL) socialIssueShouldBeDisplayedFor: (int)socialIssueIdentifier forString:(NSString *)theProgram
@@ -236,13 +248,8 @@
         return false;
     }else return true;
 }
+//- (void)setPopoverContentSize:(CGSize)size animated:(BOOL)animated{
+//    
+//}
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender 
-{
-    McKProgramInfoViewController *programInfoDestinataion;
-    if ([segue.identifier isEqualToString:@"programInfo"]){
-        programInfoDestinataion = (McKProgramInfoViewController*)segue.destinationViewController;
-                programInfoDestinataion->title = @"title";
-    }
-}
 @end

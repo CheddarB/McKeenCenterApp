@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2048525B171D9E3B0011288A /* McKPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2048525A171D9E3B0011288A /* McKPopoverController.m */; };
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
 		20866D29171CEB8700DC0147 /* artvanpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D27171CEB8700DC0147 /* artvanpic.jpg */; };
@@ -42,12 +43,13 @@
 		208B78201717501F00E9511B /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781F1717501F00E9511B /* fifth.png */; };
 		20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EE2171C826C00E194CE /* McKLocationSelector.m */; };
 		20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EEB171C9A3800E194CE /* McKContactViewController.m */; };
-		20948EEF171C9A5100E194CE /* McKProgramInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */; };
 		20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */; };
 		20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E6CAA81718E9CE002EFBCE /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20485259171D9E3B0011288A /* McKPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPopoverController.h; sourceTree = "<group>"; };
+		2048525A171D9E3B0011288A /* McKPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPopoverController.m; sourceTree = "<group>"; };
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
 		20866D27171CEB8700DC0147 /* artvanpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = artvanpic.jpg; sourceTree = "<group>"; };
@@ -94,8 +96,6 @@
 		20948EE2171C826C00E194CE /* McKLocationSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKLocationSelector.m; path = ../McKLocationSelector.m; sourceTree = "<group>"; };
 		20948EEA171C9A3800E194CE /* McKContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKContactViewController.h; sourceTree = "<group>"; };
 		20948EEB171C9A3800E194CE /* McKContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKContactViewController.m; sourceTree = "<group>"; };
-		20948EED171C9A5100E194CE /* McKProgramInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKProgramInfoViewController.h; sourceTree = "<group>"; };
-		20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKProgramInfoViewController.m; sourceTree = "<group>"; };
 		20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPartnershipsTableView.h; sourceTree = "<group>"; };
 		20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPartnershipsTableView.m; sourceTree = "<group>"; };
 		20E6CAA81718E9CE002EFBCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -149,6 +149,8 @@
 				20E6CAA81718E9CE002EFBCE /* MapKit.framework */,
 				208B77DA17170CC900E9511B /* McKAppDelegate.h */,
 				208B77DB17170CC900E9511B /* McKAppDelegate.m */,
+				20485259171D9E3B0011288A /* McKPopoverController.h */,
+				2048525A171D9E3B0011288A /* McKPopoverController.m */,
 				208B77E317170CC900E9511B /* MainStoryboard.storyboard */,
 				208B77E617170CC900E9511B /* McKFirstViewController.h */,
 				208B77E717170CC900E9511B /* McKFirstViewController.m */,
@@ -164,8 +166,6 @@
 				20948EE2171C826C00E194CE /* McKLocationSelector.m */,
 				20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */,
 				20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */,
-				20948EED171C9A5100E194CE /* McKProgramInfoViewController.h */,
-				20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */,
 				20866D1D171CEAA800DC0147 /* third.png */,
 				20866D1E171CEAA800DC0147 /* third@2x.png */,
 				208B77FF17173F1E00E9511B /* McKFourthViewController.h */,
@@ -300,7 +300,7 @@
 				20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */,
 				20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */,
 				20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */,
-				20948EEF171C9A5100E194CE /* McKProgramInfoViewController.m in Sources */,
+				2048525B171D9E3B0011288A /* McKPopoverController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
