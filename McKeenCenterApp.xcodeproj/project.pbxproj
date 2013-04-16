@@ -178,14 +178,6 @@
 				20948EEB171C9A3800E194CE /* McKContactViewController.m */,
 				208B781F1717501F00E9511B /* fifth.png */,
 				208B780D17174A3500E9511B /* fifth@2x.png */,
-				208B77D217170CC900E9511B /* Supporting Files */,
-			);
-			path = McKeenCenterApp;
-			sourceTree = "<group>";
-		};
-		208B77D217170CC900E9511B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
 				207AD0EE171B231900529449 /* partnerships.txt */,
 				207AD0F0171B240F00529449 /* social_issues.txt */,
 				202CA216171B4996008BFB8C /* locations.txt */,
@@ -195,6 +187,14 @@
 				20A4785E1719158E0017E940 /* doorDark.jpg */,
 				20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */,
 				20A4785F1719158E0017E940 /* doorLight.jpg */,
+				208B77D217170CC900E9511B /* Supporting Files */,
+			);
+			path = McKeenCenterApp;
+			sourceTree = "<group>";
+		};
+		208B77D217170CC900E9511B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				208B77D417170CC900E9511B /* InfoPlist.strings */,
 				208B77D717170CC900E9511B /* main.m */,
 				208B77D917170CC900E9511B /* McKeenCenterApp-Prefix.pch */,

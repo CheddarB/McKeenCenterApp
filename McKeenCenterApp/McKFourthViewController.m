@@ -34,7 +34,12 @@
     [feedbackTextView setReturnKeyType: UIReturnKeyDone];
     [feedbackTextView resignFirstResponder];
     if ([feedbackTextView isFirstResponder]){
-        
+        CGRect frame = myControl.frame;
+        frame.origin.x = newX;
+        frame.origin.y = newY;
+        frame.size.width = newWidth;
+        frame.size.height = newHeight;
+        myControl.frame = frame;
     }
     
 	// Do any additional setup after loading the view.
