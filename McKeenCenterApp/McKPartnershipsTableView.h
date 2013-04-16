@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "McKThirdViewController.h"
-
+#import "McKProgramInfoViewController.h"
 
 
 @interface McKPartnershipsTableView : UITableViewController{
@@ -21,7 +21,7 @@
 @property (strong, nonatomic) NSDictionary * allPrograms;
 @property (nonatomic) NSArray * socialIssues;
 @property (nonatomic) NSArray *locations;
-@property (nonatomic) BOOL browseAllMode;
+@property (nonatomic) NSArray *programTitles;
 
 
 

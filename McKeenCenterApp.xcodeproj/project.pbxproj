@@ -35,6 +35,11 @@
 		208B78201717501F00E9511B /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781F1717501F00E9511B /* fifth.png */; };
 		20948EDC171C4C0A00E194CE /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20948EDA171C4C0A00E194CE /* third.png */; };
 		20948EDD171C4C0A00E194CE /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20948EDB171C4C0A00E194CE /* third@2x.png */; };
+		20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EE2171C826C00E194CE /* McKLocationSelector.m */; };
+		20948EE7171C908E00E194CE /* artvanpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20948EE6171C908E00E194CE /* artvanpic.jpg */; };
+		20948EE9171C916200E194CE /* quadPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20948EE8171C916200E194CE /* quadPic.jpg */; };
+		20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EEB171C9A3800E194CE /* McKContactViewController.m */; };
+		20948EEF171C9A5100E194CE /* McKProgramInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */; };
 		20A478601719158E0017E940 /* doorDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A4785E1719158E0017E940 /* doorDark.jpg */; };
 		20A478611719158E0017E940 /* doorLight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A4785F1719158E0017E940 /* doorLight.jpg */; };
 		20A47863171915AA0017E940 /* 3-bowdoin-chapel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */; };
@@ -80,6 +85,14 @@
 		208B781F1717501F00E9511B /* fifth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth.png; sourceTree = "<group>"; };
 		20948EDA171C4C0A00E194CE /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = third.png; path = "../../../icons for McK/third.png"; sourceTree = "<group>"; };
 		20948EDB171C4C0A00E194CE /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "third@2x.png"; path = "../../../icons for McK/third@2x.png"; sourceTree = "<group>"; };
+		20948EE1171C826C00E194CE /* McKLocationSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKLocationSelector.h; path = ../McKLocationSelector.h; sourceTree = "<group>"; };
+		20948EE2171C826C00E194CE /* McKLocationSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKLocationSelector.m; path = ../McKLocationSelector.m; sourceTree = "<group>"; };
+		20948EE6171C908E00E194CE /* artvanpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = artvanpic.jpg; path = "../../../icons for McK/artvanpic.jpg"; sourceTree = "<group>"; };
+		20948EE8171C916200E194CE /* quadPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = quadPic.jpg; path = "../../../icons for McK/quadPic.jpg"; sourceTree = "<group>"; };
+		20948EEA171C9A3800E194CE /* McKContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKContactViewController.h; sourceTree = "<group>"; };
+		20948EEB171C9A3800E194CE /* McKContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKContactViewController.m; sourceTree = "<group>"; };
+		20948EED171C9A5100E194CE /* McKProgramInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKProgramInfoViewController.h; sourceTree = "<group>"; };
+		20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKProgramInfoViewController.m; sourceTree = "<group>"; };
 		20A4785E1719158E0017E940 /* doorDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = doorDark.jpg; path = "../../../icons for McK/doorDark.jpg"; sourceTree = "<group>"; };
 		20A4785F1719158E0017E940 /* doorLight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = doorLight.jpg; path = "../../../icons for McK/doorLight.jpg"; sourceTree = "<group>"; };
 		20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "3-bowdoin-chapel.jpg"; path = "../../../icons for McK/3-bowdoin-chapel.jpg"; sourceTree = "<group>"; };
@@ -147,8 +160,12 @@
 				208B781317174C0B00E9511B /* second@2x.png */,
 				208B77FC1717107D00E9511B /* McKThirdViewController.h */,
 				208B77FD1717107D00E9511B /* McKThirdViewController.m */,
+				20948EE1171C826C00E194CE /* McKLocationSelector.h */,
+				20948EE2171C826C00E194CE /* McKLocationSelector.m */,
 				20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */,
 				20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */,
+				20948EED171C9A5100E194CE /* McKProgramInfoViewController.h */,
+				20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */,
 				20948EDA171C4C0A00E194CE /* third.png */,
 				20948EDB171C4C0A00E194CE /* third@2x.png */,
 				208B77FF17173F1E00E9511B /* McKFourthViewController.h */,
@@ -157,6 +174,8 @@
 				208B781C17174EC300E9511B /* fourth@2x.png */,
 				208B780217173FA100E9511B /* McKFifthViewController.h */,
 				208B780317173FA100E9511B /* McKFifthViewController.m */,
+				20948EEA171C9A3800E194CE /* McKContactViewController.h */,
+				20948EEB171C9A3800E194CE /* McKContactViewController.m */,
 				208B781F1717501F00E9511B /* fifth.png */,
 				208B780D17174A3500E9511B /* fifth@2x.png */,
 				208B77D217170CC900E9511B /* Supporting Files */,
@@ -170,6 +189,8 @@
 				207AD0EE171B231900529449 /* partnerships.txt */,
 				207AD0F0171B240F00529449 /* social_issues.txt */,
 				202CA216171B4996008BFB8C /* locations.txt */,
+				20948EE6171C908E00E194CE /* artvanpic.jpg */,
+				20948EE8171C916200E194CE /* quadPic.jpg */,
 				208B77D317170CC900E9511B /* McKeenCenterApp-Info.plist */,
 				20A4785E1719158E0017E940 /* doorDark.jpg */,
 				20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */,
@@ -257,6 +278,8 @@
 				202CA217171B4996008BFB8C /* locations.txt in Resources */,
 				20948EDC171C4C0A00E194CE /* third.png in Resources */,
 				20948EDD171C4C0A00E194CE /* third@2x.png in Resources */,
+				20948EE7171C908E00E194CE /* artvanpic.jpg in Resources */,
+				20948EE9171C916200E194CE /* quadPic.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +298,9 @@
 				208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */,
 				208B780417173FA100E9511B /* McKFifthViewController.m in Sources */,
 				20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */,
+				20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */,
+				20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */,
+				20948EEF171C9A5100E194CE /* McKProgramInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

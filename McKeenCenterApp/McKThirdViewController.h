@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "McKPartnershipsTableView.h"
+//#include "McKPartnershipsTableView.h"
+#include "McKLocationSelector.h"
 
 @interface McKThirdViewController : UIViewController{
 }
@@ -15,7 +16,6 @@
 
 @property (nonatomic) NSMutableArray *serviceIssuesArray;
 @property (nonatomic) NSString *serviceType;
-@property (nonatomic) NSString * location;
-//@property (nonatomic) McKPartnershipsTableView *tableDelegate;
+
 
 @end
