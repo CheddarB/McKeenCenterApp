@@ -932,6 +932,54 @@ McKeen Center Goals
         <image name="second.png" width="30" height="30"/>
         <image name="third.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="McKContactViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKContactViewController.h"/>
+        </class>
+        <class className="McKFifthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFifthViewController.h"/>
+        </class>
+        <class className="McKFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFirstViewController.h"/>
+        </class>
+        <class className="McKFourthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFourthViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="feedbackTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="programTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="McKLocationSelector" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKLocationSelector.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locationPicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="McKPartnershipsTableView" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKPartnershipsTableView.h"/>
+        </class>
+        <class className="McKProgramInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKProgramInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="subtitleView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="titleView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="McKSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKSecondViewController.h"/>
+        </class>
+        <class className="McKThirdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKThirdViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="servicePicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		202CA217171B4996008BFB8C /* locations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 202CA216171B4996008BFB8C /* locations.txt */; };
-		207AD0EF171B231900529449 /* partnerships.txt in Resources */ = {isa = PBXBuildFile; fileRef = 207AD0EE171B231900529449 /* partnerships.txt */; };
-		207AD0F1171B240F00529449 /* social_issues.txt in Resources */ = {isa = PBXBuildFile; fileRef = 207AD0F0171B240F00529449 /* social_issues.txt */; };
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
+		20866D24171CEB5D00DC0147 /* locations in Resources */ = {isa = PBXBuildFile; fileRef = 20866D21171CEB5C00DC0147 /* locations */; };
+		20866D25171CEB5D00DC0147 /* partnerships.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20866D22171CEB5C00DC0147 /* partnerships.txt */; };
+		20866D26171CEB5D00DC0147 /* social_issues in Resources */ = {isa = PBXBuildFile; fileRef = 20866D23171CEB5C00DC0147 /* social_issues */; };
+		20866D29171CEB8700DC0147 /* artvanpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D27171CEB8700DC0147 /* artvanpic.jpg */; };
+		20866D2A171CEB8700DC0147 /* quadPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D28171CEB8700DC0147 /* quadPic.jpg */; };
+		20866D2E171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */; };
+		20866D2F171CEBFE00DC0147 /* doorDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2C171CEBFE00DC0147 /* doorDark.jpg */; };
+		20866D30171CEBFE00DC0147 /* doorLight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2D171CEBFE00DC0147 /* doorLight.jpg */; };
 		208B77CC17170CC900E9511B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CB17170CC900E9511B /* UIKit.framework */; };
 		208B77CE17170CC900E9511B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CD17170CC900E9511B /* Foundation.framework */; };
 		208B77D017170CC900E9511B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CF17170CC900E9511B /* CoreGraphics.framework */; };
@@ -36,23 +41,23 @@
 		208B781E17174EC300E9511B /* fourth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781C17174EC300E9511B /* fourth@2x.png */; };
 		208B78201717501F00E9511B /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781F1717501F00E9511B /* fifth.png */; };
 		20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EE2171C826C00E194CE /* McKLocationSelector.m */; };
-		20948EE7171C908E00E194CE /* artvanpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20948EE6171C908E00E194CE /* artvanpic.jpg */; };
-		20948EE9171C916200E194CE /* quadPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20948EE8171C916200E194CE /* quadPic.jpg */; };
 		20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EEB171C9A3800E194CE /* McKContactViewController.m */; };
 		20948EEF171C9A5100E194CE /* McKProgramInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */; };
-		20A478601719158E0017E940 /* doorDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A4785E1719158E0017E940 /* doorDark.jpg */; };
-		20A478611719158E0017E940 /* doorLight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A4785F1719158E0017E940 /* doorLight.jpg */; };
-		20A47863171915AA0017E940 /* 3-bowdoin-chapel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */; };
 		20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */; };
 		20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E6CAA81718E9CE002EFBCE /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		202CA216171B4996008BFB8C /* locations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = locations.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/locations.txt"; sourceTree = "<group>"; };
-		207AD0EE171B231900529449 /* partnerships.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = partnerships.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/partnerships.txt"; sourceTree = "<group>"; };
-		207AD0F0171B240F00529449 /* social_issues.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = social_issues.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/social_issues.txt"; sourceTree = "<group>"; };
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
+		20866D21171CEB5C00DC0147 /* locations */ = {isa = PBXFileReference; lastKnownFileType = file; path = locations; sourceTree = "<group>"; };
+		20866D22171CEB5C00DC0147 /* partnerships.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = partnerships.txt; sourceTree = "<group>"; };
+		20866D23171CEB5C00DC0147 /* social_issues */ = {isa = PBXFileReference; lastKnownFileType = file; path = social_issues; sourceTree = "<group>"; };
+		20866D27171CEB8700DC0147 /* artvanpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = artvanpic.jpg; sourceTree = "<group>"; };
+		20866D28171CEB8700DC0147 /* quadPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = quadPic.jpg; sourceTree = "<group>"; };
+		20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-bowdoin-chapel.jpg"; sourceTree = "<group>"; };
+		20866D2C171CEBFE00DC0147 /* doorDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doorDark.jpg; sourceTree = "<group>"; };
+		20866D2D171CEBFE00DC0147 /* doorLight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doorLight.jpg; sourceTree = "<group>"; };
 		208B77C817170CC900E9511B /* McKeenCenterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McKeenCenterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208B77CB17170CC900E9511B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		208B77CD17170CC900E9511B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,15 +92,10 @@
 		208B781F1717501F00E9511B /* fifth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth.png; sourceTree = "<group>"; };
 		20948EE1171C826C00E194CE /* McKLocationSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKLocationSelector.h; path = ../McKLocationSelector.h; sourceTree = "<group>"; };
 		20948EE2171C826C00E194CE /* McKLocationSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKLocationSelector.m; path = ../McKLocationSelector.m; sourceTree = "<group>"; };
-		20948EE6171C908E00E194CE /* artvanpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = artvanpic.jpg; path = "../../../icons for McK/artvanpic.jpg"; sourceTree = "<group>"; };
-		20948EE8171C916200E194CE /* quadPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = quadPic.jpg; path = "../../../icons for McK/quadPic.jpg"; sourceTree = "<group>"; };
 		20948EEA171C9A3800E194CE /* McKContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKContactViewController.h; sourceTree = "<group>"; };
 		20948EEB171C9A3800E194CE /* McKContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKContactViewController.m; sourceTree = "<group>"; };
 		20948EED171C9A5100E194CE /* McKProgramInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKProgramInfoViewController.h; sourceTree = "<group>"; };
 		20948EEE171C9A5100E194CE /* McKProgramInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKProgramInfoViewController.m; sourceTree = "<group>"; };
-		20A4785E1719158E0017E940 /* doorDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = doorDark.jpg; path = "../../../icons for McK/doorDark.jpg"; sourceTree = "<group>"; };
-		20A4785F1719158E0017E940 /* doorLight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = doorLight.jpg; path = "../../../icons for McK/doorLight.jpg"; sourceTree = "<group>"; };
-		20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "3-bowdoin-chapel.jpg"; path = "../../../icons for McK/3-bowdoin-chapel.jpg"; sourceTree = "<group>"; };
 		20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPartnershipsTableView.h; sourceTree = "<group>"; };
 		20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPartnershipsTableView.m; sourceTree = "<group>"; };
 		20E6CAA81718E9CE002EFBCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -178,15 +178,15 @@
 				20948EEB171C9A3800E194CE /* McKContactViewController.m */,
 				208B781F1717501F00E9511B /* fifth.png */,
 				208B780D17174A3500E9511B /* fifth@2x.png */,
-				207AD0EE171B231900529449 /* partnerships.txt */,
-				207AD0F0171B240F00529449 /* social_issues.txt */,
-				202CA216171B4996008BFB8C /* locations.txt */,
-				20948EE6171C908E00E194CE /* artvanpic.jpg */,
-				20948EE8171C916200E194CE /* quadPic.jpg */,
 				208B77D317170CC900E9511B /* McKeenCenterApp-Info.plist */,
-				20A4785E1719158E0017E940 /* doorDark.jpg */,
-				20A47862171915AA0017E940 /* 3-bowdoin-chapel.jpg */,
-				20A4785F1719158E0017E940 /* doorLight.jpg */,
+				20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */,
+				20866D2C171CEBFE00DC0147 /* doorDark.jpg */,
+				20866D2D171CEBFE00DC0147 /* doorLight.jpg */,
+				20866D21171CEB5C00DC0147 /* locations */,
+				20866D22171CEB5C00DC0147 /* partnerships.txt */,
+				20866D23171CEB5C00DC0147 /* social_issues */,
+				20866D27171CEB8700DC0147 /* artvanpic.jpg */,
+				20866D28171CEB8700DC0147 /* quadPic.jpg */,
 				208B77D217170CC900E9511B /* Supporting Files */,
 			);
 			path = McKeenCenterApp;
@@ -270,16 +270,16 @@
 				208B781D17174EC300E9511B /* fourth.png in Resources */,
 				208B781E17174EC300E9511B /* fourth@2x.png in Resources */,
 				208B78201717501F00E9511B /* fifth.png in Resources */,
-				20A478601719158E0017E940 /* doorDark.jpg in Resources */,
-				20A478611719158E0017E940 /* doorLight.jpg in Resources */,
-				20A47863171915AA0017E940 /* 3-bowdoin-chapel.jpg in Resources */,
-				207AD0EF171B231900529449 /* partnerships.txt in Resources */,
-				207AD0F1171B240F00529449 /* social_issues.txt in Resources */,
-				202CA217171B4996008BFB8C /* locations.txt in Resources */,
-				20948EE7171C908E00E194CE /* artvanpic.jpg in Resources */,
-				20948EE9171C916200E194CE /* quadPic.jpg in Resources */,
 				20866D1F171CEAA800DC0147 /* third.png in Resources */,
 				20866D20171CEAA800DC0147 /* third@2x.png in Resources */,
+				20866D24171CEB5D00DC0147 /* locations in Resources */,
+				20866D25171CEB5D00DC0147 /* partnerships.txt in Resources */,
+				20866D26171CEB5D00DC0147 /* social_issues in Resources */,
+				20866D29171CEB8700DC0147 /* artvanpic.jpg in Resources */,
+				20866D2A171CEB8700DC0147 /* quadPic.jpg in Resources */,
+				20866D2E171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg in Resources */,
+				20866D2F171CEBFE00DC0147 /* doorDark.jpg in Resources */,
+				20866D30171CEBFE00DC0147 /* doorLight.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
