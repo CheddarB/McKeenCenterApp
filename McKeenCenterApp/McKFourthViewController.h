@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface McKFourthViewController : UIViewController
+@interface McKFourthViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *dateTextField;
