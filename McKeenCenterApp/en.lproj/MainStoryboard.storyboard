@@ -289,6 +289,10 @@
                                         </segments>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     </segmentedControl>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="8Tl-Ql-384">
+                                        <rect key="frame" x="37" y="367" width="240" height="518"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -731,7 +735,7 @@ McKeen Center Goals
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="coh-xO-NAd"/>
+        <segue reference="dP9-Wp-Gbo"/>
         <segue reference="GDz-2H-9mK"/>
         <segue reference="aOS-WL-Yi6"/>
     </inferredMetricsTieBreakers>
