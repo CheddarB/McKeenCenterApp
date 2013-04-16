@@ -272,6 +272,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="doorDark.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5rz-Ca-nO4">
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Have you been doing community service?Tell the McKeen Center!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-6M-C4G">
                                         <constraints>
@@ -338,7 +339,7 @@
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="103" id="9gH-Fg-Mej"/>
-                                            <constraint firstAttribute="width" constant="280" id="LZ5-5t-nlC"/>
+                                            <constraint firstAttribute="width" constant="282" id="Aih-Nj-lYj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -382,6 +383,7 @@
                                     <constraint firstItem="hFf-cL-ty1" firstAttribute="leading" secondItem="dv7-mQ-kiv" secondAttribute="leading" type="default" id="0JY-iK-H1j"/>
                                     <constraint firstItem="MgE-VA-caa" firstAttribute="centerY" secondItem="hFf-cL-ty1" secondAttribute="centerY" type="default" id="23d-Ac-tS7"/>
                                     <constraint firstItem="dv7-mQ-kiv" firstAttribute="leading" secondItem="rIP-fc-eDB" secondAttribute="leading" constant="73" id="58U-sl-6AJ"/>
+                                    <constraint firstItem="UU5-6M-C4G" firstAttribute="centerX" secondItem="rIP-fc-eDB" secondAttribute="centerX" type="default" id="5Li-29-wYN"/>
                                     <constraint firstItem="5rz-Ca-nO4" firstAttribute="top" secondItem="rIP-fc-eDB" secondAttribute="top" type="default" id="6s2-Wg-0Ol"/>
                                     <constraint firstItem="LRL-tF-zzq" firstAttribute="top" secondItem="rIP-fc-eDB" secondAttribute="top" constant="135" id="8FG-cP-zqB"/>
                                     <constraint firstItem="LRL-tF-zzq" firstAttribute="trailing" secondItem="mhm-PN-cAm" secondAttribute="trailing" type="default" id="Bg3-Us-DgO"/>
@@ -392,6 +394,7 @@
                                     <constraint firstItem="LRL-tF-zzq" firstAttribute="leading" secondItem="GUS-ef-Iq9" secondAttribute="leading" type="default" id="FaY-Oc-HNU"/>
                                     <constraint firstItem="5rz-Ca-nO4" firstAttribute="bottom" secondItem="rIP-fc-eDB" secondAttribute="bottom" type="default" id="KGB-uh-0p9"/>
                                     <constraint firstItem="G7p-KS-x2C" firstAttribute="leading" secondItem="MgE-VA-caa" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LFQ-43-BTf"/>
+                                    <constraint firstAttribute="trailing" secondItem="keS-TZ-VzD" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="O24-gk-ACb"/>
                                     <constraint firstItem="G7p-KS-x2C" firstAttribute="centerY" secondItem="LRL-tF-zzq" secondAttribute="centerY" type="default" id="OE1-Dr-ByI"/>
                                     <constraint firstItem="5rz-Ca-nO4" firstAttribute="trailing" secondItem="rIP-fc-eDB" secondAttribute="trailing" type="default" id="Ptn-2z-VTs"/>
                                     <constraint firstItem="mhm-PN-cAm" firstAttribute="centerY" secondItem="dv7-mQ-kiv" secondAttribute="centerY" type="default" id="Sad-bg-VVe"/>
@@ -403,11 +406,9 @@
                                     <constraint firstItem="qKZ-Ek-nri" firstAttribute="centerX" secondItem="keS-TZ-VzD" secondAttribute="centerX" type="default" id="dJS-u1-kUz"/>
                                     <constraint firstItem="zka-ec-sf3" firstAttribute="leading" secondItem="GUS-ef-Iq9" secondAttribute="leading" type="default" id="doy-DB-htH"/>
                                     <constraint firstItem="keS-TZ-VzD" firstAttribute="top" secondItem="rIP-fc-eDB" secondAttribute="top" constant="252" id="eVQ-HB-HnA"/>
-                                    <constraint firstItem="keS-TZ-VzD" firstAttribute="leading" secondItem="rIP-fc-eDB" secondAttribute="leading" constant="18" id="hks-x5-9SI"/>
                                     <constraint firstItem="GUS-ef-Iq9" firstAttribute="top" secondItem="rIP-fc-eDB" secondAttribute="top" constant="168" id="jwx-w5-w7R"/>
                                     <constraint firstItem="hFf-cL-ty1" firstAttribute="trailing" secondItem="dv7-mQ-kiv" secondAttribute="trailing" type="default" id="mQD-tl-kvX"/>
                                     <constraint firstAttribute="trailing" secondItem="G7p-KS-x2C" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oI4-8Y-4vh"/>
-                                    <constraint firstItem="5rz-Ca-nO4" firstAttribute="centerX" secondItem="rIP-fc-eDB" secondAttribute="centerX" type="default" id="sxB-GN-Dwe"/>
                                     <constraint firstItem="MgE-VA-caa" firstAttribute="top" secondItem="rIP-fc-eDB" secondAttribute="top" constant="105" id="uF4-sB-hYl"/>
                                     <constraint firstItem="LRL-tF-zzq" firstAttribute="leading" secondItem="MgE-VA-caa" secondAttribute="leading" type="default" id="xd7-JH-g9k"/>
                                     <constraint firstItem="5rz-Ca-nO4" firstAttribute="leading" secondItem="rIP-fc-eDB" secondAttribute="leading" type="default" id="xrC-VH-kNu"/>
@@ -937,7 +938,7 @@ McKeen Center Goals
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dP9-Wp-Gbo"/>
+        <segue reference="coh-xO-NAd"/>
         <segue reference="GDz-2H-9mK"/>
         <segue reference="aOS-WL-Yi6"/>
     </inferredMetricsTieBreakers>
