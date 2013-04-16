@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HB3-nJ-gcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="1333"/>
+            <point key="canvasLocation" x="1127" y="1329"/>
         </scene>
         <!--McK Partnerships Table View - Partnered Programs-->
         <scene sceneID="7OP-7s-7UA">
@@ -157,7 +157,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bql-rN-zgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2335" y="1213"/>
+            <point key="canvasLocation" x="2211" y="1329"/>
         </scene>
         <!--McK Program Info View Controller-->
         <scene sceneID="oLN-n9-nUQ">
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ts0-8V-yA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2699" y="1497"/>
+            <point key="canvasLocation" x="2747" y="1717"/>
         </scene>
         <!--Navigation Controller - Partnerships-->
         <scene sceneID="d2z-O2-Fcg">
@@ -424,6 +424,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Report Service" image="fourth.png" id="F9P-KT-09R"/>
+                    <connections>
+                        <outlet property="dateTextField" destination="hFf-cL-ty1" id="aML-8r-rTh"/>
+                        <outlet property="feedbackTextView" destination="keS-TZ-VzD" id="iSn-Ma-hxG"/>
+                        <outlet property="nameTextField" destination="dv7-mQ-kiv" id="8RI-sA-lOo"/>
+                        <outlet property="programTextField" destination="G7p-KS-x2C" id="ObS-PW-kZW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NY4-As-hQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -750,7 +756,7 @@ Fx: (207) 798-4120       </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDq-JK-HCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3061" y="994"/>
+            <point key="canvasLocation" x="3241" y="1194"/>
         </scene>
         <!--McK Fifth View Controller - About-->
         <scene sceneID="VaP-EO-Vmw">
@@ -800,7 +806,7 @@ McKeen Center Goals
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E7y-ce-TFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3061" y="280"/>
+            <point key="canvasLocation" x="3241" y="548"/>
         </scene>
         <!--McK Location Selector - browse parter programs-->
         <scene sceneID="GxM-fg-HeU">
@@ -910,7 +916,7 @@ McKeen Center Goals
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="1711" y="914"/>
+            <point key="canvasLocation" x="1667" y="910"/>
         </scene>
     </scenes>
     <resources>
@@ -931,7 +937,7 @@ McKeen Center Goals
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="LbP-bV-85n"/>
+        <segue reference="dP9-Wp-Gbo"/>
         <segue reference="GDz-2H-9mK"/>
         <segue reference="aOS-WL-Yi6"/>
     </inferredMetricsTieBreakers>

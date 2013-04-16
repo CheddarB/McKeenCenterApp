@@ -14,7 +14,10 @@
 
 @implementation McKFourthViewController
 
-
+@synthesize nameTextField;
+@synthesize dateTextField;
+@synthesize programTextField;
+@synthesize feedbackTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +31,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [feedbackTextView setReturnKeyType: UIReturnKeyDone];
+    [feedbackTextView resignFirstResponder];
+    if ([feedbackTextView isFirstResponder]){
+        
+    }
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -35,6 +44,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)textView: shouldChangeTextInRange:replacementText
+{
+    
 }
 
 @end

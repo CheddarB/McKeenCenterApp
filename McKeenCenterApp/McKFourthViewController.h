@@ -10,4 +10,9 @@
 
 @interface McKFourthViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *nameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *dateTextField;
+@property (strong, nonatomic) IBOutlet UITextField *programTextField;
+@property (strong, nonatomic) IBOutlet UITextView *feedbackTextView;
+
 @end
