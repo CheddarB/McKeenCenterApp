@@ -142,7 +142,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ok-SI-Hwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1327" y="186"/>
+            <point key="canvasLocation" x="714" y="638"/>
         </scene>
         <!--McK First View Controller - Upcoming Events-->
         <scene sceneID="11">
@@ -156,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="180"/>
+            <point key="canvasLocation" x="714" y="-1540"/>
         </scene>
         <!--McK Fourth View Controller - Report Service-->
         <scene sceneID="yNu-kP-cGt">
@@ -280,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NY4-As-hQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="186"/>
+            <point key="canvasLocation" x="681" y="1966"/>
         </scene>
         <!--Navigation Controller - About-->
         <scene sceneID="qfH-eL-C10">
@@ -296,7 +296,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lnh-UZ-yjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2057" y="186"/>
+            <point key="canvasLocation" x="681" y="3002"/>
         </scene>
         <!--McK Fifth View Controller - About-->
         <scene sceneID="NMM-kY-oCm">
@@ -441,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="180"/>
+            <point key="canvasLocation" x="731" y="-544"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -464,7 +464,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
                 <tabBarItem title="Partnerships" image="third.png" id="UGC-2z-fPW"/>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="-16" y="632"/>
         </scene>
         <!--McK Contact View Controller - About-->
         <scene sceneID="IzR-Ck-XA0">
