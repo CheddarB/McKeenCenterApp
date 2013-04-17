@@ -42,17 +42,10 @@
 {
     [super didReceiveMemoryWarning];
 }
-- (BOOL)textFieldShouldReturn:(UITextView *)textField
-{
-    NSLog(@"Getting Called...");
-    [nameTextField resignFirstResponder];
-
-       return YES;
-}
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    NSLog(@"Called");
+
 }
 
 - (IBAction)cancelButton:(UIButton *)sender
@@ -95,10 +88,10 @@
     NSString *emailMessageBody = [[NSString alloc]init];
     NSString *throughMcKCenter = [[NSString alloc]init];
     if (throughMkC.selectedSegmentIndex)
-        throughMcKCenter = @"Through the McKeen Center";
-    else throughMcKCenter = @"Service not affiliated with the McKeen Center";
+        throughMcKCenter = @"through the McKeen Center.";
+    else throughMcKCenter = @"service not affiliated with the McKeen Center.";
     emailMessageBody = [@"The following message has been submitted through the McKeen Center Mobile App!\n\nName: " stringByAppendingString:nameTextField.text];
-    emailMessageBody = [[[[[[[emailMessageBody stringByAppendingString:@"\nProgram date: "]stringByAppendingString:dateTextField.text] stringByAppendingString:@"\nProgram title:"] stringByAppendingString:programTextField.text] stringByAppendingString:@", "]stringByAppendingString:throughMcKCenter]stringByAppendingString:@"\n\n"];
+    emailMessageBody = [[[[[[[emailMessageBody stringByAppendingString:@"\nProgram date: "]stringByAppendingString:dateTextField.text] stringByAppendingString:@"\nProgram title: "] stringByAppendingString:programTextField.text] stringByAppendingString:@", "]stringByAppendingString:throughMcKCenter]stringByAppendingString:@"\n\n"];
     emailMessageBody = [emailMessageBody stringByAppendingString:feedbackTextView.text];
     printf("%s\n", [emailMessageBody UTF8String]);
     return emailMessageBody;

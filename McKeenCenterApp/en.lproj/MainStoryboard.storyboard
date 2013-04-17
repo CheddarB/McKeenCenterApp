@@ -128,40 +128,31 @@
             </objects>
             <point key="canvasLocation" x="2152" y="638"/>
         </scene>
-        <!--McK Program Info View Controller-->
-        <scene sceneID="oLN-n9-nUQ">
+        <!--Program Detail View Controller-->
+        <scene sceneID="naj-Ar-kfO">
             <objects>
-                <viewController id="JXI-xG-U6l" customClass="McKProgramInfoViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Rc-WJ-vhV">
+                <viewController id="2yH-73-zIh" customClass="programDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xby-82-N0n" customClass="programDetailView">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="YYs-zj-ego">
-                                <rect key="frame" x="0.0" y="25" width="320" height="101"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="NNd-FK-qoL">
-                                <rect key="frame" x="0.0" y="178" width="320" height="101"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7c5-46-Qwd">
+                                <rect key="frame" x="58" y="43" width="104" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ulh-fs-tFs">
-                        <barButtonItem key="backBarButtonItem" title="back" id="TIO-M1-KDq"/>
-                    </navigationItem>
                     <connections>
-                        <outlet property="subtitleView" destination="NNd-FK-qoL" id="Bqx-2A-ep0"/>
-                        <outlet property="titleView" destination="YYs-zj-ego" id="IhL-GB-ZnK"/>
+                        <outlet property="titleLabel" destination="7c5-46-Qwd" id="6BB-qX-u1M"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ts0-8V-yA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r56-Ex-4xV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640" y="638"/>
+            <point key="canvasLocation" x="2531" y="638"/>
         </scene>
         <!--Navigation Controller - Partnerships-->
         <scene sceneID="d2z-O2-Fcg">
@@ -188,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="3-bowdoin-chapel.jpg" id="oCb-7L-Dy7">
-                                <rect key="frame" x="221" y="336" width="155" height="249"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -547,7 +538,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="center" id="vZb-we-mJy">
-                                <rect key="frame" x="0.0" y="329" width="155" height="126"/>
+                                <rect key="frame" x="0.0" y="18" width="155" height="126"/>
                                 <string key="text">Joseph McKeen Center for the Common Good
 4690 College Station
 Brunswick, ME 04011
@@ -557,7 +548,7 @@ Fx: (207) 798-4120       </string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yAb-W1-IL7">
-                                <rect key="frame" x="7" y="143" width="143" height="28"/>
+                                <rect key="frame" x="6" y="152" width="143" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="(207) 789-4133">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -573,9 +564,12 @@ Fx: (207) 798-4120       </string>
                         </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="fifth.png" id="zBl-nV-pkn"/>
-                    <navigationItem key="navigationItem" id="UDi-cr-6ZX">
+                    <navigationItem key="navigationItem" title="contact" id="UDi-cr-6ZX">
                         <barButtonItem key="backBarButtonItem" title="back" id="Ye5-cx-ZnG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="mMe-bb-NeV" id="Unc-W1-J30"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDq-JK-HCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -611,7 +605,7 @@ McKeen Center Goals
                         </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="fifth.png" id="chs-Ux-BE6"/>
-                    <navigationItem key="navigationItem" id="fZz-aP-eTG">
+                    <navigationItem key="navigationItem" title="mission" id="fZz-aP-eTG">
                         <barButtonItem key="backBarButtonItem" title="back" id="Kl5-iP-iCj"/>
                     </navigationItem>
                 </viewController>
@@ -718,7 +712,7 @@ McKeen Center Goals
                         </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="fifth.png" id="VnU-4Y-gPd"/>
-                    <navigationItem key="navigationItem" id="EJ9-yM-EUS">
+                    <navigationItem key="navigationItem" title="staff" id="EJ9-yM-EUS">
                         <barButtonItem key="backBarButtonItem" title="back" id="f5N-t0-GHv"/>
                     </navigationItem>
                 </viewController>
@@ -739,52 +733,6 @@ McKeen Center Goals
         <image name="second.png" width="30" height="30"/>
         <image name="third.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="McKContactViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKContactViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="phoneButton:" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="McKFifthViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFifthViewController.h"/>
-        </class>
-        <class className="McKFirstViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFirstViewController.h"/>
-        </class>
-        <class className="McKFourthViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFourthViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="submitButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="feedbackTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="fourthView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="programTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="throughMkC" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="McKLocationSelector" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKLocationSelector.h"/>
-            <relationships>
-                <relationship kind="outlet" name="locationPicker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="McKPartnershipsTableView" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKPartnershipsTableView.h"/>
-        </class>
-        <class className="McKSecondViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKSecondViewController.h"/>
-        </class>
-        <class className="McKThirdViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKThirdViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="servicePicker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2048525B171D9E3B0011288A /* McKPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2048525A171D9E3B0011288A /* McKPopoverController.m */; };
 		207AF0FB171E23790001DCBC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207AF0FA171E23790001DCBC /* MessageUI.framework */; };
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
@@ -44,13 +43,13 @@
 		208B78201717501F00E9511B /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781F1717501F00E9511B /* fifth.png */; };
 		20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EE2171C826C00E194CE /* McKLocationSelector.m */; };
 		20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EEB171C9A3800E194CE /* McKContactViewController.m */; };
+		209858B8171F325C008CE9EC /* programDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 209858B7171F325C008CE9EC /* programDetailView.m */; };
+		209858C1171F33F7008CE9EC /* programDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209858C0171F33F7008CE9EC /* programDetailViewController.m */; };
 		20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */; };
 		20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E6CAA81718E9CE002EFBCE /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		20485259171D9E3B0011288A /* McKPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPopoverController.h; sourceTree = "<group>"; };
-		2048525A171D9E3B0011288A /* McKPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPopoverController.m; sourceTree = "<group>"; };
 		207AF0FA171E23790001DCBC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
@@ -98,6 +97,10 @@
 		20948EE2171C826C00E194CE /* McKLocationSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKLocationSelector.m; path = ../McKLocationSelector.m; sourceTree = "<group>"; };
 		20948EEA171C9A3800E194CE /* McKContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKContactViewController.h; sourceTree = "<group>"; };
 		20948EEB171C9A3800E194CE /* McKContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKContactViewController.m; sourceTree = "<group>"; };
+		209858B6171F325C008CE9EC /* programDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = programDetailView.h; sourceTree = "<group>"; };
+		209858B7171F325C008CE9EC /* programDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = programDetailView.m; sourceTree = "<group>"; };
+		209858BF171F33F7008CE9EC /* programDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = programDetailViewController.h; sourceTree = "<group>"; };
+		209858C0171F33F7008CE9EC /* programDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = programDetailViewController.m; sourceTree = "<group>"; };
 		20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPartnershipsTableView.h; sourceTree = "<group>"; };
 		20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPartnershipsTableView.m; sourceTree = "<group>"; };
 		20E6CAA81718E9CE002EFBCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -153,41 +156,14 @@
 				20E6CAA81718E9CE002EFBCE /* MapKit.framework */,
 				208B77DA17170CC900E9511B /* McKAppDelegate.h */,
 				208B77DB17170CC900E9511B /* McKAppDelegate.m */,
-				20485259171D9E3B0011288A /* McKPopoverController.h */,
-				2048525A171D9E3B0011288A /* McKPopoverController.m */,
 				208B77E317170CC900E9511B /* MainStoryboard.storyboard */,
-				208B77E617170CC900E9511B /* McKFirstViewController.h */,
-				208B77E717170CC900E9511B /* McKFirstViewController.m */,
-				208B781717174DAF00E9511B /* first.png */,
-				208B781817174DAF00E9511B /* first@2x.png */,
-				208B77ED17170CC900E9511B /* McKSecondViewController.h */,
-				208B77EE17170CC900E9511B /* McKSecondViewController.m */,
-				208B781417174C0B00E9511B /* second.png */,
-				208B781317174C0B00E9511B /* second@2x.png */,
-				208B77FC1717107D00E9511B /* McKThirdViewController.h */,
-				208B77FD1717107D00E9511B /* McKThirdViewController.m */,
-				20948EE1171C826C00E194CE /* McKLocationSelector.h */,
-				20948EE2171C826C00E194CE /* McKLocationSelector.m */,
-				20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */,
-				20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */,
-				20866D1D171CEAA800DC0147 /* third.png */,
-				20866D1E171CEAA800DC0147 /* third@2x.png */,
-				208B77FF17173F1E00E9511B /* McKFourthViewController.h */,
-				208B780017173F1E00E9511B /* McKFourthViewController.m */,
-				208B781B17174EC300E9511B /* fourth.png */,
-				208B781C17174EC300E9511B /* fourth@2x.png */,
-				208B780217173FA100E9511B /* McKFifthViewController.h */,
-				208B780317173FA100E9511B /* McKFifthViewController.m */,
-				20948EEA171C9A3800E194CE /* McKContactViewController.h */,
-				20948EEB171C9A3800E194CE /* McKContactViewController.m */,
-				208B781F1717501F00E9511B /* fifth.png */,
-				208B780D17174A3500E9511B /* fifth@2x.png */,
+				209858BB171F32CE008CE9EC /* Upcoming Events */,
+				209858BA171F32B8008CE9EC /* Opportunities */,
+				209858B9171F3271008CE9EC /* PartnerProgramFiles */,
+				209858BC171F32EC008CE9EC /* Report Your Service */,
+				209858BD171F3300008CE9EC /* About Section */,
 				208B77D317170CC900E9511B /* McKeenCenterApp-Info.plist */,
-				20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */,
-				20866D2C171CEBFE00DC0147 /* doorDark.jpg */,
-				20866D2D171CEBFE00DC0147 /* doorLight.jpg */,
-				20866D27171CEB8700DC0147 /* artvanpic.jpg */,
-				20866D28171CEB8700DC0147 /* quadPic.jpg */,
+				209858BE171F331F008CE9EC /* JPGs */,
 				20866D31171CF14300DC0147 /* locations.txt */,
 				20866D32171CF14300DC0147 /* partnerships.txt */,
 				20866D33171CF14300DC0147 /* social_issues.txt */,
@@ -207,6 +183,83 @@
 				208B77E117170CC900E9511B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		209858B9171F3271008CE9EC /* PartnerProgramFiles */ = {
+			isa = PBXGroup;
+			children = (
+				208B77FC1717107D00E9511B /* McKThirdViewController.h */,
+				208B77FD1717107D00E9511B /* McKThirdViewController.m */,
+				20948EE1171C826C00E194CE /* McKLocationSelector.h */,
+				20948EE2171C826C00E194CE /* McKLocationSelector.m */,
+				20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */,
+				20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */,
+				209858B6171F325C008CE9EC /* programDetailView.h */,
+				209858B7171F325C008CE9EC /* programDetailView.m */,
+				209858BF171F33F7008CE9EC /* programDetailViewController.h */,
+				209858C0171F33F7008CE9EC /* programDetailViewController.m */,
+				20866D1D171CEAA800DC0147 /* third.png */,
+				20866D1E171CEAA800DC0147 /* third@2x.png */,
+			);
+			name = PartnerProgramFiles;
+			sourceTree = "<group>";
+		};
+		209858BA171F32B8008CE9EC /* Opportunities */ = {
+			isa = PBXGroup;
+			children = (
+				208B77ED17170CC900E9511B /* McKSecondViewController.h */,
+				208B77EE17170CC900E9511B /* McKSecondViewController.m */,
+				208B781417174C0B00E9511B /* second.png */,
+				208B781317174C0B00E9511B /* second@2x.png */,
+			);
+			name = Opportunities;
+			sourceTree = "<group>";
+		};
+		209858BB171F32CE008CE9EC /* Upcoming Events */ = {
+			isa = PBXGroup;
+			children = (
+				208B77E617170CC900E9511B /* McKFirstViewController.h */,
+				208B77E717170CC900E9511B /* McKFirstViewController.m */,
+				208B781717174DAF00E9511B /* first.png */,
+				208B781817174DAF00E9511B /* first@2x.png */,
+			);
+			name = "Upcoming Events";
+			sourceTree = "<group>";
+		};
+		209858BC171F32EC008CE9EC /* Report Your Service */ = {
+			isa = PBXGroup;
+			children = (
+				208B77FF17173F1E00E9511B /* McKFourthViewController.h */,
+				208B780017173F1E00E9511B /* McKFourthViewController.m */,
+				208B781B17174EC300E9511B /* fourth.png */,
+				208B781C17174EC300E9511B /* fourth@2x.png */,
+			);
+			name = "Report Your Service";
+			sourceTree = "<group>";
+		};
+		209858BD171F3300008CE9EC /* About Section */ = {
+			isa = PBXGroup;
+			children = (
+				208B780217173FA100E9511B /* McKFifthViewController.h */,
+				208B780317173FA100E9511B /* McKFifthViewController.m */,
+				20948EEA171C9A3800E194CE /* McKContactViewController.h */,
+				20948EEB171C9A3800E194CE /* McKContactViewController.m */,
+				208B781F1717501F00E9511B /* fifth.png */,
+				208B780D17174A3500E9511B /* fifth@2x.png */,
+			);
+			name = "About Section";
+			sourceTree = "<group>";
+		};
+		209858BE171F331F008CE9EC /* JPGs */ = {
+			isa = PBXGroup;
+			children = (
+				20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */,
+				20866D2C171CEBFE00DC0147 /* doorDark.jpg */,
+				20866D2D171CEBFE00DC0147 /* doorLight.jpg */,
+				20866D27171CEB8700DC0147 /* artvanpic.jpg */,
+				20866D28171CEB8700DC0147 /* quadPic.jpg */,
+			);
+			name = JPGs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +357,8 @@
 				20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */,
 				20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */,
 				20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */,
-				2048525B171D9E3B0011288A /* McKPopoverController.m in Sources */,
+				209858B8171F325C008CE9EC /* programDetailView.m in Sources */,
+				209858C1171F33F7008CE9EC /* programDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

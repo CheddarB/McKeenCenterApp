@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#include <MapKit/MapKit.h>
+
 
 @interface McKContactViewController : UIViewController
 - (IBAction)phoneButton:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
