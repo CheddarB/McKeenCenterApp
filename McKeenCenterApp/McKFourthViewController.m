@@ -18,6 +18,8 @@
 @synthesize dateTextField;
 @synthesize programTextField;
 @synthesize feedbackTextView;
+@synthesize throughMkC;
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,8 +33,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    feedbackTextView.delegate = (id)self;
-    
+    nameTextField.delegate = self;
+    [scrollView setScrollEnabled:YES];
+    [scrollView setContentSize:CGSizeMake(320, 600)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,9 +45,9 @@
 - (BOOL)textFieldShouldReturn:(UITextView *)textField
 {
     NSLog(@"Getting Called...");
-    [feedbackTextView setUserInteractionEnabled:YES];
-    [feedbackTextView resignFirstResponder];
-    return YES;
+    [nameTextField resignFirstResponder];
+
+       return YES;
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField
@@ -52,5 +55,53 @@
     NSLog(@"Called");
 }
 
+- (IBAction)cancelButton:(UIButton *)sender
+{
+        if ([feedbackTextView isFirstResponder])
+            [feedbackTextView resignFirstResponder];
+        else if ([nameTextField isFirstResponder])
+            [nameTextField resignFirstResponder];
+        else if ([dateTextField isFirstResponder])
+            [dateTextField resignFirstResponder];
+        else if ([programTextField isFirstResponder])
+            [programTextField resignFirstResponder];
+    
+}
 
+- (IBAction)submitButton:(UIButton *)sender
+{
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+        mailViewController.mailComposeDelegate = (id)self;
+        NSArray *toRecipients = [[NSArray alloc]initWithObjects:@"evanchoyt@gmail.com", nil];         [mailViewController setToRecipients:toRecipients]; //don't forget to change this
+
+        [mailViewController setSubject:@"Service Report from Mobile App"];
+         [mailViewController setMessageBody:[self composeEmailBody] isHTML:NO];        
+    }else {
+        
+        NSLog(@"Device is unable to send email in its current state.");
+        
+    }
+       // [feedbackTextView setText:@"Thank You!"];
+        feedbackTextView.text = @"Thank You!";
+        nameTextField.text = @"";
+        dateTextField.text = @"";
+        programTextField.text = @"";
+    [self cancelButton:sender];
+}
+
+- (NSString*)composeEmailBody
+{
+    NSString *emailMessageBody = [[NSString alloc]init];
+    NSString *throughMcKCenter = [[NSString alloc]init];
+    if (throughMkC.selectedSegmentIndex)
+        throughMcKCenter = @"Through the McKeen Center";
+    else throughMcKCenter = @"Service not affiliated with the McKeen Center";
+    emailMessageBody = [@"The following message has been submitted through the McKeen Center Mobile App!\n\nName: " stringByAppendingString:nameTextField.text];
+    emailMessageBody = [[[[[emailMessageBody stringByAppendingString:@"\nPrpgram date: "]stringByAppendingString:dateTextField.text] stringByAppendingString:@"\nProgram title:"] stringByAppendingString:programTextField.text] stringByAppendingString:@"\n\n"];
+    emailMessageBody = [emailMessageBody stringByAppendingString:feedbackTextView.text];
+    printf("%s\n", [emailMessageBody UTF8String]);
+    return emailMessageBody;
+    
+}
 @end

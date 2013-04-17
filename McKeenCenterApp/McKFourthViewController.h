@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @interface McKFourthViewController : UIViewController <UITextFieldDelegate>
 
@@ -14,5 +16,13 @@
 @property (strong, nonatomic) IBOutlet UITextField *dateTextField;
 @property (strong, nonatomic) IBOutlet UITextField *programTextField;
 @property (strong, nonatomic) IBOutlet UITextView *feedbackTextView;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *throughMkC;
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+
+- (IBAction)cancelButton:(UIButton *)sender;
+- (IBAction)submitButton:(UIButton*)sender;
+
+@property (strong, nonatomic) IBOutlet UIView *fourthView;
 
 @end

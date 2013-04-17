@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2048525B171D9E3B0011288A /* McKPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2048525A171D9E3B0011288A /* McKPopoverController.m */; };
+		207AF0FB171E23790001DCBC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207AF0FA171E23790001DCBC /* MessageUI.framework */; };
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
 		20866D29171CEB8700DC0147 /* artvanpic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D27171CEB8700DC0147 /* artvanpic.jpg */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		20485259171D9E3B0011288A /* McKPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPopoverController.h; sourceTree = "<group>"; };
 		2048525A171D9E3B0011288A /* McKPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPopoverController.m; sourceTree = "<group>"; };
+		207AF0FA171E23790001DCBC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
 		20866D27171CEB8700DC0147 /* artvanpic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = artvanpic.jpg; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207AF0FB171E23790001DCBC /* MessageUI.framework in Frameworks */,
 				20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */,
 				208B77CC17170CC900E9511B /* UIKit.framework in Frameworks */,
 				208B77CE17170CC900E9511B /* Foundation.framework in Frameworks */,
@@ -146,6 +149,7 @@
 		208B77D117170CC900E9511B /* McKeenCenterApp */ = {
 			isa = PBXGroup;
 			children = (
+				207AF0FA171E23790001DCBC /* MessageUI.framework */,
 				20E6CAA81718E9CE002EFBCE /* MapKit.framework */,
 				208B77DA17170CC900E9511B /* McKAppDelegate.h */,
 				208B77DB17170CC900E9511B /* McKAppDelegate.m */,
