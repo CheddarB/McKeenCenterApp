@@ -47,6 +47,7 @@
 		209858C1171F33F7008CE9EC /* programDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209858C0171F33F7008CE9EC /* programDetailViewController.m */; };
 		20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */; };
 		20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E6CAA81718E9CE002EFBCE /* MapKit.framework */; };
+		31659346171F80100099BC22 /* PartnerInfoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31659345171F80100099BC22 /* PartnerInfoFetcher.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,8 @@
 		20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPartnershipsTableView.h; sourceTree = "<group>"; };
 		20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPartnershipsTableView.m; sourceTree = "<group>"; };
 		20E6CAA81718E9CE002EFBCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		31659344171F80100099BC22 /* PartnerInfoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerInfoFetcher.h; sourceTree = "<group>"; };
+		31659345171F80100099BC22 /* PartnerInfoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartnerInfoFetcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 				209858C0171F33F7008CE9EC /* programDetailViewController.m */,
 				20866D1D171CEAA800DC0147 /* third.png */,
 				20866D1E171CEAA800DC0147 /* third@2x.png */,
+				31659344171F80100099BC22 /* PartnerInfoFetcher.h */,
+				31659345171F80100099BC22 /* PartnerInfoFetcher.m */,
 			);
 			name = PartnerProgramFiles;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */,
 				209858B8171F325C008CE9EC /* programDetailView.m in Sources */,
 				209858C1171F33F7008CE9EC /* programDetailViewController.m in Sources */,
+				31659346171F80100099BC22 /* PartnerInfoFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

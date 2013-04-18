@@ -64,16 +64,21 @@
 - (IBAction)submitButton:(UIButton *)sender
 {
     if ([MFMailComposeViewController canSendMail]) {
-        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-        mailViewController.mailComposeDelegate = (id)self;
-        NSArray *toRecipients = [[NSArray alloc]initWithObjects:@"evanchoyt@gmail.com", nil];         [mailViewController setToRecipients:toRecipients]; //don't forget to change this
-
-        [mailViewController setSubject:@"Service Report from Mobile App"];
-         [mailViewController setMessageBody:[self composeEmailBody] isHTML:NO];        
+			//setup mailViewController
+			MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+			mailViewController.mailComposeDelegate = self;
+			
+			//set fields of message
+			NSArray *toRecipients = [[NSArray alloc]initWithObjects:@"andrew.daniels714@gmail.com", nil];
+			[mailViewController setToRecipients:toRecipients]; //don't forget to change this
+			[mailViewController setSubject:@"Service Report from Mobile App"];
+			[mailViewController setMessageBody:[self composeEmailBody] isHTML:NO];
+			
+			//present mail interface
+			[self presentViewController:mailViewController animated:YES completion:nil];
     }else {
         
         NSLog(@"Device is unable to send email in its current state.");
-        
     }
        // [feedbackTextView setText:@"Thank You!"];
         feedbackTextView.text = @"Thank You!";
@@ -81,6 +86,20 @@
         dateTextField.text = @"";
         programTextField.text = @"";
     [self cancelButton:sender];
+}
+
+//MFMailComposeViewControllerDelegate method
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+	if (result==MFMailComposeResultSent) {
+		
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sent!"
+																										message:@"Your message was sent successfully"
+																									 delegate:nil
+																					cancelButtonTitle:@"OK"
+																					otherButtonTitles:nil];
+		[alert show];
+	}
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (NSString*)composeEmailBody
