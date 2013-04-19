@@ -10,4 +10,6 @@
 
 @interface PartnerInfoFetcher : NSObject
 
+- (NSString *)infoForPartnerWithID:(int) id;
+
 @end
