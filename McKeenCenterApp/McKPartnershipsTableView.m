@@ -9,6 +9,7 @@
 // helpful tutorial http://www.iosdevnotes.com/2011/10/uitableview-tutorial/
 
 #import "McKPartnershipsTableView.h"
+#import "PartnerInfoFetcher.h"
 
 
 @interface McKPartnershipsTableView ()
@@ -22,7 +23,6 @@
 @synthesize socialIssues;
 @synthesize locations;
 @synthesize programTitles;
-@synthesize programInfoView;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,7 +36,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        
+
     selectPrograms =[[NSMutableDictionary alloc]init];
     allPrograms = [[NSDictionary alloc]init];
     //read parnerships file in programTitles
@@ -167,23 +167,22 @@
     
     NSString * headerTitle = [self tableView:tableView titleForHeaderInSection:indexPath.section];
     NSString * programName = [[allPrograms valueForKey:headerTitle] objectAtIndex:indexPath.row];
-    
-    int socialIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-5, 2)] intValue];
-    int locationIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-2, 2)] intValue];
+    int socialIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-9, 2)] intValue];
+    int locationIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-6, 2)] intValue];
     NSString *socialIssue = [[NSString alloc]init];
     NSString *location = [[NSString alloc]init];
 
-    if ([programName characterAtIndex:programName.length-3] == ','){
+    if ([programName characterAtIndex:programName.length-4] == ','){
     socialIssue = [socialIssues objectAtIndex:(socialIdentifier-1)];
     location = [locations objectAtIndex:locationIdentifier-1];
     }
-    if ([programName characterAtIndex:programName.length-3] == ','){
+    if ([programName characterAtIndex:programName.length-4] == ','){
         cell.detailTextLabel.text = [[socialIssue stringByAppendingString:@", "] stringByAppendingString:location];
     } else cell.detailTextLabel.text = @"";
     
     
     
-    programName = [programName substringToIndex:(programName.length-6)];
+    programName = [programName substringToIndex:(programName.length-10)];
     cell.textLabel.text = programName;
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -198,33 +197,39 @@
 {
     NSString * headerTitle = [self tableView:tableView titleForHeaderInSection:indexPath.section];
     NSString * programName = [[allPrograms valueForKey:headerTitle] objectAtIndex:indexPath.row];
-    if ([programName characterAtIndex:programName.length-3] == ',')
-        programName = [programName substringToIndex:(programName.length-6)];
-    UIPopoverController *popover = [[UIPopoverController alloc] initWithContentViewController:programInfoView];
+    if ([programName characterAtIndex:programName.length-4] == ',')
+        programName = [programName substringToIndex:(programName.length-9)];
 
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    CGRect rect=CGRectMake(cell.bounds.origin.x+600, cell.bounds.origin.y+10, 50, 30);
-    [popover presentPopoverFromRect:rect inView:cell permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    
 
-//    
-//    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"You selected %@!", programName] delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
-//    CGRect popRect = CGRectMake(0, 0, 200, 300);
-//
-//    
-//    [popover presentPopoverFromRect:popRect
-//                                       inView:self.view
-//                     permittedArrowDirections:UIPopoverArrowDirectionAny
-//                                     animated:YES];
-//    
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	
+	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:135];
+	
+	//alert for now
+	//need to get actual id
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+													message:[infoFetcher getAllInfo]
+												   delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
+	[alert show];
+
+	
+	/* code for popover view
+	 
+	CGRect popRect = CGRectMake(0, 0, 200, 300);
+	[popover presentPopoverFromRect:popRect
+							 inView:self.view
+		   permittedArrowDirections:UIPopoverArrowDirectionAny
+						   animated:YES];
+	*/
+	
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 - (BOOL) socialIssueShouldBeDisplayedFor: (int)socialIssueIdentifier forString:(NSString *)theProgram
 {
     if (socialIssueIdentifier){
         int leangthTest = [theProgram length];
-        theProgram = [theProgram substringWithRange:NSMakeRange(leangthTest-5, 2)];
+        theProgram = [theProgram substringWithRange:NSMakeRange(leangthTest-9, 2)];
         int testInt = [theProgram intValue];
         if (socialIssueIdentifier){
             if (testInt == socialIssueIdentifier){
@@ -238,7 +243,7 @@
 {
     if (locationIdentifier){
         int leangthTest = [theProgram length];
-        theProgram = [theProgram substringWithRange:NSMakeRange(leangthTest-2, 2)];
+        theProgram = [theProgram substringWithRange:NSMakeRange(leangthTest-6, 2)];
         int testInt = [theProgram intValue];
         if (locationIdentifier){
             if (testInt == locationIdentifier){

@@ -7,7 +7,12 @@
 //
 // <a href="http://thenounproject.com/noun/calendar/#icon-No2019" target="_blank">Calendar</a> designed by <a href="http://thenounproject.com/____Lo" target="_blank">Laurent Patain</a> from The Noun Project
 #import "McKFirstViewController.h"
+//mysewual
+//php
+//read from txtfile that exists on the internet in preparation for servers
 
+//"mobile apps" test server
+//no synchronous requests
 @interface McKFirstViewController ()
 
 @end
