@@ -9,6 +9,7 @@
 // helpful tutorial http://www.iosdevnotes.com/2011/10/uitableview-tutorial/
 
 #import "McKPartnershipsTableView.h"
+#import "PartnerInfoFetcher.h"
 
 
 @interface McKPartnershipsTableView ()
@@ -199,20 +200,29 @@
     if ([programName characterAtIndex:programName.length-4] == ',')
         programName = [programName substringToIndex:(programName.length-9)];
 
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
 
-//    
-//    //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[NSString stringWithFormat:@"You selected %@!", programName] delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
-//    CGRect popRect = CGRectMake(0, 0, 200, 300);
-//
-//    
-//    [popover presentPopoverFromRect:popRect
-//                                       inView:self.view
-//                     permittedArrowDirections:UIPopoverArrowDirectionAny
-//                                     animated:YES];
-//    
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	
+	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:135];
+	
+	//alert for now
+	//need to get actual id
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+													message:[infoFetcher getAllInfo]
+												   delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
+	[alert show];
+
+	
+	/* code for popover view
+	 
+	CGRect popRect = CGRectMake(0, 0, 200, 300);
+	[popover presentPopoverFromRect:popRect
+							 inView:self.view
+		   permittedArrowDirections:UIPopoverArrowDirectionAny
+						   animated:YES];
+	*/
+	
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 - (BOOL) socialIssueShouldBeDisplayedFor: (int)socialIssueIdentifier forString:(NSString *)theProgram
