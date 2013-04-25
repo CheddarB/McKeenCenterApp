@@ -573,7 +573,7 @@ Fx: (207) 798-4120       </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YDq-JK-HCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1739" y="3571"/>
+            <point key="canvasLocation" x="1885" y="3673"/>
         </scene>
         <!--McK Fifth View Controller - About-->
         <scene sceneID="VaP-EO-Vmw">
@@ -796,8 +796,8 @@ McKeen Center Goals
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="GDz-2H-9mK"/>
-        <segue reference="dP9-Wp-Gbo"/>
         <segue reference="Ua3-yi-iXF"/>
         <segue reference="VSE-Ri-cDe"/>
+        <segue reference="coh-xO-NAd"/>
     </inferredMetricsTieBreakers>
 </document>
