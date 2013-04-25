@@ -1,11 +1,11 @@
-Androscoggin Valley Council of Governments 01,01,123
-Arts are Elementary 01,02,456
-ArtVan Program 01,03,789
-Bath Area Family YMCA 02,01,123
-Bath Area Food Pantry 02,02,456
-Cultivating Community 02,03,567
-Cumberland County YMCA 06,13,678
-Curtis Memorial Library 13,14,789
+Androscoggin Valley Council of Governments 01,01,469
+Arts are Elementary 01,02,110
+ArtVan Program 01,03,166
+Bath Area Family YMCA 02,01,063
+Bath Area Food Pantry 02,02,082
+Cultivating Community 02,03,164
+Cumberland County YMCA 06,13,146
+Curtis Memorial Library 13,14,072
 Dionne Commons 10,12,890
 Edward Little High School 11,15,123
 El Centro Latino Maine 06,03,456
