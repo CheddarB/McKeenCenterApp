@@ -87,11 +87,18 @@
 {
     NSString *emailMessageBody = [[NSString alloc]init];
     NSString *throughMcKCenter = [[NSString alloc]init];
-    if (throughMkC.selectedSegmentIndex)
+    if (!throughMkC.selectedSegmentIndex)
         throughMcKCenter = @"through the McKeen Center.";
     else throughMcKCenter = @"service not affiliated with the McKeen Center.";
     emailMessageBody = [@"The following message has been submitted through the McKeen Center Mobile App!\n\nName: " stringByAppendingString:nameTextField.text];
-    emailMessageBody = [[[[[[[emailMessageBody stringByAppendingString:@"\nProgram date: "]stringByAppendingString:dateTextField.text] stringByAppendingString:@"\nProgram title: "] stringByAppendingString:programTextField.text] stringByAppendingString:@", "]stringByAppendingString:throughMcKCenter]stringByAppendingString:@"\n\n"];
+    emailMessageBody = [[[[[[[emailMessageBody
+                              stringByAppendingString:@"\nProgram date: "]
+                             stringByAppendingString:dateTextField.text]
+                            stringByAppendingString:@"\nProgram title: "]
+                           stringByAppendingString:programTextField.text]
+                          stringByAppendingString:@", "]
+                         stringByAppendingString:throughMcKCenter]
+                        stringByAppendingString:@"\n\n"];
     emailMessageBody = [emailMessageBody stringByAppendingString:feedbackTextView.text];
     printf("%s\n", [emailMessageBody UTF8String]);
     return emailMessageBody;

@@ -198,8 +198,12 @@
     NSString * programName = [[allPrograms valueForKey:headerTitle] objectAtIndex:indexPath.row];
     if ([programName characterAtIndex:programName.length-4] == ',')
         programName = [programName substringToIndex:(programName.length-9)];
+    
+    programDetailViewController *dvController = [[programDetailViewController alloc] initWithNibName:@"DetailView" bundle:[NSBundle mainBundle]];
+    [self.navigationController pushViewController:dvController animated:YES];
+    dvController = nil;
 
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
 
 //    
