@@ -203,12 +203,12 @@
 
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 	
-	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] init];
+	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:135];
 	
 	//alert for now
 	//need to get actual id
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-													message:[infoFetcher infoForPartnerWithID:71]
+													message:[infoFetcher getAllInfo]
 												   delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
 	[alert show];
 

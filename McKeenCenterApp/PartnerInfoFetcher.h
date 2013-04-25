@@ -8,8 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface PartnerInfoFetcher : NSObject
 
-- (NSString *)infoForPartnerWithID:(int) id;
+//-(id)initWithURL:(NSURL *)url;
+
+-(id)initWithURLPath:(NSString *)url andID:(int)orgID;
+
+//all info formatted in single string
+- (NSString *)getAllInfo;
+
+//website
+- (NSString *)getSite;
+
+
+@property (nonatomic) NSString * site;
+@property (nonatomic) NSString * name;
+@property (nonatomic) NSString * street;
+@property (nonatomic) NSString * town;
+@property (nonatomic) NSString * phone;
 
 @end
