@@ -779,9 +779,6 @@ McKeen Center Goals
                 <relationship kind="outlet" name="servicePicker" candidateClass="UIPickerView"/>
             </relationships>
         </class>
-        <class className="programDetailView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/programDetailView.h"/>
-        </class>
         <class className="programDetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/programDetailViewController.h"/>
             <relationships>

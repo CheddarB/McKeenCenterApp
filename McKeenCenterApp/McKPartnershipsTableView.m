@@ -167,6 +167,7 @@
     
     NSString * headerTitle = [self tableView:tableView titleForHeaderInSection:indexPath.section];
     NSString * programName = [[allPrograms valueForKey:headerTitle] objectAtIndex:indexPath.row];
+    
     int socialIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-9, 2)] intValue];
     int locationIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-6, 2)] intValue];
     NSString *socialIssue = [[NSString alloc]init];
@@ -196,38 +197,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString * headerTitle = [self tableView:tableView titleForHeaderInSection:indexPath.section];
+    
+    
     NSString * programName = [[allPrograms valueForKey:headerTitle] objectAtIndex:indexPath.row];
+    int urlID = [[programName substringFromIndex:[programName length]-3] intValue];
     if ([programName characterAtIndex:programName.length-4] == ',')
         programName = [programName substringToIndex:(programName.length-9)];
-    
-    programDetailViewController *dvController = [[programDetailViewController alloc] initWithNibName:@"DetailView" bundle:[NSBundle mainBundle]];
-    [self.navigationController pushViewController:dvController animated:YES];
-    dvController = nil;
 
-    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    
 
     //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 	
-	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:135];
+	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:urlID];
 	
 	//alert for now
 	//need to get actual id
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
 													message:[infoFetcher getAllInfo]
 												   delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
-	[alert show];
-
-	
-	/* code for popover view
-	 
-	CGRect popRect = CGRectMake(0, 0, 200, 300);
-	[popover presentPopoverFromRect:popRect
-							 inView:self.view
-		   permittedArrowDirections:UIPopoverArrowDirectionAny
-						   animated:YES];
-	*/
-	
+	[alert show];	
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
