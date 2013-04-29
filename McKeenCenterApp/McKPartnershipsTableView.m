@@ -213,10 +213,19 @@
 	//need to get actual id
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
 													message:[infoFetcher getAllInfo]
-												   delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
-	[alert show];	
+												   delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles: [NSString stringWithFormat:@"%d",urlID], @"another button", @"another button", nil];
+	[alert show];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+}
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    //u need to change 0 to other value(,1,2,3) if u have more buttons.then u can check which button was pressed.
+    
+    printf("INDEX: %d\n", buttonIndex);
+
+
 }
 - (BOOL) socialIssueShouldBeDisplayedFor: (int)socialIssueIdentifier forString:(NSString *)theProgram
 {

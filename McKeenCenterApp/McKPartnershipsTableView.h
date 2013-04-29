@@ -10,7 +10,7 @@
 #import "McKThirdViewController.h"
 #import "programDetailViewController.h"
 
-@interface McKPartnershipsTableView : UITableViewController{
+@interface McKPartnershipsTableView : UITableViewController<UIAlertViewDelegate>{
     @public
     NSString *specificSocialIssue;
     NSString *specificLocation;
