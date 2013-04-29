@@ -18,14 +18,22 @@
 //all info formatted in single string
 - (NSString *)getAllInfo;
 
-//website
+//returns string for site url if available, nil if not
 - (NSString *)getSite;
+
+//returns string for email address if available, nil if not
+- (NSString *)getEmail;
+
+//returns string for phone number if available, nil if not
+- (NSString *)getPhone;
 
 
 @property (nonatomic) NSString * site;
 @property (nonatomic) NSString * name;
 @property (nonatomic) NSString * street;
 @property (nonatomic) NSString * town;
+@property (nonatomic) NSString * email;
 @property (nonatomic) NSString * phone;
+
 
 @end
