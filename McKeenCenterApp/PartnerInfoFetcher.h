@@ -35,5 +35,7 @@
 @property (nonatomic) NSString * email;
 @property (nonatomic) NSString * phone;
 
+@property (nonatomic) NSMutableArray * data;
+
 
 @end
