@@ -44,7 +44,7 @@
 	//grab data
 	//site
 	
-	self.data = [NSMutableArray arrayWithCapacity:6];
+	NSMutableArray * data = [NSMutableArray arrayWithCapacity:6];
 	
 	if([section children] && [[section children] count] >= 1){
 		HTMLNode * siteNode = [section children][0];
@@ -52,7 +52,7 @@
 		
 		//add to data array if not nil
 		if ([siteNode allContents]) {
-			[self.data addObject:[siteNode allContents]];
+			[data addObject:[siteNode allContents]];
 		}
 				
 		if([[section children] count] >= 2){
@@ -64,7 +64,7 @@
 				self.name = [nameNode contents];
 				
 				if ([nameNode contents]) {
-					[self.data addObject:[nameNode contents]];
+					[data addObject:[nameNode contents]];
 				}
 				
 				if([nameNode children] && [[nameNode children] count] >= 2){
@@ -72,7 +72,7 @@
 					HTMLNode * streetNode = [nameNode children][1];
 					self.street = [streetNode contents];
 					if ([streetNode contents]) {
-						[self.data addObject:[streetNode contents]];
+						[data addObject:[streetNode contents]];
 					}
 					
 					
@@ -83,7 +83,7 @@
 						self.town = [PartnerInfoFetcher fixTown:[townNode allContents]];
 						
 						if ([townNode allContents]) {
-							[self.data addObject:[townNode allContents]];
+							[data addObject:[townNode allContents]];
 						}
 						
 						if ([[streetNode children] count] >= 5) {
@@ -92,7 +92,7 @@
 							self.email = [emailNode allContents];
 							
 							if ([emailNode allContents]) {
-								[self.data addObject:[emailNode allContents]];
+								[data addObject:[emailNode allContents]];
 							}
 							
 							if ([[streetNode children] count] >= 7) {
@@ -101,13 +101,34 @@
 								self.phone = [phoneNode allContents];
 								
 								if ([phoneNode allContents]) {
-									[self.data addObject:[phoneNode allContents]];
+									[data addObject:[phoneNode allContents]];
 								}
 							}
 						}
 					}
 				}
 			}
+		}
+	}
+	
+	//set site
+	for (NSString * path in data) {
+		if([path rangeOfString:@"www"].length > 0 || [path rangeOfString:@"http"].length > 0){
+			self.site = path;
+		}
+	}
+	
+	//set email
+	for (NSString * address in data) {
+		if([address rangeOfString:@"@"].length > 0){
+			self.email = address;
+		}
+	}
+		
+	//set phone
+	for(NSString * number in data){
+		if([[PartnerInfoFetcher isPhoneNumber:number] length] > 0){
+			self.phone = [PartnerInfoFetcher isPhoneNumber:number];
 		}
 	}
 	 
@@ -155,10 +176,8 @@
 	NSString * site = nil;
 	
 	
-	for (NSString * path in self.data) {
-		if([path rangeOfString:@"www"].length > 0 || [path rangeOfString:@"http"].length > 0){
-			return path;
-		}
+	if (self.site) {
+		site = self.site;
 	}
 	
 	return site;
@@ -167,10 +186,8 @@
 - (NSString *)getEmail{
 	NSString * email = nil;
 	
-	for (NSString * address in self.data) {
-		if([[PartnerInfoFetcher isEmail:self.email] length] > 0){
-			email = self.email;
-		}
+	if (self.email) {
+		email = self.email;
 	}
 
 	return email;
@@ -180,13 +197,10 @@
 	
 	NSString * phone = nil;
 	
-	for(NSString * number in self.data){
-	
-		if([[PartnerInfoFetcher isPhoneNumber:number] length] > 0){
-			phone = [PartnerInfoFetcher isPhoneNumber:number];
-			NSLog(@"%@", phone);
-		}
+	if (self.phone) {
+		phone = self.phone;
 	}
+	
 	return phone;
 }
 
@@ -226,6 +240,10 @@
 	
 	
 	if ([numberFinal length] >= 10) {
+		//if num is more than 10 digits, it includes an extension
+		if ([numberFinal length] > 10) {
+			numberFinal = [numberFinal substringToIndex:10];
+		}
 		return numberFinal;
 	} else {
 		return @"";

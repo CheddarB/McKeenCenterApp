@@ -212,7 +212,7 @@
 	//alert for now
 	//need to get actual id
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-													message:[infoFetcher getSite]
+													message:[infoFetcher getPhone]
 												   delegate:nil cancelButtonTitle:@"dismiss" otherButtonTitles:nil];
 	[alert show];	
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
