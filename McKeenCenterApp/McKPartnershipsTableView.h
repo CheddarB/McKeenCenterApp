@@ -22,6 +22,8 @@
 @property (nonatomic) NSArray *locations;
 @property (nonatomic) NSArray *programTitles;
 
-
+@property (nonatomic) NSString * programEmail;
+@property (nonatomic) NSString * programWebsite;
+@property (nonatomic) NSString * programPhoneNumber;
 
 @end

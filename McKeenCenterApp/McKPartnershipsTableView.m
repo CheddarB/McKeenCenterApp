@@ -24,6 +24,10 @@
 @synthesize locations;
 @synthesize programTitles;
 
+@synthesize programEmail;
+@synthesize programWebsite;
+@synthesize programPhoneNumber;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -209,12 +213,60 @@
 	
 	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:urlID];
 	
-	//alert for now
-	//need to get actual id
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-													message:[infoFetcher getAllInfo]
-												   delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles: [NSString stringWithFormat:@"%d",urlID], @"another button", @"another button", nil];
-	[alert show];
+    
+    
+	//alert 
+    int numberOfButtons = 0;
+    NSString *buttonOne = nil;
+    NSString *buttonTwo = nil;
+    NSString *buttonThree = nil;
+    
+    programEmail = nil;
+   programPhoneNumber = @"2345";
+   programWebsite = @"sadfasdf.com";
+    
+    if (programEmail){
+        numberOfButtons ++;
+        buttonOne = @"email";
+    }if (programWebsite){
+        numberOfButtons ++;
+        if (!buttonOne)
+            buttonOne = @"go to website";
+        else {
+            buttonTwo = @"go to website";
+        }
+    }if (programPhoneNumber){
+        numberOfButtons ++;
+        if (!buttonOne)
+            buttonOne = @"call";
+        else if (!buttonTwo){
+            buttonTwo = @"call";
+        } else {
+            buttonThree = @"call";
+        }
+    }
+    if (numberOfButtons == 0){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:[infoFetcher getAllInfo]
+                                                       delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles: nil];
+        [alert show];
+    }else if (numberOfButtons == 1){
+    	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:[infoFetcher getAllInfo]
+                                                       delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles:buttonOne, nil];
+        [alert show];
+    }else if (numberOfButtons == 2){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:[infoFetcher getAllInfo]
+                                                       delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles:buttonOne, buttonTwo, nil];
+        [alert show];
+    }else if (numberOfButtons == 3){
+    	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:[infoFetcher getAllInfo]
+                                                       delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles:buttonOne, buttonTwo, buttonThree, nil];
+        [alert show];
+    }
+    
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
@@ -223,9 +275,76 @@
     
     //u need to change 0 to other value(,1,2,3) if u have more buttons.then u can check which button was pressed.
     
-    printf("INDEX: %d\n", buttonIndex);
+    printf("%s\n", [programEmail UTF8String]);
+    int numberOfButtons = alertView.numberOfButtons;
+    if (buttonIndex != 0){
+        if (numberOfButtons == 1){
+            if (programWebsite)
+            {
+             //link to website
+                printf("- >going to website\n");
+            }
+            if (programPhoneNumber)
+            {
+                //button to call
+                printf("- >making call\n");
 
+            }
+            if (programEmail)
+            {
+                //button to email
+                printf("-> sending email\n");
 
+            }
+        } else if (numberOfButtons == 2){
+            if (!programPhoneNumber){
+                if (buttonIndex == 1){
+                    //send email
+                    printf("1-> sending email\n");
+
+                } else {
+                    // go to website
+                    printf("- >going to website\n");
+
+                }
+            } else if (!programWebsite){
+                if (buttonIndex == 1){
+                    //send email
+                    printf("2-> sending email\n");
+
+                } else {
+                    // make phone call
+                    printf("- >making call\n");
+
+                }
+            } else if (programEmail == ( NSString *) [ NSNull null ]){
+                if (buttonIndex == 1){
+                    // go to webite
+                    printf("- >going to website\n");
+
+                } else {
+                    // make phone call
+                    printf("- >making call\n");
+
+                }
+            }
+        } else {
+            if (buttonIndex == 1){
+                //send email
+                printf("3-> sending email\n");
+
+            } else if (buttonIndex == 2){
+                //go to website
+                printf("- >going to website\n");
+
+            } else {
+                //make phone call
+                printf("-> making call\n");
+
+            }
+        }
+    }
+    return;
 }
 - (BOOL) socialIssueShouldBeDisplayedFor: (int)socialIssueIdentifier forString:(NSString *)theProgram
 {
@@ -255,8 +374,4 @@
         return false;
     }else return true;
 }
-//- (void)setPopoverContentSize:(CGSize)size animated:(BOOL)animated{
-//    
-//}
-
 @end
