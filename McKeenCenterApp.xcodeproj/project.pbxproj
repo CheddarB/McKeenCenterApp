@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		203A260A1737376E007F39D9 /* events.txt in Resources */ = {isa = PBXBuildFile; fileRef = 203A26091737376E007F39D9 /* events.txt */; };
 		203A260D17373C3A007F39D9 /* McKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A260C17373C3A007F39D9 /* McKFirstViewController.m */; };
+		203A261117374629007F39D9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203A261017374629007F39D9 /* ImageIO.framework */; };
+		203A261417375AC2007F39D9 /* McKEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261317375AC2007F39D9 /* McKEventInfoViewController.m */; };
 		207AF0FB171E23790001DCBC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207AF0FA171E23790001DCBC /* MessageUI.framework */; };
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
@@ -57,6 +59,10 @@
 		203A26091737376E007F39D9 /* events.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = events.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/events.txt"; sourceTree = "<group>"; };
 		203A260B17373C3A007F39D9 /* McKFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKFirstViewController.h; path = ../McKFirstViewController.h; sourceTree = "<group>"; };
 		203A260C17373C3A007F39D9 /* McKFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKFirstViewController.m; path = ../McKFirstViewController.m; sourceTree = "<group>"; };
+		203A260E1737455A007F39D9 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		203A261017374629007F39D9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		203A261217375AC2007F39D9 /* McKEventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKEventInfoViewController.h; sourceTree = "<group>"; };
+		203A261317375AC2007F39D9 /* McKEventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKEventInfoViewController.m; sourceTree = "<group>"; };
 		207AF0FA171E23790001DCBC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203A261117374629007F39D9 /* ImageIO.framework in Frameworks */,
 				316593C11720A3D30099BC22 /* libxml2.dylib in Frameworks */,
 				207AF0FB171E23790001DCBC /* MessageUI.framework in Frameworks */,
 				20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */,
@@ -164,6 +171,7 @@
 		208B77D117170CC900E9511B /* McKeenCenterApp */ = {
 			isa = PBXGroup;
 			children = (
+				203A261017374629007F39D9 /* ImageIO.framework */,
 				207AF0FA171E23790001DCBC /* MessageUI.framework */,
 				20E6CAA81718E9CE002EFBCE /* MapKit.framework */,
 				208B77DA17170CC900E9511B /* McKAppDelegate.h */,
@@ -231,6 +239,8 @@
 			children = (
 				203A260B17373C3A007F39D9 /* McKFirstViewController.h */,
 				203A260C17373C3A007F39D9 /* McKFirstViewController.m */,
+				203A261217375AC2007F39D9 /* McKEventInfoViewController.h */,
+				203A261317375AC2007F39D9 /* McKEventInfoViewController.m */,
 				208B781717174DAF00E9511B /* first.png */,
 				208B781817174DAF00E9511B /* first@2x.png */,
 			);
@@ -276,6 +286,7 @@
 		316593B7172096710099BC22 /* Objective-C-HMTL-Parser */ = {
 			isa = PBXGroup;
 			children = (
+				203A260E1737455A007F39D9 /* CoreImage.framework */,
 				316593B8172096710099BC22 /* HTMLNode.h */,
 				316593B9172096710099BC22 /* HTMLNode.m */,
 				316593BA172096710099BC22 /* HTMLParser.h */,
@@ -385,6 +396,7 @@
 				316593BD172096710099BC22 /* HTMLNode.m in Sources */,
 				316593BE172096710099BC22 /* HTMLParser.m in Sources */,
 				203A260D17373C3A007F39D9 /* McKFirstViewController.m in Sources */,
+				203A261417375AC2007F39D9 /* McKEventInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

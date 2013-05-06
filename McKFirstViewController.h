@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "McKEventInfoViewController.h"
 
 @interface McKFirstViewController : UITableViewController
 
 @property (nonatomic) NSMutableArray *arrayOfEvents;
+@property (strong, nonatomic) McKEventInfoViewController *eventInfoVC;
 
 @end

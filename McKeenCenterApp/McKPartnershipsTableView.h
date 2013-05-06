@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "McKThirdViewController.h"
-#import "programDetailViewController.h"
 
 @interface McKPartnershipsTableView : UITableViewController<UIAlertViewDelegate>{
     @public
