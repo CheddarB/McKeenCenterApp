@@ -2,12 +2,20 @@
 //  McKSecondViewController.h
 //  McKeenCenterApp
 //
-//  Created by Evan Hoyt on 4/11/13.
+//  Created by Evan Hoyt on 5/6/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#include "McKOpportunityInfo.h"
 
-@interface McKSecondViewController : UIViewController
+@interface McKSecondViewController : UITableViewController
+
+@property (nonatomic) NSMutableArray * arrayOfObjects;
+@property (strong, nonatomic) McKOpportunityInfo * oppInfoVC;
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *toggleSwitch;
+
+- (IBAction)switchToggled:(id)sender;
 
 @end

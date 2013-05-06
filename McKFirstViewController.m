@@ -29,7 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     //read from events file
+    
     NSString* path = [[NSBundle mainBundle] pathForResource:@"events"
                                                      ofType:@"txt"];
     NSString *content = [NSString stringWithContentsOfFile:path
@@ -43,13 +45,14 @@
         NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
         [arrayOfEvents replaceObjectAtIndex:i withObject:subArray];
     }
-    
+/*
     for (int i = 0; i < [arrayOfEvents count]; i++){
         for (int j = 0; j < [[arrayOfEvents objectAtIndex:i] count]; j++){
-            printf("%s\n", [[[arrayOfEvents objectAtIndex:i] objectAtIndex:j ] UTF8String]);
+            printf("(%d, %d) %s\n",i,j, [[[arrayOfEvents objectAtIndex:i] objectAtIndex:j ] UTF8String]);
         }
         printf("\n");
     }
+*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,7 +70,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
     return [arrayOfEvents count];
 }
 
@@ -88,9 +90,9 @@
     //set alternating grey backgrounds
     UIView* backgroundView = [[UIView alloc]initWithFrame:CGRectZero ];
     if (indexPath.row %2){
-        backgroundView.backgroundColor = [UIColor colorWithWhite: .88 alpha:1];
+        backgroundView.backgroundColor = [UIColor colorWithRed: 180.0/255.0 green: 200.0/255.0 blue:220.0/255.0 alpha: 1.0];
     } else
-        backgroundView.backgroundColor = [UIColor colorWithWhite: 0.80 alpha:1];
+        backgroundView.backgroundColor = [UIColor colorWithRed: 152.0/255.0 green: 187.0/255.0 blue:228.0/255.0 alpha: 1.0];
     cell.backgroundView = backgroundView;
     for ( UIView* view in cell.contentView.subviews )
     {

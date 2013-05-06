@@ -11,6 +11,10 @@
 		203A260D17373C3A007F39D9 /* McKFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A260C17373C3A007F39D9 /* McKFirstViewController.m */; };
 		203A261117374629007F39D9 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 203A261017374629007F39D9 /* ImageIO.framework */; };
 		203A261417375AC2007F39D9 /* McKEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261317375AC2007F39D9 /* McKEventInfoViewController.m */; };
+		203A261A17380431007F39D9 /* McKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261917380431007F39D9 /* McKSecondViewController.m */; };
+		203A261D173804EC007F39D9 /* McKOpportunityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261C173804EC007F39D9 /* McKOpportunityInfo.m */; };
+		203A261F17380AA0007F39D9 /* jobs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 203A261E17380AA0007F39D9 /* jobs.txt */; };
+		203A262117380C81007F39D9 /* conferences.txt in Resources */ = {isa = PBXBuildFile; fileRef = 203A262017380C81007F39D9 /* conferences.txt */; };
 		207AF0FB171E23790001DCBC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207AF0FA171E23790001DCBC /* MessageUI.framework */; };
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
@@ -32,7 +36,6 @@
 		208B77E017170CC900E9511B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77DF17170CC900E9511B /* Default@2x.png */; };
 		208B77E217170CC900E9511B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77E117170CC900E9511B /* Default-568h@2x.png */; };
 		208B77E517170CC900E9511B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208B77E317170CC900E9511B /* MainStoryboard.storyboard */; };
-		208B77EF17170CC900E9511B /* McKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77EE17170CC900E9511B /* McKSecondViewController.m */; };
 		208B77FE1717107D00E9511B /* McKThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77FD1717107D00E9511B /* McKThirdViewController.m */; };
 		208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B780017173F1E00E9511B /* McKFourthViewController.m */; };
 		208B780417173FA100E9511B /* McKFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B780317173FA100E9511B /* McKFifthViewController.m */; };
@@ -63,6 +66,12 @@
 		203A261017374629007F39D9 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		203A261217375AC2007F39D9 /* McKEventInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKEventInfoViewController.h; sourceTree = "<group>"; };
 		203A261317375AC2007F39D9 /* McKEventInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKEventInfoViewController.m; sourceTree = "<group>"; };
+		203A261817380431007F39D9 /* McKSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKSecondViewController.h; sourceTree = "<group>"; };
+		203A261917380431007F39D9 /* McKSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKSecondViewController.m; sourceTree = "<group>"; };
+		203A261B173804EC007F39D9 /* McKOpportunityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKOpportunityInfo.h; path = ../McKOpportunityInfo.h; sourceTree = "<group>"; };
+		203A261C173804EC007F39D9 /* McKOpportunityInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKOpportunityInfo.m; path = ../McKOpportunityInfo.m; sourceTree = "<group>"; };
+		203A261E17380AA0007F39D9 /* jobs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = jobs.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/jobs.txt"; sourceTree = "<group>"; };
+		203A262017380C81007F39D9 /* conferences.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = conferences.txt; path = "../../../../Library/Mobile Documents/com~apple~TextEdit/Documents/conferences.txt"; sourceTree = "<group>"; };
 		207AF0FA171E23790001DCBC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
@@ -88,8 +97,6 @@
 		208B77DF17170CC900E9511B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		208B77E117170CC900E9511B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		208B77E417170CC900E9511B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		208B77ED17170CC900E9511B /* McKSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = McKSecondViewController.h; sourceTree = "<group>"; };
-		208B77EE17170CC900E9511B /* McKSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = McKSecondViewController.m; sourceTree = "<group>"; };
 		208B77FC1717107D00E9511B /* McKThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKThirdViewController.h; sourceTree = "<group>"; };
 		208B77FD1717107D00E9511B /* McKThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKThirdViewController.m; sourceTree = "<group>"; };
 		208B77FF17173F1E00E9511B /* McKFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKFourthViewController.h; sourceTree = "<group>"; };
@@ -184,10 +191,12 @@
 				209858BD171F3300008CE9EC /* About Section */,
 				208B77D317170CC900E9511B /* McKeenCenterApp-Info.plist */,
 				209858BE171F331F008CE9EC /* JPGs */,
-				20866D31171CF14300DC0147 /* locations.txt */,
-				20866D32171CF14300DC0147 /* partnerships.txt */,
-				20866D33171CF14300DC0147 /* social_issues.txt */,
 				203A26091737376E007F39D9 /* events.txt */,
+				203A261E17380AA0007F39D9 /* jobs.txt */,
+				203A262017380C81007F39D9 /* conferences.txt */,
+				20866D31171CF14300DC0147 /* locations.txt */,
+				20866D33171CF14300DC0147 /* social_issues.txt */,
+				20866D32171CF14300DC0147 /* partnerships.txt */,
 				208B77D217170CC900E9511B /* Supporting Files */,
 			);
 			path = McKeenCenterApp;
@@ -226,8 +235,10 @@
 		209858BA171F32B8008CE9EC /* Opportunities */ = {
 			isa = PBXGroup;
 			children = (
-				208B77ED17170CC900E9511B /* McKSecondViewController.h */,
-				208B77EE17170CC900E9511B /* McKSecondViewController.m */,
+				203A261817380431007F39D9 /* McKSecondViewController.h */,
+				203A261917380431007F39D9 /* McKSecondViewController.m */,
+				203A261B173804EC007F39D9 /* McKOpportunityInfo.h */,
+				203A261C173804EC007F39D9 /* McKOpportunityInfo.m */,
 				208B781417174C0B00E9511B /* second.png */,
 				208B781317174C0B00E9511B /* second@2x.png */,
 			);
@@ -373,6 +384,8 @@
 				20866D36171CF14300DC0147 /* social_issues.txt in Resources */,
 				316593BF172096710099BC22 /* README.md in Resources */,
 				203A260A1737376E007F39D9 /* events.txt in Resources */,
+				203A261F17380AA0007F39D9 /* jobs.txt in Resources */,
+				203A262117380C81007F39D9 /* conferences.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +398,6 @@
 			files = (
 				208B77D817170CC900E9511B /* main.m in Sources */,
 				208B77DC17170CC900E9511B /* McKAppDelegate.m in Sources */,
-				208B77EF17170CC900E9511B /* McKSecondViewController.m in Sources */,
 				208B77FE1717107D00E9511B /* McKThirdViewController.m in Sources */,
 				208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */,
 				208B780417173FA100E9511B /* McKFifthViewController.m in Sources */,
@@ -397,6 +409,8 @@
 				316593BE172096710099BC22 /* HTMLParser.m in Sources */,
 				203A260D17373C3A007F39D9 /* McKFirstViewController.m in Sources */,
 				203A261417375AC2007F39D9 /* McKEventInfoViewController.m in Sources */,
+				203A261A17380431007F39D9 /* McKSecondViewController.m in Sources */,
+				203A261D173804EC007F39D9 /* McKOpportunityInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

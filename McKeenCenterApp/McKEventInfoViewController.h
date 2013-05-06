@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
 @interface McKEventInfoViewController : UIViewController
 
 @property (nonatomic) int cellSelected;
 @property (nonatomic) NSMutableArray * eventInfo;
-@property (strong, nonatomic) IBOutlet UILabel *eventTitle;
-@property (strong, nonatomic) IBOutlet UILabel *eventSubtitle;
+@property (nonatomic) NSString *emailAddress;
+
+
+@property (strong, nonatomic) IBOutlet UITextView *eventTitle;
+@property (strong, nonatomic) IBOutlet UITextView *eventSubtitle;
 @property (strong, nonatomic) IBOutlet UITextView *eventDetails;
+@property (strong, nonatomic) IBOutlet UIButton *signupButton;
+- (IBAction)signUp:(UIButton *)sender;
 
 @end

@@ -109,7 +109,7 @@
     if (!throughMkC.selectedSegmentIndex)
         throughMcKCenter = @"through the McKeen Center.";
     else throughMcKCenter = @"service not affiliated with the McKeen Center.";
-    emailMessageBody = [@"The following message has been submitted through the McKeen Center Mobile App!\n\nName: " stringByAppendingString:nameTextField.text];
+    emailMessageBody = [@"The following message has been submitted through the McKeen Center Mobile App;\n\nName: " stringByAppendingString:nameTextField.text];
     emailMessageBody = [[[[[[[emailMessageBody
                               stringByAppendingString:@"\nProgram date: "]
                              stringByAppendingString:dateTextField.text]
@@ -119,7 +119,9 @@
                          stringByAppendingString:throughMcKCenter]
                         stringByAppendingString:@"\n\n"];
     emailMessageBody = [emailMessageBody stringByAppendingString:feedbackTextView.text];
+/*
     printf("%s\n", [emailMessageBody UTF8String]);
+ */
     return emailMessageBody;
     
 }
