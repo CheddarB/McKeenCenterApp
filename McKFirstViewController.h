@@ -2,12 +2,14 @@
 //  McKFirstViewController.h
 //  McKeenCenterApp
 //
-//  Created by Evan Hoyt on 4/11/13.
+//  Created by Evan Hoyt on 5/5/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface McKFirstViewController : UIViewController
+@interface McKFirstViewController : UITableViewController
+
+@property (nonatomic) NSMutableArray *arrayOfEvents;
 
 @end
