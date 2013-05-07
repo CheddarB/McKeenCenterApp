@@ -28,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    mapView.mapType = MKMapTypeHybrid;
+
     CLLocationCoordinate2D myCoordinate = {43.908266, -69.961828};
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.title = @"McKeen Center for the Common Good";

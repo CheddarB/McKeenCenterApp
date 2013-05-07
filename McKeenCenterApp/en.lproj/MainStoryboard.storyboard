@@ -272,7 +272,7 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" id="j3p-oB-dC6">
-                                <rect key="frame" x="-2" y="-64" width="325" height="520"/>
+                                <rect key="frame" x="-5" y="-68" width="325" height="520"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Have you been doing community service?Tell the McKeen Center!" textAlignment="center" id="UU5-6M-C4G">
@@ -824,10 +824,10 @@ McKeen Center Goals
             </objects>
             <point key="canvasLocation" x="1630" y="638"/>
         </scene>
-        <!--McK Contact View Controller - About-->
+        <!--McK Staff View Controller - About-->
         <scene sceneID="2Td-FA-xz5">
             <objects>
-                <viewController title="About" id="L2m-l8-egK" customClass="McKContactViewController" sceneMemberID="viewController">
+                <viewController title="About" id="L2m-l8-egK" customClass="McKStaffViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Egx-EX-WyE">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -835,22 +835,181 @@ McKeen Center Goals
                             <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" image="3-bowdoin-chapel.jpg" id="h42-sB-MYm">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Banister Hall, South Side of the Chapel" textAlignment="center" id="8Dk-XO-jZf">
-                                <rect key="frame" x="0.0" y="455" width="320" height="36"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="zoa-lB-J7E">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sseames contact.jpg" id="AN9-kb-Usw">
+                                        <rect key="frame" x="10" y="13" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Sarah Seams, Director of the McKeen Center" id="Lgs-Sg-1ro">
+                                        <rect key="frame" x="121" y="6" width="188" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="CCallahan1.jpg" id="jvc-dY-fRS">
+                                        <rect key="frame" x="11" y="134" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Caitlin Callahan '11, Assistent Director of the McKeen Center" id="joO-8b-ZdS">
+                                        <rect key="frame" x="121" y="121" width="188" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="srg-contact.jpg" id="g96-NM-ylK">
+                                        <rect key="frame" x="11" y="255" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Shawn Gerwig, Administrative Coordinator" id="Kcw-Th-B4r">
+                                        <rect key="frame" x="116" y="244" width="199" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="janice-jaffee.jpg" id="hV6-y8-JPU">
+                                        <rect key="frame" x="11" y="376" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Janice Jaffe, Associate Director for Community-based Cources and Research" id="Whu-lr-lif">
+                                        <rect key="frame" x="121" y="359" width="188" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IEt-UR-gyt">
+                                        <rect key="frame" x="151" y="433" width="129" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="email janice">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailButton:" destination="L2m-l8-egK" eventType="touchUpInside" id="za3-Sl-T90"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="nancy-jennings contact.jpg" id="RT1-bC-F86">
+                                        <rect key="frame" x="11" y="497" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Nancy Jennings, Senior Faculty Fellow at the McKeen Center" id="wXB-PW-CrM">
+                                        <rect key="frame" x="121" y="484" width="188" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="lmondello contact.jpg" id="nK7-mU-QYQ">
+                                        <rect key="frame" x="11" y="618" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Luke Mondello '10, Assistent Director" id="NsC-wk-UIx">
+                                        <rect key="frame" x="121" y="618" width="188" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Ik-RC-cy0">
+                                        <rect key="frame" x="164" y="63" width="103" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="email sara">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailButton:" destination="L2m-l8-egK" eventType="touchUpInside" id="XNQ-GN-3O1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tAc-Z8-rBP">
+                                        <rect key="frame" x="161" y="187" width="109" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="email caitlin">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailButton:" destination="L2m-l8-egK" eventType="touchUpInside" id="CnN-Cn-Fyd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Tob-FF-XmE">
+                                        <rect key="frame" x="149" y="299" width="132" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="email shawn">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailButton:" destination="L2m-l8-egK" eventType="touchUpInside" id="7iY-PO-fRe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xET-ru-gLD">
+                                        <rect key="frame" x="146" y="551" width="139" height="46"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="email nancy">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailButton:" destination="L2m-l8-egK" eventType="touchUpInside" id="VLk-hP-IFo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2u8-kC-SwK">
+                                        <rect key="frame" x="148" y="666" width="134" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <state key="normal" title="email luke">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailButton:" destination="L2m-l8-egK" eventType="touchUpInside" id="tvw-0P-OjE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="fifth.png" id="VnU-4Y-gPd"/>
                     <navigationItem key="navigationItem" title="staff" id="EJ9-yM-EUS">
                         <barButtonItem key="backBarButtonItem" title="back" id="f5N-t0-GHv"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="staffScrollView" destination="zoa-lB-J7E" id="KuV-cc-I0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg3-cZ-k4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="2098"/>
+            <point key="canvasLocation" x="1910" y="2098"/>
         </scene>
         <!--McK Opportunity Info-->
         <scene sceneID="d9M-dv-qZN">
@@ -922,14 +1081,20 @@ McKeen Center Goals
     </scenes>
     <resources>
         <image name="3-bowdoin-chapel.jpg" width="370" height="555"/>
+        <image name="CCallahan1.jpg" width="165" height="190"/>
         <image name="artvanpic.jpg" width="635" height="315"/>
         <image name="doorDark.jpg" width="2306" height="3174"/>
         <image name="doorLight.jpg" width="2306" height="3174"/>
         <image name="fifth.png" width="25" height="25"/>
         <image name="first.png" width="30" height="30"/>
         <image name="fourth.png" width="30" height="30"/>
+        <image name="janice-jaffee.jpg" width="165" height="203"/>
+        <image name="lmondello contact.jpg" width="165" height="190"/>
+        <image name="nancy-jennings contact.jpg" width="165" height="190"/>
         <image name="quadPic.jpg" width="6193" height="2092"/>
         <image name="second.png" width="30" height="30"/>
+        <image name="srg-contact.jpg" width="525" height="600"/>
+        <image name="sseames contact.jpg" width="165" height="190"/>
         <image name="third.png" width="30" height="30"/>
     </resources>
     <classes>
@@ -994,6 +1159,13 @@ McKeen Center Goals
             <relationships>
                 <relationship kind="action" name="switchToggled:"/>
                 <relationship kind="outlet" name="toggleSwitch" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="McKStaffViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKStaffViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="emailButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="staffScrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
         <class className="McKThirdViewController" superclassName="UIViewController">

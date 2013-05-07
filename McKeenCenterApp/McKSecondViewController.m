@@ -122,7 +122,7 @@
     //set alternating grey backgrounds
     UIView* backgroundView = [[UIView alloc]initWithFrame:CGRectZero ];
     if (indexPath.row %2){
-        backgroundView.backgroundColor = [UIColor colorWithRed: 122/255.0 green: 200/255.0 blue:122/255.0 alpha: 1.0];
+        backgroundView.backgroundColor = [UIColor colorWithRed: 160/255.0 green: 250/255.0 blue:160/255.0 alpha: 1.0];
     } else
         backgroundView.backgroundColor = [UIColor colorWithRed: 188.0/255.0 green: 233.0/255.0 blue:188.0/255.0 alpha: 1.0];
     cell.backgroundView = backgroundView;

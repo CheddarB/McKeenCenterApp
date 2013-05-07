@@ -48,8 +48,15 @@
 		208B781E17174EC300E9511B /* fourth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781C17174EC300E9511B /* fourth@2x.png */; };
 		208B78201717501F00E9511B /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781F1717501F00E9511B /* fifth.png */; };
 		20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EE2171C826C00E194CE /* McKLocationSelector.m */; };
-		20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EEB171C9A3800E194CE /* McKContactViewController.m */; };
 		20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */; };
+		20CFAF6C1739478200BF8529 /* sseames contact.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CFAF661739478200BF8529 /* sseames contact.jpg */; };
+		20CFAF6D1739478200BF8529 /* janice-jaffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CFAF671739478200BF8529 /* janice-jaffee.jpg */; };
+		20CFAF6E1739478200BF8529 /* srg-contact.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CFAF681739478200BF8529 /* srg-contact.jpg */; };
+		20CFAF6F1739478200BF8529 /* CCallahan1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CFAF691739478200BF8529 /* CCallahan1.jpg */; };
+		20CFAF701739478200BF8529 /* lmondello contact.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CFAF6A1739478200BF8529 /* lmondello contact.jpg */; };
+		20CFAF711739478200BF8529 /* nancy-jennings contact.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CFAF6B1739478200BF8529 /* nancy-jennings contact.jpg */; };
+		20CFAF731739490400BF8529 /* McKContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CFAF721739490400BF8529 /* McKContactViewController.m */; };
+		20CFAF7617394A2300BF8529 /* McKStaffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CFAF7517394A2300BF8529 /* McKStaffViewController.m */; };
 		20E6CAA91718E9CE002EFBCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E6CAA81718E9CE002EFBCE /* MapKit.framework */; };
 		31659346171F80100099BC22 /* PartnerInfoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 31659345171F80100099BC22 /* PartnerInfoFetcher.m */; };
 		316593BD172096710099BC22 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 316593B9172096710099BC22 /* HTMLNode.m */; };
@@ -114,9 +121,17 @@
 		20948EE1171C826C00E194CE /* McKLocationSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKLocationSelector.h; path = ../McKLocationSelector.h; sourceTree = "<group>"; };
 		20948EE2171C826C00E194CE /* McKLocationSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKLocationSelector.m; path = ../McKLocationSelector.m; sourceTree = "<group>"; };
 		20948EEA171C9A3800E194CE /* McKContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKContactViewController.h; sourceTree = "<group>"; };
-		20948EEB171C9A3800E194CE /* McKContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKContactViewController.m; sourceTree = "<group>"; };
 		20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPartnershipsTableView.h; sourceTree = "<group>"; };
 		20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPartnershipsTableView.m; sourceTree = "<group>"; };
+		20CFAF661739478200BF8529 /* sseames contact.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sseames contact.jpg"; sourceTree = "<group>"; };
+		20CFAF671739478200BF8529 /* janice-jaffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "janice-jaffee.jpg"; sourceTree = "<group>"; };
+		20CFAF681739478200BF8529 /* srg-contact.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "srg-contact.jpg"; sourceTree = "<group>"; };
+		20CFAF691739478200BF8529 /* CCallahan1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CCallahan1.jpg; sourceTree = "<group>"; };
+		20CFAF6A1739478200BF8529 /* lmondello contact.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "lmondello contact.jpg"; sourceTree = "<group>"; };
+		20CFAF6B1739478200BF8529 /* nancy-jennings contact.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "nancy-jennings contact.jpg"; sourceTree = "<group>"; };
+		20CFAF721739490400BF8529 /* McKContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKContactViewController.m; sourceTree = "<group>"; };
+		20CFAF7417394A2300BF8529 /* McKStaffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKStaffViewController.h; sourceTree = "<group>"; };
+		20CFAF7517394A2300BF8529 /* McKStaffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKStaffViewController.m; sourceTree = "<group>"; };
 		20E6CAA81718E9CE002EFBCE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		31659344171F80100099BC22 /* PartnerInfoFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PartnerInfoFetcher.h; sourceTree = "<group>"; };
 		31659345171F80100099BC22 /* PartnerInfoFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PartnerInfoFetcher.m; sourceTree = "<group>"; };
@@ -190,6 +205,7 @@
 				209858BC171F32EC008CE9EC /* Report Your Service */,
 				209858BD171F3300008CE9EC /* About Section */,
 				208B77D317170CC900E9511B /* McKeenCenterApp-Info.plist */,
+				20CFAF651739471900BF8529 /* Staff Photos */,
 				209858BE171F331F008CE9EC /* JPGs */,
 				203A26091737376E007F39D9 /* events.txt */,
 				203A261E17380AA0007F39D9 /* jobs.txt */,
@@ -275,7 +291,9 @@
 				208B780217173FA100E9511B /* McKFifthViewController.h */,
 				208B780317173FA100E9511B /* McKFifthViewController.m */,
 				20948EEA171C9A3800E194CE /* McKContactViewController.h */,
-				20948EEB171C9A3800E194CE /* McKContactViewController.m */,
+				20CFAF721739490400BF8529 /* McKContactViewController.m */,
+				20CFAF7417394A2300BF8529 /* McKStaffViewController.h */,
+				20CFAF7517394A2300BF8529 /* McKStaffViewController.m */,
 				208B781F1717501F00E9511B /* fifth.png */,
 				208B780D17174A3500E9511B /* fifth@2x.png */,
 			);
@@ -292,6 +310,19 @@
 				20866D28171CEB8700DC0147 /* quadPic.jpg */,
 			);
 			name = JPGs;
+			sourceTree = "<group>";
+		};
+		20CFAF651739471900BF8529 /* Staff Photos */ = {
+			isa = PBXGroup;
+			children = (
+				20CFAF661739478200BF8529 /* sseames contact.jpg */,
+				20CFAF691739478200BF8529 /* CCallahan1.jpg */,
+				20CFAF681739478200BF8529 /* srg-contact.jpg */,
+				20CFAF671739478200BF8529 /* janice-jaffee.jpg */,
+				20CFAF6B1739478200BF8529 /* nancy-jennings contact.jpg */,
+				20CFAF6A1739478200BF8529 /* lmondello contact.jpg */,
+			);
+			name = "Staff Photos";
 			sourceTree = "<group>";
 		};
 		316593B7172096710099BC22 /* Objective-C-HMTL-Parser */ = {
@@ -386,6 +417,12 @@
 				203A260A1737376E007F39D9 /* events.txt in Resources */,
 				203A261F17380AA0007F39D9 /* jobs.txt in Resources */,
 				203A262117380C81007F39D9 /* conferences.txt in Resources */,
+				20CFAF6C1739478200BF8529 /* sseames contact.jpg in Resources */,
+				20CFAF6D1739478200BF8529 /* janice-jaffee.jpg in Resources */,
+				20CFAF6E1739478200BF8529 /* srg-contact.jpg in Resources */,
+				20CFAF6F1739478200BF8529 /* CCallahan1.jpg in Resources */,
+				20CFAF701739478200BF8529 /* lmondello contact.jpg in Resources */,
+				20CFAF711739478200BF8529 /* nancy-jennings contact.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,7 +440,6 @@
 				208B780417173FA100E9511B /* McKFifthViewController.m in Sources */,
 				20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */,
 				20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */,
-				20948EEC171C9A3800E194CE /* McKContactViewController.m in Sources */,
 				31659346171F80100099BC22 /* PartnerInfoFetcher.m in Sources */,
 				316593BD172096710099BC22 /* HTMLNode.m in Sources */,
 				316593BE172096710099BC22 /* HTMLParser.m in Sources */,
@@ -411,6 +447,8 @@
 				203A261417375AC2007F39D9 /* McKEventInfoViewController.m in Sources */,
 				203A261A17380431007F39D9 /* McKSecondViewController.m in Sources */,
 				203A261D173804EC007F39D9 /* McKOpportunityInfo.m in Sources */,
+				20CFAF731739490400BF8529 /* McKContactViewController.m in Sources */,
+				20CFAF7617394A2300BF8529 /* McKStaffViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
