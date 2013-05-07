@@ -25,9 +25,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "277"
-         endingLineNumber = "277"
-         landmarkName = "-alertView:clickedButtonAtIndex:"
-         landmarkType = "5">
+         endingLineNumber = "277">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
