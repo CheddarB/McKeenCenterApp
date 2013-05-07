@@ -35,5 +35,4 @@
 @property (nonatomic) NSString * email;
 @property (nonatomic) NSString * phone;
 
-
 @end

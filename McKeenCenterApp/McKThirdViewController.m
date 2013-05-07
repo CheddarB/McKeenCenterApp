@@ -76,6 +76,7 @@
         locationSelectorVC = (McKLocationSelector*)segue.destinationViewController;
         locationSelectorVC->socialIssue = serviceType;
     }
+
 }
 
 @end
