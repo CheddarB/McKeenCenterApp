@@ -35,7 +35,7 @@
     //NSString* path = [[NSBundle mainBundle] pathForResource:@"social_issues" ofType:@"txt"];
 	
 	//contruct file location on server
-	NSString * serverDirectory = @"http://www.bowdoin.edu/~amdaniel";
+	NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
 	NSString * fileName = @"social_issues.txt";
 	NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 	
