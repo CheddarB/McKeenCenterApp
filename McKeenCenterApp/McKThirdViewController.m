@@ -7,6 +7,7 @@
 //
 // <a href="http://thenounproject.com/noun/handshake/#icon-No767" target="_blank">Handshake</a> designed by <a href="http://thenounproject.com/Jake_Nelsen" target="_blank">Jake Nelsen</a> from The Noun Project
 #import "McKThirdViewController.h"
+#import "McKFileRetriever.h"
 
 @interface McKThirdViewController ()
 
@@ -31,11 +32,21 @@
     [super viewDidLoad];
     serviceIssuesArray = [[NSMutableArray alloc]init];
 
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"social_issues"
-                                                     ofType:@"txt"];
-    NSString *content = [NSString stringWithContentsOfFile:path
-                                                  encoding:NSUTF8StringEncoding
+    //NSString* path = [[NSBundle mainBundle] pathForResource:@"social_issues" ofType:@"txt"];
+	
+	//contruct file location on server
+	NSString * serverDirectory = @"http://www.bowdoin.edu/~amdaniel";
+	NSString * fileName = @"social_issues.txt";
+	NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+	
+	//retrieve the file and get its path
+	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	
+    //grab the contents of the file
+	NSString *content = [NSString stringWithContentsOfFile:path
+												  encoding:NSUTF8StringEncoding
                                                      error:NULL];
+
     NSArray *forDictionary = [content componentsSeparatedByString:@"\n"];
     [serviceIssuesArray addObject:@"all social issues"];
     for (int i = 0; i < forDictionary.count; i++){
