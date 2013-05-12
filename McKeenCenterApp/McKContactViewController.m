@@ -43,7 +43,9 @@
     span.latitudeDelta=STARTING_DELTA;
     span.longitudeDelta=STARTING_DELTA;
     region.span=span;
+	NSLog(@"region:%f,%f",region.center.latitude, region.center.longitude);
     [mapView setRegion:region animated:TRUE];
+	NSLog(@"map:%f,%f",mapView.centerCoordinate.latitude, mapView.centerCoordinate.longitude);
 }
 
 - (void)didReceiveMemoryWarning
