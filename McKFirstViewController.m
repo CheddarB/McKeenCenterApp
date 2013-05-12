@@ -9,6 +9,14 @@
 #import "McKFirstViewController.h"
 #import "McKFileRetriever.h"
 
+#define Red1 180
+#define Green1 200
+#define Blue1 220
+
+#define Red2 150
+#define Blue2 200
+#define Green2 180
+
 @interface McKFirstViewController ()
 
 @end
@@ -100,9 +108,9 @@
     //set alternating grey backgrounds
     UIView* backgroundView = [[UIView alloc]initWithFrame:CGRectZero ];
     if (indexPath.row %2){
-        backgroundView.backgroundColor = [UIColor colorWithRed: 180.0/255.0 green: 200.0/255.0 blue:220.0/255.0 alpha: 1.0];
+        backgroundView.backgroundColor = [UIColor colorWithRed: Red1/255.0 green: Green1/255.0 blue:Blue1/255.0 alpha: 1.0];
     } else
-        backgroundView.backgroundColor = [UIColor colorWithRed: 152.0/255.0 green: 187.0/255.0 blue:228.0/255.0 alpha: 1.0];
+        backgroundView.backgroundColor = [UIColor colorWithRed: Red2/255.0 green: Green2/255.0 blue:Blue2/255.0 alpha: 1.0];
     cell.backgroundView = backgroundView;
     for ( UIView* view in cell.contentView.subviews )
     {
