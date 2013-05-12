@@ -9,6 +9,15 @@
 #import "McKSecondViewController.h"
 #import "McKFileRetriever.h"
 
+#define Red1 180
+#define Green1 220
+#define Blue1 200
+
+#define Red2 150
+#define Blue2 180
+#define Green2 200
+
+
 @interface McKSecondViewController ()
 
 @end
@@ -32,15 +41,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    toggleButtonOutlet.backgroundColor = [UIColor colorWithRed: 188.0/255.0 green: 233.0/255.0 blue:188.0/255.0 alpha: 1.0];
-    //toggleSwitch.backgroundColor = [UIColor colorWithRed: 188.0/255.0 green: 233.0/255.0 blue:188.0/255.0 alpha: 1.0];
+    //toggleButtonOutlet.backgroundColor = [UIColor colorWithRed: 160/255.0 green: 250/255.0 blue:160/255.0 alpha: 1.0];
+    
     [self buildArraysOfJobsAndConferences];
     
 }
 - (void)buildArraysOfJobsAndConferences
 {
-    NSLog(toggleButtonOutlet.currentTitle);
     if ([toggleButtonOutlet.currentTitle isEqual:@"view conferences"]){
+        self.navigationItem.title = @"Jobs and Opportunities";
+
         //contruct file location on server
 		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
 		NSString * fileName = @"jobs.txt";
@@ -76,7 +86,7 @@
         }
          
     } else {
-    
+        self.navigationItem.title = @"Conferences";
 		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
 		NSString * fileName = @"conferences.txt";
 		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
@@ -146,9 +156,9 @@
     //set alternating grey backgrounds
     UIView* backgroundView = [[UIView alloc]initWithFrame:CGRectZero ];
     if (indexPath.row %2){
-        backgroundView.backgroundColor = [UIColor colorWithRed: 160/255.0 green: 250/255.0 blue:160/255.0 alpha: 1.0];
+        backgroundView.backgroundColor = [UIColor colorWithRed: Red1/255.0 green: Green1/255.0 blue: Blue1/255.0 alpha: 1.0];
     } else
-        backgroundView.backgroundColor = [UIColor colorWithRed: 188.0/255.0 green: 233.0/255.0 blue:188.0/255.0 alpha: 1.0];
+        backgroundView.backgroundColor = [UIColor colorWithRed: Red2/255.0 green: Green2/255.0 blue:Blue2/255.0 alpha: 1.0];
     cell.backgroundView = backgroundView;
     for ( UIView* view in cell.contentView.subviews )
     {

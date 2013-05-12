@@ -14,9 +14,6 @@
 @property (nonatomic) NSMutableArray * arrayOfObjects;
 @property (strong, nonatomic) McKOpportunityInfo * oppInfoVC;
 
-//@property (strong, nonatomic) IBOutlet UISegmentedControl *toggleSwitch;
-
-//- (IBAction)switchToggled:(id)sender;
 - (IBAction)toggleModeButton:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UIButton *toggleButtonOutlet;
 
