@@ -45,18 +45,26 @@
 	NSString * fileName = @"events.txt";
 	NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 	
+    
 	//retrieve the file and get its path
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	
+    
     //grab the contents of the file
 	NSString *content = [NSString stringWithContentsOfFile:path
 												  encoding:NSUTF8StringEncoding
                                                      error:NULL];
-	//populate array of events
-	NSArray *nonMutableArrayOfEvents = [content componentsSeparatedByString:@"\n\n"];
+	
+   // printf("%s", [content UTF8String]);
+
+    //populate array of events
+	NSArray *nonMutableArrayOfEvents = [content componentsSeparatedByString:@"~~"];
 	 
+    
+    printf("\n%d\n", [nonMutableArrayOfEvents count]);
+
     //make arrayOfEvents a 2D array
     arrayOfEvents = [nonMutableArrayOfEvents mutableCopy];
     for (int i = 0; i < [arrayOfEvents count]; i++){
@@ -64,14 +72,14 @@
         NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
         [arrayOfEvents replaceObjectAtIndex:i withObject:subArray];
     }
-/*
+
     for (int i = 0; i < [arrayOfEvents count]; i++){
         for (int j = 0; j < [[arrayOfEvents objectAtIndex:i] count]; j++){
             printf("(%d, %d) %s\n",i,j, [[[arrayOfEvents objectAtIndex:i] objectAtIndex:j ] UTF8String]);
         }
         printf("\n");
     }
-*/
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -1103,9 +1103,9 @@ McKeen Center Goals
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="coh-xO-NAd"/>
-        <segue reference="GDz-2H-9mK"/>
         <segue reference="Ua3-yi-iXF"/>
+        <segue reference="GDz-2H-9mK"/>
         <segue reference="VSE-Ri-cDe"/>
+        <segue reference="dP9-Wp-Gbo"/>
     </inferredMetricsTieBreakers>
 </document>

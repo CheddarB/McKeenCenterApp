@@ -20,9 +20,6 @@
 		20866D2E171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */; };
 		20866D2F171CEBFE00DC0147 /* doorDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2C171CEBFE00DC0147 /* doorDark.jpg */; };
 		20866D30171CEBFE00DC0147 /* doorLight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20866D2D171CEBFE00DC0147 /* doorLight.jpg */; };
-		20866D34171CF14300DC0147 /* locations.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20866D31171CF14300DC0147 /* locations.txt */; };
-		20866D35171CF14300DC0147 /* partnerships.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20866D32171CF14300DC0147 /* partnerships.txt */; };
-		20866D36171CF14300DC0147 /* social_issues.txt in Resources */ = {isa = PBXBuildFile; fileRef = 20866D33171CF14300DC0147 /* social_issues.txt */; };
 		208B77CC17170CC900E9511B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CB17170CC900E9511B /* UIKit.framework */; };
 		208B77CE17170CC900E9511B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CD17170CC900E9511B /* Foundation.framework */; };
 		208B77D017170CC900E9511B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 208B77CF17170CC900E9511B /* CoreGraphics.framework */; };
@@ -61,9 +58,6 @@
 		316593BF172096710099BC22 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 316593BC172096710099BC22 /* README.md */; };
 		316593C11720A3D30099BC22 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 316593C01720A3D30099BC22 /* libxml2.dylib */; };
 		31668AC7173B40020078F45F /* McKFileRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 31668AC6173B40020078F45F /* McKFileRetriever.m */; };
-		31D909E8173B3208004C71E4 /* conferences.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31D909E7173B3208004C71E4 /* conferences.txt */; };
-		31D909EA173B3214004C71E4 /* jobs.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31D909E9173B3214004C71E4 /* jobs.txt */; };
-		31D909EC173B321B004C71E4 /* events.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31D909EB173B321B004C71E4 /* events.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,9 +79,6 @@
 		20866D2B171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "3-bowdoin-chapel.jpg"; sourceTree = "<group>"; };
 		20866D2C171CEBFE00DC0147 /* doorDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doorDark.jpg; sourceTree = "<group>"; };
 		20866D2D171CEBFE00DC0147 /* doorLight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = doorLight.jpg; sourceTree = "<group>"; };
-		20866D31171CF14300DC0147 /* locations.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = locations.txt; sourceTree = "<group>"; };
-		20866D32171CF14300DC0147 /* partnerships.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = partnerships.txt; sourceTree = "<group>"; };
-		20866D33171CF14300DC0147 /* social_issues.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = social_issues.txt; sourceTree = "<group>"; };
 		208B77C817170CC900E9511B /* McKeenCenterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = McKeenCenterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208B77CB17170CC900E9511B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		208B77CD17170CC900E9511B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,9 +132,6 @@
 		316593C01720A3D30099BC22 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		31668AC5173B40020078F45F /* McKFileRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKFileRetriever.h; sourceTree = "<group>"; };
 		31668AC6173B40020078F45F /* McKFileRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKFileRetriever.m; sourceTree = "<group>"; };
-		31D909E7173B3208004C71E4 /* conferences.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = conferences.txt; sourceTree = "<group>"; };
-		31D909E9173B3214004C71E4 /* jobs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jobs.txt; sourceTree = "<group>"; };
-		31D909EB173B321B004C71E4 /* events.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = events.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,12 +198,6 @@
 				208B77D317170CC900E9511B /* McKeenCenterApp-Info.plist */,
 				20CFAF651739471900BF8529 /* Staff Photos */,
 				209858BE171F331F008CE9EC /* JPGs */,
-				20866D31171CF14300DC0147 /* locations.txt */,
-				31D909EB173B321B004C71E4 /* events.txt */,
-				31D909E9173B3214004C71E4 /* jobs.txt */,
-				31D909E7173B3208004C71E4 /* conferences.txt */,
-				20866D33171CF14300DC0147 /* social_issues.txt */,
-				20866D32171CF14300DC0147 /* partnerships.txt */,
 				208B77D217170CC900E9511B /* Supporting Files */,
 				31668AC5173B40020078F45F /* McKFileRetriever.h */,
 				31668AC6173B40020078F45F /* McKFileRetriever.m */,
@@ -415,9 +397,6 @@
 				20866D2E171CEBFE00DC0147 /* 3-bowdoin-chapel.jpg in Resources */,
 				20866D2F171CEBFE00DC0147 /* doorDark.jpg in Resources */,
 				20866D30171CEBFE00DC0147 /* doorLight.jpg in Resources */,
-				20866D34171CF14300DC0147 /* locations.txt in Resources */,
-				20866D35171CF14300DC0147 /* partnerships.txt in Resources */,
-				20866D36171CF14300DC0147 /* social_issues.txt in Resources */,
 				316593BF172096710099BC22 /* README.md in Resources */,
 				20CFAF6C1739478200BF8529 /* sseames contact.jpg in Resources */,
 				20CFAF6D1739478200BF8529 /* janice-jaffee.jpg in Resources */,
@@ -425,9 +404,6 @@
 				20CFAF6F1739478200BF8529 /* CCallahan1.jpg in Resources */,
 				20CFAF701739478200BF8529 /* lmondello contact.jpg in Resources */,
 				20CFAF711739478200BF8529 /* nancy-jennings contact.jpg in Resources */,
-				31D909E8173B3208004C71E4 /* conferences.txt in Resources */,
-				31D909EA173B3214004C71E4 /* jobs.txt in Resources */,
-				31D909EC173B321B004C71E4 /* events.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
