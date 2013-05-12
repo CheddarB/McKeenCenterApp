@@ -319,7 +319,8 @@
 		[actionSheet showInView:[self.view window]];
 	}else if ((actionSheetMode > 0) && (actionSheetMode < 4)){
         if ([programEmail length]){
-            printf("actionsheet email\n");
+            //email
+			[self sendEmail];
         } else if ([programPhoneNumber length]){
 			//call
 			NSURL * phoneNumber = [NSURL URLWithString:@"tel://8608827388"];
@@ -331,29 +332,33 @@
     } else if ((actionSheetMode > 3) && (actionSheetMode < 7)){
         if (![programEmail length]){
             if (buttonIndex == 0){
-                printf("action sheet call\n");
+				//*phone*
             } else{
 				//open site
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
 			}
         } else if (![programPhoneNumber length]){
             if (buttonIndex == 0){
-                printf("action sheet email\n");
+				//email
+				[self sendEmail];
             } else{
 				//open site
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
 			}
         } else if (![programWebsite length]){
             if (buttonIndex == 0){
-                printf("action sheet email\n");
+				//email
+				[self sendEmail];
             } else{
-				printf("action sheet call\n");
+				//*phone*
 			}
         }
     } else if (actionSheetMode == 7){
         if (buttonIndex == 0){
-            printf("action sheet email");
+			//email
+			[self sendEmail];
         } else if (buttonIndex == 1){
+			//*phone*
             printf("actionsheet phone\n");
         } else {
 			printf("actionsheet website\n %s",[programWebsite UTF8String]);
@@ -461,5 +466,36 @@
         } else return true;
         return false;
     }else return true;
+}
+
+//MFMailComposeViewControllerDelegate method
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+	if (result==MFMailComposeResultSent) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sent!"
+														message:@"Your message was sent successfully"
+													   delegate:nil
+											  cancelButtonTitle:@"OK"
+											  otherButtonTitles:nil];
+		[alert show];
+	}
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+//open window to send an email to programEmail
+- (void)sendEmail{
+	if ([MFMailComposeViewController canSendMail]) {
+		//setup mailViewController
+		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+		mailViewController.mailComposeDelegate = self;
+		
+		//set fields of message
+		NSArray *toRecipients = [[NSArray alloc]initWithObjects:programEmail, nil];
+		[mailViewController setToRecipients:toRecipients];
+		
+		//present mail interface
+		[self presentViewController:mailViewController animated:YES completion:nil];
+	}else {
+		NSLog(@"Device is unable to send email in its current state.");
+	}
 }
 @end

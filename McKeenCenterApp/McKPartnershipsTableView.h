@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "McKThirdViewController.h"
 #import "PartnerInfoFetcher.h"
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface McKPartnershipsTableView : UITableViewController<UIActionSheetDelegate>{
+@interface McKPartnershipsTableView : UITableViewController<UIActionSheetDelegate, MFMailComposeViewControllerDelegate>{
 @public
     NSString *specificSocialIssue;
     NSString *specificLocation;
