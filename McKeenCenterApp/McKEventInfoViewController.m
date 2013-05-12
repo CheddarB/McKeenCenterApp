@@ -36,18 +36,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    signupButton.hidden = YES;
     [eventTitle setText: [[eventInfo objectAtIndex:cellSelected]objectAtIndex:0 ]];
     [eventSubtitle setText: [[eventInfo objectAtIndex:cellSelected]objectAtIndex:1 ]];
+
+    if ([[[eventInfo objectAtIndex:cellSelected]objectAtIndex:1 ]characterAtIndex:0] == '('){
+        [eventSubtitle setText:@""];
+    }
     if ([[eventInfo objectAtIndex:cellSelected]count] > 2){
         [eventDetails setText: [[eventInfo objectAtIndex:cellSelected]objectAtIndex:2]];
     } else [eventDetails setText:@"There is no additional information about this event. Please contact the McKeenCenter for more information."];
-    if ([[eventInfo objectAtIndex:cellSelected]count] > 3){
+    if ([[eventInfo objectAtIndex:cellSelected]objectAtIndex:2]){
         char buttonMode = [[[eventInfo objectAtIndex:cellSelected]objectAtIndex:3]characterAtIndex:0];
-        if ((buttonMode == 'n') || (buttonMode == 'N')){
-            signupButton.hidden = YES;
-        }
+        if ((buttonMode == 'y') || (buttonMode == 'Y')){
+            signupButton.hidden = NO;
+        } else signupButton.hidden = YES;
     } else signupButton.hidden = YES;
+
 
 }
 

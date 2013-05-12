@@ -18,7 +18,7 @@
 @synthesize arrayOfObjects;
 @synthesize oppInfoVC;
 
-@synthesize toggleSwitch;
+@synthesize toggleButtonOutlet;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,23 +32,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    toggleSwitch.backgroundColor = [UIColor colorWithRed: 188.0/255.0 green: 233.0/255.0 blue:188.0/255.0 alpha: 1.0];
+    toggleButtonOutlet.backgroundColor = [UIColor colorWithRed: 188.0/255.0 green: 233.0/255.0 blue:188.0/255.0 alpha: 1.0];
+    //toggleSwitch.backgroundColor = [UIColor colorWithRed: 188.0/255.0 green: 233.0/255.0 blue:188.0/255.0 alpha: 1.0];
     [self buildArraysOfJobsAndConferences];
     
 }
 - (void)buildArraysOfJobsAndConferences
 {
-    if (toggleSwitch.selectedSegmentIndex == 0){
-        //read from events file
-        /*
-		NSString* path = [[NSBundle mainBundle] pathForResource:@"jobs"
-                                                         ofType:@"txt"];
-        NSString *content = [NSString stringWithContentsOfFile:path
-                                                      encoding:NSUTF8StringEncoding
-                                                         error:NULL];
-		*/
-		
-		//contruct file location on server
+    NSLog(toggleButtonOutlet.currentTitle);
+    if ([toggleButtonOutlet.currentTitle isEqual:@"view conferences"]){
+        //contruct file location on server
 		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
 		NSString * fileName = @"jobs.txt";
 		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
@@ -61,8 +54,9 @@
 													  encoding:NSUTF8StringEncoding
 														 error:NULL];
         
-		NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"\n\n"];
+		NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"~"];
         
+        printf("###%d###", [nonMutableArrayOfJobs count]);
 		//make arrayOfEvents a 2D array
         arrayOfObjects = [nonMutableArrayOfJobs mutableCopy];
         for (int i = 0; i < [arrayOfObjects count]; i++){
@@ -70,7 +64,7 @@
             NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
             [arrayOfObjects replaceObjectAtIndex:i withObject:subArray];
         }
-        /*
+        
         printf("JOBS:\n");
         for (int i = 0; i < [arrayOfObjects count]; i++){
             for (int j = 0; j < [[arrayOfObjects objectAtIndex:i] count]; j++){
@@ -78,17 +72,9 @@
             }
             printf("\n");
         }
-         */
+         
     } else {
-        /*
-		NSString* path = [[NSBundle mainBundle] pathForResource:@"conferences"
-                                                         ofType:@"txt"];
-        NSString *content = [NSString stringWithContentsOfFile:path
-                                                      encoding:NSUTF8StringEncoding
-                                                         error:NULL];
-		*/
-		
-		//contruct file location on server
+    
 		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
 		NSString * fileName = @"conferences.txt";
 		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
@@ -101,7 +87,7 @@
 													  encoding:NSUTF8StringEncoding
 														 error:NULL];
 		//put conferences into array
-        NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"\n\n"];
+        NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"~"];
         //make arrayOfEvents a 2D array
         arrayOfObjects = [nonMutableArrayOfJobs mutableCopy];
         for (int i = 0; i < [arrayOfObjects count]; i++){
@@ -170,63 +156,8 @@
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
-
-- (IBAction)switchToggled:(id)sender {
-    [self buildArraysOfJobsAndConferences];
-    [self.tableView reloadData];
-}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -236,5 +167,13 @@
         oppInfoVC.oppInfo = arrayOfObjects;
         oppInfoVC.cellSelected = self.tableView.indexPathForSelectedRow.row;
     }
+}
+- (IBAction)toggleModeButton:(UIButton *)sender {
+    if ([toggleButtonOutlet.currentTitle isEqual:@"view conferences"]){
+        [toggleButtonOutlet setTitle:@"view jobs and opportunities" forState:UIControlStateNormal];
+    } else [toggleButtonOutlet setTitle:@"view conferences" forState:UIControlStateNormal];
+    [self buildArraysOfJobsAndConferences];
+    [self.tableView reloadData];
+
 }
 @end

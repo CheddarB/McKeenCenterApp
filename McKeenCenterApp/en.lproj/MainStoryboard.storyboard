@@ -554,17 +554,21 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="6cR-Un-HWN">
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nTY-ZX-aju">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Jobs/Internships"/>
-                                <segment title="Conferences"/>
-                            </segments>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <state key="normal" title="view conferences">
+                                <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
                             <connections>
-                                <action selector="switchToggled:" destination="4ah-Qi-Wuw" eventType="valueChanged" id="oj7-9F-Rbf"/>
+                                <action selector="toggleModeButton:" destination="4ah-Qi-Wuw" eventType="touchUpInside" id="bJW-2x-r5a"/>
                             </connections>
-                        </segmentedControl>
+                        </button>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OpportunityCell" textLabel="33f-9H-M0e" detailTextLabel="LaE-s2-zDh" rowHeight="80" style="IBUITableViewCellStyleSubtitle" id="c2q-9i-J2I">
                                 <rect key="frame" x="0.0" y="66" width="320" height="80"/>
@@ -598,7 +602,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Professional Opportunities" id="i4L-DW-Df1"/>
                     <connections>
-                        <outlet property="toggleSwitch" destination="6cR-Un-HWN" id="pBX-pg-3nU"/>
+                        <outlet property="toggleButtonOutlet" destination="nTY-ZX-aju" id="dYe-k7-Ney"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFN-fd-8v6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1097,6 +1101,84 @@ McKeen Center Goals
         <image name="sseames contact.jpg" width="165" height="190"/>
         <image name="third.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="McKContactViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKContactViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="phoneButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="McKEventInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKEventInfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="signUp:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="eventDetails" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="eventSubtitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="eventTitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="McKFifthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFifthViewController.h"/>
+        </class>
+        <class className="McKFirstViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFirstViewController.h"/>
+        </class>
+        <class className="McKFourthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFourthViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="submitButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="feedbackTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="fourthView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="programTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="throughMkC" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="McKLocationSelector" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKLocationSelector.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locationPicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="McKOpportunityInfo" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKOpportunityInfo.h"/>
+            <relationships>
+                <relationship kind="action" name="signUpButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="opportunityInformation" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="opportunitySubtitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="opportunityTitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="McKPartnershipsTableView" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKPartnershipsTableView.h"/>
+        </class>
+        <class className="McKSecondViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKSecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleModeButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="toggleButtonOutlet" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="McKStaffViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKStaffViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="emailButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="staffScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="McKThirdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKThirdViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="servicePicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -31,38 +31,21 @@
 {
     [super viewDidLoad];
     
-    //read from events file
-    /*
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"events"
-                                                     ofType:@"txt"];
-    NSString *content = [NSString stringWithContentsOfFile:path
-                                                  encoding:NSUTF8StringEncoding
-                                                     error:NULL];
-	 */
-	
-	//contruct file location on server
+    //contruct file location on server
 	NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
 	NSString * fileName = @"events.txt";
 	NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 	
-    
 	//retrieve the file and get its path
 	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
 	
-    
     //grab the contents of the file
 	NSString *content = [NSString stringWithContentsOfFile:path
 												  encoding:NSUTF8StringEncoding
                                                      error:NULL];
-	
-   // printf("%s", [content UTF8String]);
-
-    //populate array of events
-	NSArray *nonMutableArrayOfEvents = [content componentsSeparatedByString:@"~~"];
+	//populate array of events
+	NSArray *nonMutableArrayOfEvents = [content componentsSeparatedByString:@"~"];
 	 
-    
-    printf("\n%d\n", [nonMutableArrayOfEvents count]);
-
     //make arrayOfEvents a 2D array
     arrayOfEvents = [nonMutableArrayOfEvents mutableCopy];
     for (int i = 0; i < [arrayOfEvents count]; i++){
@@ -70,14 +53,14 @@
         NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
         [arrayOfEvents replaceObjectAtIndex:i withObject:subArray];
     }
-
+/*
     for (int i = 0; i < [arrayOfEvents count]; i++){
         for (int j = 0; j < [[arrayOfEvents objectAtIndex:i] count]; j++){
             printf("(%d, %d) %s\n",i,j, [[[arrayOfEvents objectAtIndex:i] objectAtIndex:j ] UTF8String]);
         }
         printf("\n");
     }
-
+*/
 }
 
 - (void)didReceiveMemoryWarning

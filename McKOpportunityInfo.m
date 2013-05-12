@@ -35,16 +35,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    signupButton.hidden = YES;
     [opportunityTitle setText: [[oppInfo objectAtIndex:cellSelected]objectAtIndex:0 ]];
-    [opportunitySubtitle setText: [[oppInfo objectAtIndex:cellSelected]objectAtIndex:1 ]];
+    [opportunitySubtitle setText: [[oppInfo objectAtIndex:cellSelected]objectAtIndex:1 ]];    
+    if ([[[oppInfo objectAtIndex:cellSelected]objectAtIndex:1 ]characterAtIndex:0] == '('){
+        [opportunitySubtitle setText:@""];
+    }
+
     if ([[oppInfo objectAtIndex:cellSelected]count] > 2){
         [opportunityInformation setText: [[oppInfo objectAtIndex:cellSelected]objectAtIndex:2]];
     } else [opportunityInformation setText:@"There is no additional information about this opportunity. Please contact the McKeenCenter for more information."];
-    if ([[oppInfo objectAtIndex:cellSelected]count] > 3){
+    if ([[oppInfo objectAtIndex:cellSelected]objectAtIndex:2]){
         char buttonMode = [[[oppInfo objectAtIndex:cellSelected]objectAtIndex:3]characterAtIndex:0];
-        if ((buttonMode == 'n') || (buttonMode == 'N')){
-            signupButton.hidden = YES;
-        }
+        if ((buttonMode == 'y') || (buttonMode == 'Y')){
+            signupButton.hidden = NO;
+        } else signupButton.hidden = YES;
     } else signupButton.hidden = YES;
 }
 

@@ -60,8 +60,6 @@
 	NSString *content = [NSString stringWithContentsOfFile:path
 												  encoding:NSUTF8StringEncoding
                                                      error:NULL];
-    /* NSString* path = [[NSBundle mainBundle] pathForResource:@"partnerships" ofType:@"txt"];
-     NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]; */
     
 	programTitles = [content componentsSeparatedByString:@"\n"];
     
@@ -79,8 +77,7 @@
 	content = [NSString stringWithContentsOfFile:path
 										encoding:NSUTF8StringEncoding
 										   error:NULL];
-    /*path = [[NSBundle mainBundle] pathForResource:@"social_issues" ofType:@"txt"];
-     content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];*/
+
     
 	socialIssues = [content componentsSeparatedByString:@"\n"];
 	
@@ -89,7 +86,7 @@
     //read locations in the array locations
 	
 	//contruct file location on server
-	fileName = @"social_issues.txt";
+	fileName = @"locations.txt";
 	fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 	
 	//retrieve the file and get its path
@@ -99,8 +96,6 @@
 	content = [NSString stringWithContentsOfFile:path
 										encoding:NSUTF8StringEncoding
 										   error:NULL];
-    /*path = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"txt"];
-     content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];*/
     
 	locations = [content componentsSeparatedByString:@"\n"];
 	
@@ -198,11 +193,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[allPrograms objectForKey:[[[allPrograms allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] objectAtIndex:section]] count];
-    
-    // number of objects in allprograms object at (sectionth key)
-    //returned the number of objects in an array for a certain key
-    
+    return [[allPrograms objectForKey:[[[allPrograms allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] objectAtIndex:section]] count];    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -298,7 +289,7 @@
         }
     }
     
-    printf("number of button: %d in mode %d\n\n", numberOfButtons, actionSheetMode);
+    printf("number of button: %d in mode %d\n", numberOfButtons, actionSheetMode);
     
     UIActionSheet *actionSheet = [self buildActionSheetWithProgramTitle:programName];
     
