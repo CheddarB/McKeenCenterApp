@@ -7,6 +7,7 @@
 //
 
 #import "McKLocationSelector.h"
+#import "McKFileRetriever.h"
 
 @interface McKLocationSelector ()
 
@@ -30,13 +31,30 @@
     [super viewDidLoad];
     locationsArray = [[NSMutableArray alloc]init];
     
+	/*
     NSString* path = [[NSBundle mainBundle] pathForResource:@"locations"
                                                      ofType:@"txt"];
     NSString *content = [NSString stringWithContentsOfFile:path
                                                   encoding:NSUTF8StringEncoding
+                                                     error:NULL]; */
+	
+	//contruct file location on server
+	NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
+	NSString * fileName = @"locations.txt";
+	NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+	
+	//retrieve the file and get its path
+	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	
+    //grab the contents of the file
+	NSString *content = [NSString stringWithContentsOfFile:path
+												  encoding:NSUTF8StringEncoding
                                                      error:NULL];
-    NSArray *forDictionary = [content componentsSeparatedByString:@"\n"];
-    [locationsArray addObject:@"all locations"];
+	
+	//create dictionary for raw locations from file
+	NSArray *forDictionary = [content componentsSeparatedByString:@"\n"];
+    
+	[locationsArray addObject:@"all locations"];
     for (int i = 0; i < forDictionary.count; i++){
         [locationsArray addObject:[forDictionary objectAtIndex:i]];
     }

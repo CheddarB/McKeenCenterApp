@@ -48,7 +48,7 @@
 	
 	if([section children] && [[section children] count] >= 1){
 		HTMLNode * siteNode = [section children][0];
-		self.site = [siteNode allContents];
+		//self.site = [siteNode allContents];
 		
 		//add to data array if not nil
 		if ([siteNode allContents]) {
@@ -61,7 +61,7 @@
 			if([addressNode children] && [[addressNode children] count] >= 1){
 				//name
 				HTMLNode * nameNode = [addressNode children][0];
-				self.name = [nameNode contents];
+				//self.name = [nameNode contents];
 				
 				if ([nameNode contents]) {
 					[data addObject:[nameNode contents]];
@@ -70,7 +70,7 @@
 				if([nameNode children] && [[nameNode children] count] >= 2){
 					//street
 					HTMLNode * streetNode = [nameNode children][1];
-					self.street = [streetNode contents];
+					//self.street = [streetNode contents];
 					if ([streetNode contents]) {
 						[data addObject:[streetNode contents]];
 					}
@@ -80,7 +80,7 @@
 					if([streetNode children] && [[streetNode children] count] >= 3){
 						//town
 						HTMLNode * townNode = [streetNode children][2];
-						self.town = [PartnerInfoFetcher fixTown:[townNode allContents]];
+						//self.town = [PartnerInfoFetcher fixTown:[townNode allContents]];
 						
 						if ([townNode allContents]) {
 							[data addObject:[townNode allContents]];
@@ -89,7 +89,7 @@
 						if ([[streetNode children] count] >= 5) {
 							//phone
 							HTMLNode * emailNode = [streetNode children][4];
-							self.email = [emailNode allContents];
+							//self.email = [emailNode allContents];
 							
 							if ([emailNode allContents]) {
 								[data addObject:[emailNode allContents]];
@@ -98,7 +98,7 @@
 							if ([[streetNode children] count] >= 7) {
 								//phone
 								HTMLNode * phoneNode = [streetNode children][6];
-								self.phone = [phoneNode allContents];
+								//self.phone = [phoneNode allContents];
 								
 								if ([phoneNode allContents]) {
 									[data addObject:[phoneNode allContents]];

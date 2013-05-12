@@ -10,6 +10,7 @@
 
 #import "McKPartnershipsTableView.h"
 #import "PartnerInfoFetcher.h"
+#import "McKFileRetriever.h"
 
 
 @interface McKPartnershipsTableView ()
@@ -44,22 +45,65 @@
     selectPrograms =[[NSMutableDictionary alloc]init];
     allPrograms = [[NSDictionary alloc]init];
     //read parnerships file in programTitles
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"partnerships" ofType:@"txt"];
-    NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
-    programTitles = [content componentsSeparatedByString:@"\n"];
+	
+	//contruct file location on server
+	NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
+	NSString * fileName = @"partnerships.txt";
+	NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+	
+	//retrieve the file and get its path
+	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	
+    //grab the contents of the file
+	NSString *content = [NSString stringWithContentsOfFile:path
+												  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+   /* NSString* path = [[NSBundle mainBundle] pathForResource:@"partnerships" ofType:@"txt"];
+    NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]; */
     
-    //read social_issues into socailIssues
-    path = [[NSBundle mainBundle] pathForResource:@"social_issues" ofType:@"txt"];
+	programTitles = [content componentsSeparatedByString:@"\n"];
     
-    content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
-    socialIssues = [content componentsSeparatedByString:@"\n"];
+    
+	
+	//read social_issues into socialIssues
+	//contruct file location on server
+	fileName = @"social_issues.txt";
+	fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+	
+	//retrieve the file and get its path
+	path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	
+    //grab the contents of the file
+	content = [NSString stringWithContentsOfFile:path
+										encoding:NSUTF8StringEncoding
+										   error:NULL];
+    /*path = [[NSBundle mainBundle] pathForResource:@"social_issues" ofType:@"txt"];
+    content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];*/
+    
+	socialIssues = [content componentsSeparatedByString:@"\n"];
+	
+	
     
     //read locations in the array locations
-    path = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"txt"];
-    content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
-    locations = [content componentsSeparatedByString:@"\n"];
+	
+	//contruct file location on server
+	fileName = @"social_issues.txt";
+	fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+	
+	//retrieve the file and get its path
+	path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	
+    //grab the contents of the file
+	content = [NSString stringWithContentsOfFile:path
+										encoding:NSUTF8StringEncoding
+										   error:NULL];
+    /*path = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"txt"];
+    content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];*/
+    
+	locations = [content componentsSeparatedByString:@"\n"];
+	
     [self initDictionaryAndFinishInit];
-    }
+}
 
 - (void)didReceiveMemoryWarning
 {
