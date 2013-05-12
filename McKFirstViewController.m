@@ -7,6 +7,7 @@
 //
 
 #import "McKFirstViewController.h"
+#import "McKFileRetriever.h"
 
 @interface McKFirstViewController ()
 
@@ -31,13 +32,29 @@
     [super viewDidLoad];
     
     //read from events file
-    
+    /*
     NSString* path = [[NSBundle mainBundle] pathForResource:@"events"
                                                      ofType:@"txt"];
     NSString *content = [NSString stringWithContentsOfFile:path
                                                   encoding:NSUTF8StringEncoding
                                                      error:NULL];
-    NSArray *nonMutableArrayOfEvents = [content componentsSeparatedByString:@"\n\n"];
+	 */
+	
+	//contruct file location on server
+	NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
+	NSString * fileName = @"events.txt";
+	NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+	
+	//retrieve the file and get its path
+	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	
+    //grab the contents of the file
+	NSString *content = [NSString stringWithContentsOfFile:path
+												  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
+	//populate array of events
+	NSArray *nonMutableArrayOfEvents = [content componentsSeparatedByString:@"\n\n"];
+	 
     //make arrayOfEvents a 2D array
     arrayOfEvents = [nonMutableArrayOfEvents mutableCopy];
     for (int i = 0; i < [arrayOfEvents count]; i++){

@@ -7,6 +7,7 @@
 //
 
 #import "McKSecondViewController.h"
+#import "McKFileRetriever.h"
 
 @interface McKSecondViewController ()
 
@@ -39,13 +40,30 @@
 {
     if (toggleSwitch.selectedSegmentIndex == 0){
         //read from events file
-        NSString* path = [[NSBundle mainBundle] pathForResource:@"jobs"
+        /*
+		NSString* path = [[NSBundle mainBundle] pathForResource:@"jobs"
                                                          ofType:@"txt"];
         NSString *content = [NSString stringWithContentsOfFile:path
                                                       encoding:NSUTF8StringEncoding
                                                          error:NULL];
-        NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"\n\n"];
-        //make arrayOfEvents a 2D array
+		*/
+		
+		//contruct file location on server
+		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
+		NSString * fileName = @"jobs.txt";
+		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+		
+		//retrieve the file and get its path
+		NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+		
+		//grab the contents of the file
+		NSString *content = [NSString stringWithContentsOfFile:path
+													  encoding:NSUTF8StringEncoding
+														 error:NULL];
+        
+		NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"\n\n"];
+        
+		//make arrayOfEvents a 2D array
         arrayOfObjects = [nonMutableArrayOfJobs mutableCopy];
         for (int i = 0; i < [arrayOfObjects count]; i++){
             NSString *eventInfo = [arrayOfObjects objectAtIndex:i];
@@ -62,11 +80,27 @@
         }
          */
     } else {
-        NSString* path = [[NSBundle mainBundle] pathForResource:@"conferences"
+        /*
+		NSString* path = [[NSBundle mainBundle] pathForResource:@"conferences"
                                                          ofType:@"txt"];
         NSString *content = [NSString stringWithContentsOfFile:path
                                                       encoding:NSUTF8StringEncoding
                                                          error:NULL];
+		*/
+		
+		//contruct file location on server
+		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
+		NSString * fileName = @"conferences.txt";
+		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+		
+		//retrieve the file and get its path
+		NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+		
+		//grab the contents of the file
+		NSString *content = [NSString stringWithContentsOfFile:path
+													  encoding:NSUTF8StringEncoding
+														 error:NULL];
+		//put conferences into array
         NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"\n\n"];
         //make arrayOfEvents a 2D array
         arrayOfObjects = [nonMutableArrayOfJobs mutableCopy];
