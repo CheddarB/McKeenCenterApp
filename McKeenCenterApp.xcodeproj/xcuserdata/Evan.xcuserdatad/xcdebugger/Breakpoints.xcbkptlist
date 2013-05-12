@@ -16,16 +16,5 @@
          landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "McKeenCenterApp/McKPartnershipsTableView.m"
-         timestampString = "388955423.001091"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "277"
-         endingLineNumber = "277">
-      </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

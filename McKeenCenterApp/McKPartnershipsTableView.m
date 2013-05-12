@@ -19,6 +19,8 @@
 
 @implementation McKPartnershipsTableView
 
+@synthesize actionSheetMode;
+
 @synthesize selectPrograms;
 @synthesize allPrograms;
 @synthesize socialIssues;
@@ -41,7 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     selectPrograms =[[NSMutableDictionary alloc]init];
     allPrograms = [[NSDictionary alloc]init];
     //read parnerships file in programTitles
@@ -58,8 +60,8 @@
 	NSString *content = [NSString stringWithContentsOfFile:path
 												  encoding:NSUTF8StringEncoding
                                                      error:NULL];
-   /* NSString* path = [[NSBundle mainBundle] pathForResource:@"partnerships" ofType:@"txt"];
-    NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]; */
+    /* NSString* path = [[NSBundle mainBundle] pathForResource:@"partnerships" ofType:@"txt"];
+     NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL]; */
     
 	programTitles = [content componentsSeparatedByString:@"\n"];
     
@@ -78,7 +80,7 @@
 										encoding:NSUTF8StringEncoding
 										   error:NULL];
     /*path = [[NSBundle mainBundle] pathForResource:@"social_issues" ofType:@"txt"];
-    content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];*/
+     content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];*/
     
 	socialIssues = [content componentsSeparatedByString:@"\n"];
 	
@@ -98,7 +100,7 @@
 										encoding:NSUTF8StringEncoding
 										   error:NULL];
     /*path = [[NSBundle mainBundle] pathForResource:@"locations" ofType:@"txt"];
-    content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];*/
+     content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];*/
     
 	locations = [content componentsSeparatedByString:@"\n"];
 	
@@ -118,7 +120,7 @@
     NSMutableArray *keys = [[NSMutableArray alloc]init];
     NSMutableArray *objects = [[NSMutableArray alloc]init];
     NSMutableArray * objectsForOneKey = [[NSMutableArray alloc]init];
-
+    
     //sdfsdf
     int specificLocationKey = 0;
     int specificSocialIssueKey = 0;
@@ -176,7 +178,7 @@
     allPrograms = [NSDictionary dictionaryWithObjects:nonMutableObjecs
                                               forKeys:nonMutableKeys];
     //dictionary made with first letter as Key and array of strings as each Object
-
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -220,10 +222,10 @@
     int locationIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-6, 2)] intValue];
     NSString *socialIssue = [[NSString alloc]init];
     NSString *location = [[NSString alloc]init];
-
+    
     if ([programName characterAtIndex:programName.length-4] == ','){
-    socialIssue = [socialIssues objectAtIndex:(socialIdentifier-1)];
-    location = [locations objectAtIndex:locationIdentifier-1];
+        socialIssue = [socialIssues objectAtIndex:(socialIdentifier-1)];
+        location = [locations objectAtIndex:locationIdentifier-1];
     }
     if ([programName characterAtIndex:programName.length-4] == ','){
         cell.detailTextLabel.text = [[socialIssue stringByAppendingString:@", "] stringByAppendingString:location];
@@ -241,7 +243,9 @@
 }
 
 #pragma mark - Table view delegate
-//make popover viewcontroller
+
+
+//make uiaction sheet for selected program
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString * headerTitle = [self tableView:tableView titleForHeaderInSection:indexPath.section];
@@ -251,145 +255,164 @@
     int urlID = [[programName substringFromIndex:[programName length]-3] intValue];
     if ([programName characterAtIndex:programName.length-4] == ',')
         programName = [programName substringToIndex:(programName.length-9)];
-
-
-    //UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 	
 	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:urlID];
 	
-    
-    
-	//alert 
     int numberOfButtons = 0;
-    NSString *buttonOne = nil;
-    NSString *buttonTwo = nil;
-    NSString *buttonThree = nil;
     
-    programEmail = nil;
-   programPhoneNumber = @"2345";
-   programWebsite = @"sadfasdf.com";
     
-    if (programEmail){
+    programEmail = infoFetcher.email;
+    programEmail = [infoFetcher getEmail];
+    [programEmail stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    programPhoneNumber = infoFetcher.phone;
+    [programPhoneNumber stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    programWebsite = infoFetcher.site;
+    [programWebsite stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    programWebsite = [programWebsite stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    programWebsite = [programWebsite stringByReplacingOccurrencesOfString:@" " withString:@""];
+    programWebsite = [infoFetcher getSite];
+    
+    
+    printf("email, phone, web: \nE: %s\nP: %s\nWS: --%s--\n", [programEmail UTF8String], [programPhoneNumber UTF8String], [programWebsite UTF8String]);
+    
+    if ([programEmail length]){
         numberOfButtons ++;
-        buttonOne = @"email";
-    }if (programWebsite){
+        actionSheetMode = 1;
+    }if ([programPhoneNumber length]){
         numberOfButtons ++;
-        if (!buttonOne)
-            buttonOne = @"go to website";
-        else {
-            buttonTwo = @"go to website";
+        if (numberOfButtons == 1){
+            actionSheetMode = 2;
+        }else {
+            actionSheetMode = 4;
         }
-    }if (programPhoneNumber){
+    }if ([programWebsite length]){
         numberOfButtons ++;
-        if (!buttonOne)
-            buttonOne = @"call";
-        else if (!buttonTwo){
-            buttonTwo = @"call";
+        if (numberOfButtons == 1){
+            actionSheetMode = 3;
+        }else if (numberOfButtons == 2){
+            if ([programEmail length])
+                actionSheetMode = 5;
+            else actionSheetMode = 6;
         } else {
-            buttonThree = @"call";
+            actionSheetMode = 7;
         }
     }
-    if (numberOfButtons == 0){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:[infoFetcher getAllInfo]
-                                                       delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles: nil];
-        [alert show];
-    }else if (numberOfButtons == 1){
-    	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:[infoFetcher getAllInfo]
-                                                       delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles:buttonOne, nil];
-        [alert show];
-    }else if (numberOfButtons == 2){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:[infoFetcher getAllInfo]
-                                                       delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles:buttonOne, buttonTwo, nil];
-        [alert show];
-    }else if (numberOfButtons == 3){
-    	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
-                                                        message:[infoFetcher getAllInfo]
-                                                       delegate:self cancelButtonTitle:@"dismiss" otherButtonTitles:buttonOne, buttonTwo, buttonThree, nil];
-        [alert show];
-    }
+    
+    printf("number of button: %d in mode %d\n\n", numberOfButtons, actionSheetMode);
+    
+    UIActionSheet *actionSheet = [self buildActionSheetWithProgramTitle:programName];
+    
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
     
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
--(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
-    //u need to change 0 to other value(,1,2,3) if u have more buttons.then u can check which button was pressed.
-    
-    printf("%s\n", [programEmail UTF8String]);
-    int numberOfButtons = alertView.numberOfButtons;
-    if (buttonIndex != 0){
-        if (numberOfButtons == 1){
-            if (programWebsite)
-            {
-             //link to website
-                printf("- >going to website\n");
-            }
-            if (programPhoneNumber)
-            {
-                //button to call
-                printf("- >making call\n");
-
-            }
-            if (programEmail)
-            {
-                //button to email
-                printf("-> sending email\n");
-
-            }
-        } else if (numberOfButtons == 2){
-            if (!programPhoneNumber){
-                if (buttonIndex == 1){
-                    //send email
-                    printf("1-> sending email\n");
-
-                } else {
-                    // go to website
-                    printf("- >going to website\n");
-
-                }
-            } else if (!programWebsite){
-                if (buttonIndex == 1){
-                    //send email
-                    printf("2-> sending email\n");
-
-                } else {
-                    // make phone call
-                    printf("- >making call\n");
-
-                }
-            } else if (programEmail == ( NSString *) [ NSNull null ]){
-                if (buttonIndex == 1){
-                    // go to webite
-                    printf("- >going to website\n");
-
-                } else {
-                    // make phone call
-                    printf("- >making call\n");
-
-                }
-            }
-        } else {
-            if (buttonIndex == 1){
-                //send email
-                printf("3-> sending email\n");
-
-            } else if (buttonIndex == 2){
-                //go to website
-                printf("- >going to website\n");
-
-            } else {
-                //make phone call
-                printf("-> making call\n");
-
-            }
+-(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    printf("button index: %d\n", buttonIndex);
+    if ((actionSheetMode > 0) && (actionSheetMode < 4)){
+        if ([programEmail length]){
+            printf("actionsheet email\n");
+        } else if ([programPhoneNumber length]){
+            printf("actionsheet call\n");
+        } else if ([programWebsite length]){
+            printf("actionsheet website\n");
         }
+    } else if ((actionSheetMode > 3) && (actionSheetMode < 7)){
+        if (![programEmail length]){
+            if (buttonIndex == 0)
+                printf("action sheet call\n");
+            else printf("actionsheet website\n");
+        } else if (![programPhoneNumber length]){
+            if (buttonIndex == 0)
+                printf("action sheet email\n");
+            else printf("actionsheet website\n");
+        } else if (![programWebsite length]){
+            if (buttonIndex == 0)
+                printf("action sheet email\n");
+            else printf("action sheet call\n");
+        }
+    } else if (actionSheetMode == 7){
+        if (buttonIndex == 0)
+            printf("action sheet email");
+        else if (buttonIndex == 1)
+            printf("actionsheet phone\n");
+        else printf("actionsheet website\n");
     }
-    return;
 }
+-(UIActionSheet*) buildActionSheetWithProgramTitle:(NSString *)title
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:[title stringByAppendingString:@"\n\nContact the McKeen Center for More Information"]
+                                  delegate:self
+                                  cancelButtonTitle:@"dismiss"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles: nil];
+    
+    switch (actionSheetMode)
+    {
+        case 1:
+            actionSheet = [[UIActionSheet alloc]
+                           initWithTitle:title
+                           delegate:self
+                           cancelButtonTitle:@"dismiss"
+                           destructiveButtonTitle:nil
+                           otherButtonTitles:@"email", nil];
+            return actionSheet;
+        case 2:
+            actionSheet = [[UIActionSheet alloc]
+                           initWithTitle:title
+                           delegate:self
+                           cancelButtonTitle:@"dismiss"
+                           destructiveButtonTitle:nil
+                           otherButtonTitles:@"call", nil];
+            return actionSheet;
+        case 3:
+            actionSheet = [[UIActionSheet alloc]
+                           initWithTitle:title
+                           delegate:self
+                           cancelButtonTitle:@"dismiss"
+                           destructiveButtonTitle:nil
+                           otherButtonTitles:@"website", nil];
+            return actionSheet;
+            
+        case 4:
+            actionSheet = [[UIActionSheet alloc]
+                           initWithTitle:title
+                           delegate:self
+                           cancelButtonTitle:@"dismiss"
+                           destructiveButtonTitle:nil
+                           otherButtonTitles:@"email",@"call", nil];
+            return actionSheet;
+        case 5:
+            actionSheet = [[UIActionSheet alloc]
+                           initWithTitle:title
+                           delegate:self
+                           cancelButtonTitle:@"dismiss"
+                           destructiveButtonTitle:nil
+                           otherButtonTitles:@"email",@"website", nil];
+            return actionSheet;
+        case 6:
+            actionSheet = [[UIActionSheet alloc]
+                           initWithTitle:title
+                           delegate:self
+                           cancelButtonTitle:@"dismiss"
+                           destructiveButtonTitle:nil
+                           otherButtonTitles:@"call",@"website", nil];
+            return actionSheet;
+        case 7:
+            actionSheet = [[UIActionSheet alloc]
+                           initWithTitle:title
+                           delegate:self
+                           cancelButtonTitle:@"dismiss"
+                           destructiveButtonTitle:nil
+                           otherButtonTitles:@"email",@"call",@"website", nil];
+            return actionSheet;
+            break;
+    }
+    return actionSheet;
+}
+
 - (BOOL) socialIssueShouldBeDisplayedFor: (int)socialIssueIdentifier forString:(NSString *)theProgram
 {
     if (socialIssueIdentifier){
