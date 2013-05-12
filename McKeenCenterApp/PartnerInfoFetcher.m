@@ -115,6 +115,11 @@
 	for (NSString * path in data) {
 		if([path rangeOfString:@"www"].length > 0 || [path rangeOfString:@"http"].length > 0){
 			self.site = path;
+			
+			//add http if missing
+			if([self.site rangeOfString:@"http"].length <= 0){
+				self.site = [@"http://" stringByAppendingString:self.site];
+			}
 		}
 	}
 	
