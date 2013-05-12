@@ -544,8 +544,8 @@
                             </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="&quot;The Joseph McKeen Center for the Common Good provides " translatesAutoresizingMaskIntoConstraints="NO" id="Fzb-7v-Jhz" userLabel="Mission Quote 1">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="BwI-Mg-jem"/>
                                     <constraint firstAttribute="width" constant="271" id="qQq-uA-eMc"/>
+                                    <constraint firstAttribute="height" constant="56" id="yHY-hf-Dav"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
@@ -605,7 +605,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox8-Ov-KIt" userLabel="Mission Quote">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="2b3-jL-eXD"/>
-                                    <constraint firstAttribute="height" constant="162" type="user" id="Ivr-qS-phG"/>
+                                    <constraint firstAttribute="height" constant="156" id="hhz-PD-8UF"/>
                                 </constraints>
                                 <string key="text">opportunities for students to discover the ways in which their talents, passions and academic pursuits can be used for the benefit of society through             public engagement."</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
