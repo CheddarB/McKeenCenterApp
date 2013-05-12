@@ -47,7 +47,9 @@
 		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 		
 		//retrieve the file and get its path
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 		NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 		
 		//grab the contents of the file
 		NSString *content = [NSString stringWithContentsOfFile:path
@@ -80,7 +82,9 @@
 		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 		
 		//retrieve the file and get its path
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 		NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 		
 		//grab the contents of the file
 		NSString *content = [NSString stringWithContentsOfFile:path

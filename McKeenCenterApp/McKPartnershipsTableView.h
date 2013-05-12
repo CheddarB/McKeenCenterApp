@@ -20,6 +20,7 @@
 @property (strong, nonatomic) NSDictionary * allPrograms;
 
 @property (nonatomic) int actionSheetMode;
+@property (nonatomic) int numberOfButtons;
 
 @property (nonatomic) NSArray * socialIssues;
 @property (nonatomic) NSArray *locations;

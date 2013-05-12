@@ -20,6 +20,7 @@
 @implementation McKPartnershipsTableView
 
 @synthesize actionSheetMode;
+@synthesize numberOfButtons;
 
 @synthesize selectPrograms;
 @synthesize allPrograms;
@@ -54,7 +55,9 @@
 	NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 	
 	//retrieve the file and get its path
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	
     //grab the contents of the file
 	NSString *content = [NSString stringWithContentsOfFile:path
@@ -71,7 +74,9 @@
 	fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 	
 	//retrieve the file and get its path
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	
     //grab the contents of the file
 	content = [NSString stringWithContentsOfFile:path
@@ -90,7 +95,9 @@
 	fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
 	
 	//retrieve the file and get its path
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	
     //grab the contents of the file
 	content = [NSString stringWithContentsOfFile:path
@@ -249,7 +256,7 @@
 	
 	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:urlID];
 	
-    int numberOfButtons = 0;
+    numberOfButtons = 0;
     
     
     programEmail = infoFetcher.email;
@@ -269,21 +276,27 @@
     if ([programEmail length]){
         numberOfButtons ++;
         actionSheetMode = 1;
-    }if ([programPhoneNumber length]){
+    }
+	
+	if ([programPhoneNumber length]){
         numberOfButtons ++;
         if (numberOfButtons == 1){
             actionSheetMode = 2;
         }else {
             actionSheetMode = 4;
         }
-    }if ([programWebsite length]){
+    }
+	
+	if ([programWebsite length]){
         numberOfButtons ++;
         if (numberOfButtons == 1){
             actionSheetMode = 3;
-        }else if (numberOfButtons == 2){
-            if ([programEmail length])
+        } else if (numberOfButtons == 2){
+            if ([programEmail length]){
                 actionSheetMode = 5;
-            else actionSheetMode = 6;
+			} else{
+				actionSheetMode = 6;
+			}
         } else {
             actionSheetMode = 7;
         }
@@ -292,6 +305,7 @@
     printf("number of button: %d in mode %d\n", numberOfButtons, actionSheetMode);
     
     UIActionSheet *actionSheet = [self buildActionSheetWithProgramTitle:programName];
+
     
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
     
@@ -301,34 +315,50 @@
 }
 -(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     printf("button index: %d\n", buttonIndex);
-    if ((actionSheetMode > 0) && (actionSheetMode < 4)){
+	if (buttonIndex == numberOfButtons) {
+		[actionSheet showInView:[self.view window]];
+	}else if ((actionSheetMode > 0) && (actionSheetMode < 4)){
         if ([programEmail length]){
             printf("actionsheet email\n");
         } else if ([programPhoneNumber length]){
-            printf("actionsheet call\n");
+			//call
+			NSURL * phoneNumber = [NSURL URLWithString:@"tel://8608827388"];
+			[[UIApplication sharedApplication] openURL:phoneNumber];
         } else if ([programWebsite length]){
-            printf("actionsheet website\n");
+			//open site
+			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
         }
     } else if ((actionSheetMode > 3) && (actionSheetMode < 7)){
         if (![programEmail length]){
-            if (buttonIndex == 0)
+            if (buttonIndex == 0){
                 printf("action sheet call\n");
-            else printf("actionsheet website\n");
+            } else{
+				//open site
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
+			}
         } else if (![programPhoneNumber length]){
-            if (buttonIndex == 0)
+            if (buttonIndex == 0){
                 printf("action sheet email\n");
-            else printf("actionsheet website\n");
+            } else{
+				//open site
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
+			}
         } else if (![programWebsite length]){
-            if (buttonIndex == 0)
+            if (buttonIndex == 0){
                 printf("action sheet email\n");
-            else printf("action sheet call\n");
+            } else{
+				printf("action sheet call\n");
+			}
         }
     } else if (actionSheetMode == 7){
-        if (buttonIndex == 0)
+        if (buttonIndex == 0){
             printf("action sheet email");
-        else if (buttonIndex == 1)
+        } else if (buttonIndex == 1){
             printf("actionsheet phone\n");
-        else printf("actionsheet website\n");
+        } else {
+			printf("actionsheet website\n %s",[programWebsite UTF8String]);
+			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
+		}
     }
 }
 -(UIActionSheet*) buildActionSheetWithProgramTitle:(NSString *)title
