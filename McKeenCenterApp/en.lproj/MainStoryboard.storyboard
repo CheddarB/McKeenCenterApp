@@ -685,7 +685,6 @@
                             </textView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="4i7-a4-dQk" firstAttribute="trailing" secondItem="Q1S-sV-heo" secondAttribute="trailing" type="default" id="9QP-9Z-IhJ"/>
                             <constraint firstItem="HOC-Tl-Uqq" firstAttribute="trailing" secondItem="rp3-4W-sfd" secondAttribute="trailing" type="user" id="Bfx-nh-Bh0"/>
                             <constraint firstItem="Fzb-7v-Jhz" firstAttribute="leading" secondItem="Q1S-sV-heo" secondAttribute="leading" type="default" id="ETa-dO-lWa"/>
                             <constraint firstItem="Fzb-7v-Jhz" firstAttribute="top" secondItem="Q1S-sV-heo" secondAttribute="top" constant="5" id="Ebk-VR-pO5"/>
@@ -695,19 +694,20 @@
                             <constraint firstAttribute="trailing" secondItem="adt-AC-soU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="M8L-R0-Rbs"/>
                             <constraint firstItem="ox8-Ov-KIt" firstAttribute="top" secondItem="Q1S-sV-heo" secondAttribute="top" constant="45" type="user" id="PXi-WS-olR"/>
                             <constraint firstItem="HOC-Tl-Uqq" firstAttribute="top" secondItem="rp3-4W-sfd" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Rju-XC-TZG"/>
-                            <constraint firstItem="4i7-a4-dQk" firstAttribute="top" secondItem="Q1S-sV-heo" secondAttribute="top" constant="412" type="user" id="UEF-YS-Sdu"/>
                             <constraint firstItem="QmK-9k-xVF" firstAttribute="trailing" secondItem="Q1S-sV-heo" secondAttribute="trailing" type="default" id="Wgq-c2-yZY"/>
-                            <constraint firstItem="QmK-9k-xVF" firstAttribute="top" secondItem="Q1S-sV-heo" secondAttribute="top" constant="456" id="Zfj-Ev-2Xe"/>
                             <constraint firstItem="scy-er-rB2" firstAttribute="centerX" secondItem="QmK-9k-xVF" secondAttribute="centerX" type="default" id="bqg-DL-K8J"/>
-                            <constraint firstAttribute="bottom" secondItem="HOC-Tl-Uqq" secondAttribute="bottom" constant="46" id="ddF-NW-eaY"/>
+                            <constraint firstItem="QmK-9k-xVF" firstAttribute="top" secondItem="4i7-a4-dQk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cbH-iK-LeR"/>
                             <constraint firstAttribute="trailing" secondItem="8Y1-9e-qnR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dwn-09-Cz5"/>
+                            <constraint firstAttribute="trailing" secondItem="4i7-a4-dQk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="e7g-QR-KiJ"/>
+                            <constraint firstAttribute="bottom" secondItem="4i7-a4-dQk" secondAttribute="bottom" constant="7" id="eEu-ZG-ieN"/>
                             <constraint firstItem="ox8-Ov-KIt" firstAttribute="leading" secondItem="Q1S-sV-heo" secondAttribute="leading" type="default" id="eHP-5z-X3z"/>
                             <constraint firstItem="rp3-4W-sfd" firstAttribute="top" secondItem="aXk-uQ-gQm" secondAttribute="top" type="default" id="ed1-8M-2mW"/>
+                            <constraint firstItem="HOC-Tl-Uqq" firstAttribute="centerY" secondItem="adt-AC-soU" secondAttribute="centerY" type="default" id="fK2-Kk-vt6"/>
                             <constraint firstItem="zOV-PQ-9C1" firstAttribute="leading" secondItem="Q1S-sV-heo" secondAttribute="leading" type="default" id="hTE-PC-ufX"/>
                             <constraint firstItem="zOV-PQ-9C1" firstAttribute="top" secondItem="Q1S-sV-heo" secondAttribute="top" constant="-45" id="jJh-AR-YvR"/>
+                            <constraint firstItem="4i7-a4-dQk" firstAttribute="top" secondItem="adt-AC-soU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jTs-UK-kIi"/>
                             <constraint firstItem="8Y1-9e-qnR" firstAttribute="centerY" secondItem="scy-er-rB2" secondAttribute="centerY" type="default" id="koB-oI-7vT"/>
                             <constraint firstItem="zOV-PQ-9C1" firstAttribute="trailing" secondItem="Q1S-sV-heo" secondAttribute="trailing" type="default" id="mpf-fd-r3c"/>
-                            <constraint firstItem="adt-AC-soU" firstAttribute="centerY" secondItem="HOC-Tl-Uqq" secondAttribute="centerY" type="default" id="oHQ-JB-DGJ"/>
                             <constraint firstItem="QmK-9k-xVF" firstAttribute="leading" secondItem="Q1S-sV-heo" secondAttribute="leading" type="default" id="sqP-S1-Qda"/>
                         </constraints>
                     </view>
