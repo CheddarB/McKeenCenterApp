@@ -21,7 +21,7 @@
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Phone Not Available"
 														message:errorMessage
 													   delegate:self
-											  cancelButtonTitle:@"okay"
+											  cancelButtonTitle:@"Cancel"
 											  otherButtonTitles:nil];
 		[alert show];
 	}

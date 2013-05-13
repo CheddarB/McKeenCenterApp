@@ -7,7 +7,10 @@
 //
 
 #import "McKContactViewController.h"
+#import "McKUtilities.h"
+
 #define STARTING_DELTA .004
+
 @interface McKContactViewController ()
 
 @end
@@ -63,6 +66,6 @@
 }
 
 - (IBAction)phoneButton:(UIButton *)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://2077894113"]];
+	[McKUtilities callPhoneNumber:@"2077894113"];
 }
 @end
