@@ -43,12 +43,14 @@
 {
     [super viewDidLoad];    
     [self buildArraysOfJobsAndConferences];
+    self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+
     
 }
 - (void)buildArraysOfJobsAndConferences
 {
     
-    if ([toggleButtonOutlet.title isEqual:@"conferences"]){
+    if ([toggleButtonOutlet.title isEqual:@"Conferences"]){
         self.navigationItem.title = @"Jobs Opportunities";
 
         //contruct file location on server
@@ -75,14 +77,7 @@
             NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
             [arrayOfObjects replaceObjectAtIndex:i withObject:subArray];
         }
-        
-        printf("JOBS:\n");
-        for (int i = 0; i < [arrayOfObjects count]; i++){
-            for (int j = 0; j < [[arrayOfObjects objectAtIndex:i] count]; j++){
-                printf("(%d, %d) %s\n",i,j, [[[arrayOfObjects objectAtIndex:i] objectAtIndex:j ] UTF8String]);
-            }
-            printf("\n");
-        }
+
          
     } else {
         self.navigationItem.title = @"Conferences";
@@ -108,16 +103,7 @@
             NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
             [arrayOfObjects replaceObjectAtIndex:i withObject:subArray];
         }
-        /*
-        printf("CONFERENCES:\n");
-        for (int i = 0; i < [arrayOfObjects count]; i++){
-            for (int j = 0; j < [[arrayOfObjects objectAtIndex:i] count]; j++){
-                printf("(%d, %d) %s\n",i,j, [[[arrayOfObjects objectAtIndex:i] objectAtIndex:j ] UTF8String]);
-            }
-            printf("\n");
-        }
-         */
-        
+
     }
 }
 - (void)didReceiveMemoryWarning
@@ -184,12 +170,12 @@
 //- (IBAction)toggleModeButton:(UIButton *)sender {
    // }
 - (IBAction)toggleModeButton:(UIBarButtonItem *)sender {
-    if ([toggleButtonOutlet.title isEqual:@"conferences"]){
-        toggleButtonOutlet.title = @"job opps";
+    if ([toggleButtonOutlet.title isEqual:@"Conferences"]){
+        toggleButtonOutlet.title = @"Job Opps";
         self.navigationItem.leftBarButtonItem = toggleButtonOutlet;
         self.navigationItem.rightBarButtonItem = nil;
     } else {
-    toggleButtonOutlet.title = @"conferences";
+    toggleButtonOutlet.title = @"Conferences";
         self.navigationItem.rightBarButtonItem = toggleButtonOutlet;
         self.navigationItem.leftBarButtonItem = nil;
     }
