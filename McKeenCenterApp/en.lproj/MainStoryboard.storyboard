@@ -37,7 +37,7 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zie-VN-pvz">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="IqB-Z2-kTz"/>
+                                    <constraint firstAttribute="height" constant="216" type="user" id="IqB-Z2-kTz"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="IO2-TG-JQc" id="eAD-k8-JwE"/>
@@ -54,10 +54,6 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0d-ts-Ip8">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="1QH-tN-AbD"/>
-                                    <constraint firstAttribute="width" constant="111" id="T4p-Zk-ooN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,16 +92,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Yre-qM-ojU" firstAttribute="top" secondItem="UGL-aK-aKd" secondAttribute="top" constant="117" id="28J-2d-jdw"/>
+                            <constraint firstItem="Yre-qM-ojU" firstAttribute="leading" secondItem="f0d-ts-Ip8" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Gi2-7s-ehm"/>
                             <constraint firstItem="uo4-GD-9ZV" firstAttribute="leading" secondItem="UGL-aK-aKd" secondAttribute="leading" type="default" id="HhX-Q0-sDn"/>
-                            <constraint firstItem="Zie-VN-pvz" firstAttribute="bottom" secondItem="UGL-aK-aKd" secondAttribute="bottom" type="default" id="NXq-DE-kyN"/>
-                            <constraint firstItem="Zie-VN-pvz" firstAttribute="top" secondItem="f0d-ts-Ip8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RBt-Tp-39F"/>
                             <constraint firstItem="Zie-VN-pvz" firstAttribute="leading" secondItem="UGL-aK-aKd" secondAttribute="leading" type="default" id="UPO-qt-umK"/>
                             <constraint firstItem="VJd-iR-uun" firstAttribute="top" secondItem="UGL-aK-aKd" secondAttribute="top" constant="72" id="Wpi-vg-ilC"/>
-                            <constraint firstItem="Yre-qM-ojU" firstAttribute="top" secondItem="UGL-aK-aKd" secondAttribute="top" constant="202" id="ZpU-kH-hnb"/>
-                            <constraint firstItem="Yre-qM-ojU" firstAttribute="trailing" secondItem="f0d-ts-Ip8" secondAttribute="trailing" type="default" id="agA-w3-3GK"/>
+                            <constraint firstItem="f0d-ts-Ip8" firstAttribute="top" secondItem="UGL-aK-aKd" secondAttribute="top" constant="115" id="bg7-V3-3Pd"/>
                             <constraint firstItem="uo4-GD-9ZV" firstAttribute="top" secondItem="UGL-aK-aKd" secondAttribute="top" constant="-128" id="cDm-ox-kFO"/>
                             <constraint firstItem="Zie-VN-pvz" firstAttribute="trailing" secondItem="UGL-aK-aKd" secondAttribute="trailing" type="default" id="ffC-N6-Byh"/>
                             <constraint firstItem="VJd-iR-uun" firstAttribute="centerX" secondItem="f0d-ts-Ip8" secondAttribute="centerX" type="default" id="gEJ-K3-oQm"/>
+                            <constraint firstItem="Zie-VN-pvz" firstAttribute="bottom" secondItem="UGL-aK-aKd" secondAttribute="bottom" type="default" id="gd5-9J-4N0"/>
                             <constraint firstItem="Erg-sP-oNd" firstAttribute="leading" secondItem="UGL-aK-aKd" secondAttribute="leading" constant="33" id="nFh-E4-29V"/>
                             <constraint firstAttribute="trailing" secondItem="Qk4-uE-ODV" secondAttribute="trailing" constant="92" id="occ-yS-j8P"/>
                             <constraint firstItem="uo4-GD-9ZV" firstAttribute="trailing" secondItem="UGL-aK-aKd" secondAttribute="trailing" type="default" id="pE8-WO-L5A"/>
@@ -871,8 +867,7 @@
                                     <constraint firstAttribute="height" constant="126" id="e1M-F8-rdu"/>
                                     <constraint firstAttribute="width" constant="155" id="tFZ-Ug-voQ"/>
                                 </constraints>
-                                <string key="text">Joseph McKeen Center for the Common Good
-									4690 College Station
+                                <string key="text">Joseph McKeen Center for the Common Good	4690 College Station
 									Brunswick, ME 04011
 									Fx: (207) 798-4120       </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
