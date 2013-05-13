@@ -71,6 +71,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yre-qM-ojU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" type="user" id="pvX-mb-anB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -940,7 +943,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="305" id="ot7-dR-fU9"/>
                                 </constraints>
-                                <mutableString key="text">Mission
+                                <string key="text">Mission
 									
 The Joseph McKeen Center for the Common Good provides opportunities for students to discover the ways in which their talents, passions and academic pursuits can be used for the benefit of society through public engagement.  By linking diverse activities in order to compound their meaningfulness, the McKeen Center serves as a vibrant and central source of information, events and activities related to public engagement for faculty and staff as well as students, and connects departments, programs and individuals with similar interests to enhance both learning and impact in the community.
 									
@@ -949,7 +952,7 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
 									McKeen Center Goals
 									• Enhance student learning and leadership skills through reflective public engagement in the curriculum and co-curriculum while cultivating lifelong commitments to improving the well-being of society;
 									• Encourage and support publicly engaged teaching, research and artistic work;
-									• Promote public engagement throughout the Bowdoin community by fostering discussion of the common good in campus-wide events that address issues of broad public concern.</mutableString>
+									• Promote public engagement throughout the Bowdoin community by fostering discussion of the common good in campus-wide events that address issues of broad public concern.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1563,7 +1566,7 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="coh-xO-NAd"/>
+        <segue reference="dP9-Wp-Gbo"/>
         <segue reference="Ua3-yi-iXF"/>
         <segue reference="VSE-Ri-cDe"/>
         <segue reference="GDz-2H-9mK"/>

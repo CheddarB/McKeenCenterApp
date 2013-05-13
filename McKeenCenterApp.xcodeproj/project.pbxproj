@@ -12,13 +12,6 @@
 		203A261417375AC2007F39D9 /* McKEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261317375AC2007F39D9 /* McKEventInfoViewController.m */; };
 		203A261A17380431007F39D9 /* McKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261917380431007F39D9 /* McKSecondViewController.m */; };
 		203A261D173804EC007F39D9 /* McKOpportunityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261C173804EC007F39D9 /* McKOpportunityInfo.m */; };
-		2050693F17409E2200DBFB4D /* Fall-Leaves-beautiful-Autumn-31000.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2050693817409E2200DBFB4D /* Fall-Leaves-beautiful-Autumn-31000.jpg */; };
-		2050694017409E2200DBFB4D /* greenleavespg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2050693917409E2200DBFB4D /* greenleavespg3.jpg */; };
-		2050694117409E2200DBFB4D /* _MG_0807.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2050693A17409E2200DBFB4D /* _MG_0807.jpg */; };
-		2050694217409E2200DBFB4D /* Autumn leaves5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2050693B17409E2200DBFB4D /* Autumn leaves5.jpg */; };
-		2050694317409E2200DBFB4D /* First_flowering_trees_of_spring_-_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2050693C17409E2200DBFB4D /* First_flowering_trees_of_spring_-_01.jpg */; };
-		2050694417409E2200DBFB4D /* green_leaves_background-other.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2050693D17409E2200DBFB4D /* green_leaves_background-other.jpg */; };
-		2050694517409E2200DBFB4D /* autumn-leaves-wallpaper1-640x426.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2050693E17409E2200DBFB4D /* autumn-leaves-wallpaper1-640x426.jpg */; };
 		207AF0FB171E23790001DCBC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207AF0FA171E23790001DCBC /* MessageUI.framework */; };
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
@@ -81,13 +74,6 @@
 		203A261917380431007F39D9 /* McKSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKSecondViewController.m; sourceTree = "<group>"; };
 		203A261B173804EC007F39D9 /* McKOpportunityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKOpportunityInfo.h; path = ../McKOpportunityInfo.h; sourceTree = "<group>"; };
 		203A261C173804EC007F39D9 /* McKOpportunityInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKOpportunityInfo.m; path = ../McKOpportunityInfo.m; sourceTree = "<group>"; };
-		2050693817409E2200DBFB4D /* Fall-Leaves-beautiful-Autumn-31000.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Fall-Leaves-beautiful-Autumn-31000.jpg"; sourceTree = "<group>"; };
-		2050693917409E2200DBFB4D /* greenleavespg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = greenleavespg3.jpg; sourceTree = "<group>"; };
-		2050693A17409E2200DBFB4D /* _MG_0807.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = _MG_0807.jpg; sourceTree = "<group>"; };
-		2050693B17409E2200DBFB4D /* Autumn leaves5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Autumn leaves5.jpg"; sourceTree = "<group>"; };
-		2050693C17409E2200DBFB4D /* First_flowering_trees_of_spring_-_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "First_flowering_trees_of_spring_-_01.jpg"; sourceTree = "<group>"; };
-		2050693D17409E2200DBFB4D /* green_leaves_background-other.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "green_leaves_background-other.jpg"; sourceTree = "<group>"; };
-		2050693E17409E2200DBFB4D /* autumn-leaves-wallpaper1-640x426.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "autumn-leaves-wallpaper1-640x426.jpg"; sourceTree = "<group>"; };
 		207AF0FA171E23790001DCBC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
@@ -320,13 +306,6 @@
 				20866D2D171CEBFE00DC0147 /* doorLight.jpg */,
 				20866D27171CEB8700DC0147 /* artvanpic.jpg */,
 				20866D28171CEB8700DC0147 /* quadPic.jpg */,
-				2050693817409E2200DBFB4D /* Fall-Leaves-beautiful-Autumn-31000.jpg */,
-				2050693917409E2200DBFB4D /* greenleavespg3.jpg */,
-				2050693A17409E2200DBFB4D /* _MG_0807.jpg */,
-				2050693B17409E2200DBFB4D /* Autumn leaves5.jpg */,
-				2050693C17409E2200DBFB4D /* First_flowering_trees_of_spring_-_01.jpg */,
-				2050693D17409E2200DBFB4D /* green_leaves_background-other.jpg */,
-				2050693E17409E2200DBFB4D /* autumn-leaves-wallpaper1-640x426.jpg */,
 			);
 			name = JPGs;
 			sourceTree = "<group>";
@@ -438,13 +417,6 @@
 				31E4AAC71740708F00B11F90 /* Default-568h@2x.png in Resources */,
 				31E4AACC17407A9300B11F90 /* retina_icon.png in Resources */,
 				31E4AACE17407DE800B11F90 /* default_icon.png in Resources */,
-				2050693F17409E2200DBFB4D /* Fall-Leaves-beautiful-Autumn-31000.jpg in Resources */,
-				2050694017409E2200DBFB4D /* greenleavespg3.jpg in Resources */,
-				2050694117409E2200DBFB4D /* _MG_0807.jpg in Resources */,
-				2050694217409E2200DBFB4D /* Autumn leaves5.jpg in Resources */,
-				2050694317409E2200DBFB4D /* First_flowering_trees_of_spring_-_01.jpg in Resources */,
-				2050694417409E2200DBFB4D /* green_leaves_background-other.jpg in Resources */,
-				2050694517409E2200DBFB4D /* autumn-leaves-wallpaper1-640x426.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
