@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UISegmentedControl *throughMkC;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (nonatomic) CGRect savedScrollFrame;
 
 - (IBAction)cancelButton:(UIButton *)sender;
 - (IBAction)submitButton:(UIButton*)sender;
