@@ -58,6 +58,7 @@
 		31E4AAC317406F0D00B11F90 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E4AAC117406E5800B11F90 /* Default.png */; };
 		31E4AAC517406FCA00B11F90 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E4AAC417406FCA00B11F90 /* Default@2x.png */; };
 		31E4AAC71740708F00B11F90 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E4AAC61740708F00B11F90 /* Default-568h@2x.png */; };
+		31E4AACA1740724D00B11F90 /* McKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E4AAC91740724D00B11F90 /* McKUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,8 @@
 		31E4AAC117406E5800B11F90 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		31E4AAC417406FCA00B11F90 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		31E4AAC61740708F00B11F90 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		31E4AAC81740724D00B11F90 /* McKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKUtilities.h; sourceTree = "<group>"; };
+		31E4AAC91740724D00B11F90 /* McKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +217,8 @@
 				31E4AAC117406E5800B11F90 /* Default.png */,
 				31E4AAC417406FCA00B11F90 /* Default@2x.png */,
 				31E4AAC61740708F00B11F90 /* Default-568h@2x.png */,
+				31E4AAC81740724D00B11F90 /* McKUtilities.h */,
+				31E4AAC91740724D00B11F90 /* McKUtilities.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -431,6 +436,7 @@
 				20CFAF731739490400BF8529 /* McKContactViewController.m in Sources */,
 				20CFAF7617394A2300BF8529 /* McKStaffViewController.m in Sources */,
 				31668AC7173B40020078F45F /* McKFileRetriever.m in Sources */,
+				31E4AACA1740724D00B11F90 /* McKUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
