@@ -359,6 +359,7 @@
 			[self sendEmail];
         } else if (buttonIndex == 1){
 			//*phone*
+			[self callPhone];
             printf("actionsheet phone\n");
         } else {
 			printf("actionsheet website\n %s",[programWebsite UTF8String]);
@@ -497,5 +498,22 @@
 	}else {
 		NSLog(@"Device is unable to send email in its current state.");
 	}
+}
+
+- (void)callPhone{
+	NSString * device = [UIDevice  currentDevice].model;
+	if ([device isEqualToString:@"iPhone"]) {
+		NSURL * phoneNumber = [NSURL URLWithString:@"tel://8608827388"];
+		[[UIApplication sharedApplication] openURL:phoneNumber];
+	} else{
+		NSString * errorMessage = [NSString stringWithFormat:@"Cannot make a call with your %@",device];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Nope"
+														message:errorMessage
+													   delegate:self
+											  cancelButtonTitle:@"okay"
+											  otherButtonTitles:nil];
+		[alert show];
+	}
+	
 }
 @end

@@ -34,9 +34,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [staffScrollView setScrollEnabled:YES];
-    [staffScrollView setContentSize:CGSizeMake(320, 731)];
+   
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewWillLayoutSubviews{
+	[super viewWillLayoutSubviews];
+	
+	[staffScrollView setScrollEnabled:YES];
+    [staffScrollView setContentSize:CGSizeMake(320, 731)];
 }
 
 - (void)didReceiveMemoryWarning

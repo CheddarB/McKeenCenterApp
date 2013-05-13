@@ -374,7 +374,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <textInputTraits key="textInputTraits" keyboardType=""/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFf-cL-ty1">
                                         <constraints>
@@ -663,11 +663,11 @@
                             <constraint firstAttribute="trailing" secondItem="8Y1-9e-qnR" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dwn-09-Cz5"/>
                             <constraint firstItem="ox8-Ov-KIt" firstAttribute="leading" secondItem="Q1S-sV-heo" secondAttribute="leading" type="default" id="eHP-5z-X3z"/>
                             <constraint firstItem="rp3-4W-sfd" firstAttribute="top" secondItem="aXk-uQ-gQm" secondAttribute="top" type="default" id="ed1-8M-2mW"/>
-                            <constraint firstItem="HOC-Tl-Uqq" firstAttribute="top" secondItem="adt-AC-soU" secondAttribute="top" type="default" id="gSh-GO-6vC"/>
                             <constraint firstItem="zOV-PQ-9C1" firstAttribute="leading" secondItem="Q1S-sV-heo" secondAttribute="leading" type="default" id="hTE-PC-ufX"/>
                             <constraint firstItem="zOV-PQ-9C1" firstAttribute="top" secondItem="Q1S-sV-heo" secondAttribute="top" constant="-45" id="jJh-AR-YvR"/>
                             <constraint firstItem="8Y1-9e-qnR" firstAttribute="centerY" secondItem="scy-er-rB2" secondAttribute="centerY" type="default" id="koB-oI-7vT"/>
                             <constraint firstItem="zOV-PQ-9C1" firstAttribute="trailing" secondItem="Q1S-sV-heo" secondAttribute="trailing" type="default" id="mpf-fd-r3c"/>
+                            <constraint firstItem="adt-AC-soU" firstAttribute="centerY" secondItem="HOC-Tl-Uqq" secondAttribute="centerY" type="default" id="oHQ-JB-DGJ"/>
                             <constraint firstItem="QmK-9k-xVF" firstAttribute="leading" secondItem="Q1S-sV-heo" secondAttribute="leading" type="default" id="sqP-S1-Qda"/>
                             <constraint firstAttribute="bottom" secondItem="HOC-Tl-Uqq" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ub2-KF-DVH"/>
                         </constraints>

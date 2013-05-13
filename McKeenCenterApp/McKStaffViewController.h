@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface McKStaffViewController : UIViewController
+@interface McKStaffViewController : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic) NSString * staffName;
 @property (nonatomic) NSString * staffEmail;
