@@ -233,7 +233,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbN-1T-zsi">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="289" id="8Rq-9L-9ea"/>
-                                    <constraint firstAttribute="height" constant="272" id="CiO-w9-pt6"/>
+                                    <constraint firstAttribute="height" constant="272" type="user" id="CiO-w9-pt6"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -260,7 +260,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9z-oS-Kp6">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="152" id="Arw-eb-eG2"/>
-                                    <constraint firstAttribute="height" constant="68" id="xgK-dj-waL"/>
+                                    <constraint firstAttribute="height" constant="68" type="user" id="xgK-dj-waL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="25"/>
                                 <state key="normal" title="sign up">
@@ -281,11 +281,12 @@
                             <constraint firstItem="p6f-5y-I8V" firstAttribute="trailing" secondItem="seb-yi-soh" secondAttribute="trailing" type="default" id="Iih-iE-AEb"/>
                             <constraint firstItem="W9z-oS-Kp6" firstAttribute="leading" secondItem="seb-yi-soh" secondAttribute="leading" constant="75" id="LZ0-zw-SCh"/>
                             <constraint firstItem="WZB-JJ-TCq" firstAttribute="top" secondItem="seb-yi-soh" secondAttribute="top" constant="55" id="NBh-fB-LKi"/>
+                            <constraint firstItem="W9z-oS-Kp6" firstAttribute="top" secondItem="rbN-1T-zsi" secondAttribute="bottom" constant="-5" type="user" id="PB6-7v-4dT"/>
                             <constraint firstAttribute="trailing" secondItem="rbN-1T-zsi" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UWV-q7-uHi"/>
-                            <constraint firstAttribute="bottom" secondItem="W9z-oS-Kp6" secondAttribute="bottom" constant="9" id="VQ4-yW-3Xm"/>
+                            <constraint firstAttribute="bottom" secondItem="W9z-oS-Kp6" secondAttribute="bottom" constant="9" type="user" id="VQ4-yW-3Xm"/>
                             <constraint firstItem="caX-KC-iNY" firstAttribute="centerX" secondItem="p6f-5y-I8V" secondAttribute="centerX" type="default" id="l5L-sV-DdM"/>
                             <constraint firstItem="WZB-JJ-TCq" firstAttribute="trailing" secondItem="caX-KC-iNY" secondAttribute="trailing" type="default" id="mZf-U2-sRx"/>
-                            <constraint firstItem="rbN-1T-zsi" firstAttribute="top" secondItem="seb-yi-soh" secondAttribute="top" constant="111" id="nX2-90-mXH"/>
+                            <constraint firstItem="rbN-1T-zsi" firstAttribute="top" secondItem="seb-yi-soh" secondAttribute="top" constant="111" type="user" id="nX2-90-mXH"/>
                             <constraint firstItem="caX-KC-iNY" firstAttribute="leading" secondItem="WZB-JJ-TCq" secondAttribute="leading" type="default" id="o6a-a6-2JO"/>
                             <constraint firstItem="WZB-JJ-TCq" firstAttribute="leading" secondItem="rbN-1T-zsi" secondAttribute="leading" type="default" id="qv5-Kh-YAK"/>
                             <constraint firstItem="caX-KC-iNY" firstAttribute="top" secondItem="seb-yi-soh" secondAttribute="top" constant="8" id="tEN-Iv-wdJ"/>
@@ -1328,7 +1329,7 @@ McKeen Center Goals
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2I0-FT-BLE">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="269" id="WaC-kS-3cm"/>
+                                    <constraint firstAttribute="height" constant="269" type="user" id="WaC-kS-3cm"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1355,7 +1356,7 @@ McKeen Center Goals
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qmx-rG-e1i">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="152" id="jSd-HJ-0e3"/>
-                                    <constraint firstAttribute="height" constant="52" id="kS7-iJ-n8v"/>
+                                    <constraint firstAttribute="height" constant="52" type="user" id="kS7-iJ-n8v"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="25"/>
                                 <state key="normal" title="sign up">
@@ -1372,12 +1373,13 @@ McKeen Center Goals
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2I0-FT-BLE" firstAttribute="top" secondItem="cco-xO-TMa" secondAttribute="top" constant="112" id="DMW-Sj-WvA"/>
+                            <constraint firstItem="Qmx-rG-e1i" firstAttribute="top" secondItem="2I0-FT-BLE" secondAttribute="bottom" constant="13" type="user" id="CIn-Fy-4lF"/>
+                            <constraint firstItem="2I0-FT-BLE" firstAttribute="top" secondItem="cco-xO-TMa" secondAttribute="top" constant="112" type="user" id="DMW-Sj-WvA"/>
                             <constraint firstItem="2I0-FT-BLE" firstAttribute="leading" secondItem="oLZ-11-X9a" secondAttribute="leading" type="default" id="U4o-Yh-TgI"/>
                             <constraint firstItem="oLZ-11-X9a" firstAttribute="trailing" secondItem="2I0-FT-BLE" secondAttribute="trailing" type="default" id="UPm-ZO-Wyj"/>
                             <constraint firstItem="oLZ-11-X9a" firstAttribute="trailing" secondItem="gn6-DO-bws" secondAttribute="trailing" type="default" id="ZYb-Mt-dta"/>
                             <constraint firstItem="oLZ-11-X9a" firstAttribute="top" secondItem="cco-xO-TMa" secondAttribute="top" constant="55" id="bpg-sY-qzg"/>
-                            <constraint firstAttribute="bottom" secondItem="Qmx-rG-e1i" secondAttribute="bottom" constant="9" id="bqY-bA-JwT"/>
+                            <constraint firstAttribute="bottom" secondItem="Qmx-rG-e1i" secondAttribute="bottom" constant="9" type="user" id="bqY-bA-JwT"/>
                             <constraint firstItem="57m-zd-ZDf" firstAttribute="centerX" secondItem="oLZ-11-X9a" secondAttribute="centerX" type="default" id="dDk-6f-rx9"/>
                             <constraint firstItem="57m-zd-ZDf" firstAttribute="trailing" secondItem="cco-xO-TMa" secondAttribute="trailing" type="default" id="iHG-wN-3JF"/>
                             <constraint firstItem="gn6-DO-bws" firstAttribute="top" secondItem="cco-xO-TMa" secondAttribute="top" constant="8" id="nBz-6N-5za"/>
