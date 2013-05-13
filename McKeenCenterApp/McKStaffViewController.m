@@ -52,7 +52,7 @@
 
 - (IBAction)emailButton:(UIButton *)sender {
     printf("%s\n", [[sender currentTitle] UTF8String]);
-    if ([sender.titleLabel isEqual:@"email sarah"]){
+    if ([[sender currentTitle] isEqual:@"email sarah"]){
         staffName = @"Sarah";
         staffEmail = @"sseames@bowdoin.edu";
     } else if ([[sender currentTitle] isEqual:@"email caitlin"]){

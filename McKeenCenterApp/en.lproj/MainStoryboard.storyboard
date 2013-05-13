@@ -1049,7 +1049,7 @@ McKeen Center Goals
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" image="3-bowdoin-chapel.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="h42-sB-MYm">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="519" id="BaM-ly-z5c"/>
+                                    <constraint firstAttribute="height" constant="519" id="UGd-pr-dj0"/>
                                 </constraints>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zoa-lB-J7E">
@@ -1075,7 +1075,7 @@ McKeen Center Goals
                                             <constraint firstAttribute="width" constant="100" id="Mgd-Zr-hD5"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Caitlin Callahan '11, Assistent Director of the McKeen Center" translatesAutoresizingMaskIntoConstraints="NO" id="joO-8b-ZdS">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Caitlin Callahan '11, Assistant Director of the McKeen Center" translatesAutoresizingMaskIntoConstraints="NO" id="joO-8b-ZdS">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="69" id="HaJ-c3-ksk"/>
                                         </constraints>
@@ -1145,7 +1145,7 @@ McKeen Center Goals
                                             <constraint firstAttribute="height" constant="100" id="ZbD-P2-nme"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Luke Mondello '10, Assistent Director" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-wk-UIx">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Luke Mondello '10, Assistant Director" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-wk-UIx">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="9xW-yI-kMd"/>
                                         </constraints>
@@ -1156,10 +1156,9 @@ McKeen Center Goals
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ik-RC-cy0">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="B9m-EU-2RY"/>
-                                            <constraint firstAttribute="width" constant="103" id="hhJ-dn-4UW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <state key="normal" title="email sara">
+                                        <state key="normal" title="email sarah">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -1249,10 +1248,10 @@ McKeen Center Goals
                                     <constraint firstItem="RT1-bC-F86" firstAttribute="bottom" secondItem="xET-ru-gLD" secondAttribute="bottom" type="default" id="J3O-51-2j7"/>
                                     <constraint firstItem="Lgs-Sg-1ro" firstAttribute="leading" secondItem="joO-8b-ZdS" secondAttribute="leading" type="default" id="LqM-LF-CmL"/>
                                     <constraint firstItem="2u8-kC-SwK" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="666" id="LwB-V6-bQb"/>
+                                    <constraint firstItem="wXB-PW-CrM" firstAttribute="top" secondItem="RT1-bC-F86" secondAttribute="top" type="default" id="N1E-5M-n7R"/>
                                     <constraint firstItem="tAc-Z8-rBP" firstAttribute="centerX" secondItem="joO-8b-ZdS" secondAttribute="centerX" type="default" id="NAP-BU-dZS"/>
                                     <constraint firstItem="Tob-FF-XmE" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="299" id="Nh4-VX-nTF"/>
                                     <constraint firstItem="joO-8b-ZdS" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="121" id="Nwv-KC-YL3"/>
-                                    <constraint firstAttribute="bottom" secondItem="Whu-lr-lif" secondAttribute="bottom" constant="15" id="ONd-wu-rFr"/>
                                     <constraint firstItem="jvc-dY-fRS" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="134" id="OUa-4M-Eye"/>
                                     <constraint firstItem="0Ik-RC-cy0" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="63" id="OZI-PE-Uwm"/>
                                     <constraint firstItem="RT1-bC-F86" firstAttribute="leading" secondItem="nK7-mU-QYQ" secondAttribute="leading" type="default" id="QET-P5-FJk"/>
@@ -1265,7 +1264,6 @@ McKeen Center Goals
                                     <constraint firstItem="Whu-lr-lif" firstAttribute="leading" secondItem="joO-8b-ZdS" secondAttribute="leading" type="default" id="X6r-hq-aLa"/>
                                     <constraint firstItem="g96-NM-ylK" firstAttribute="leading" secondItem="jvc-dY-fRS" secondAttribute="leading" type="default" id="Z8B-lQ-NPc"/>
                                     <constraint firstItem="Whu-lr-lif" firstAttribute="leading" secondItem="wXB-PW-CrM" secondAttribute="leading" type="default" id="aHC-JH-afn"/>
-                                    <constraint firstItem="hV6-y8-JPU" firstAttribute="bottom" secondItem="IEt-UR-gyt" secondAttribute="bottom" type="default" id="aJ2-xU-NuR"/>
                                     <constraint firstItem="g96-NM-ylK" firstAttribute="leading" secondItem="hV6-y8-JPU" secondAttribute="leading" type="default" id="bnR-0C-4W6"/>
                                     <constraint firstItem="nK7-mU-QYQ" firstAttribute="top" secondItem="NsC-wk-UIx" secondAttribute="top" type="default" id="cIa-B3-8Nv"/>
                                     <constraint firstItem="Whu-lr-lif" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="359" id="dgt-DW-cVJ"/>
@@ -1276,8 +1274,8 @@ McKeen Center Goals
                                     <constraint firstItem="nK7-mU-QYQ" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="618" id="gHz-CV-Xjp"/>
                                     <constraint firstItem="xET-ru-gLD" firstAttribute="centerX" secondItem="wXB-PW-CrM" secondAttribute="centerX" type="default" id="iPN-ag-6Zs"/>
                                     <constraint firstItem="hV6-y8-JPU" firstAttribute="trailing" secondItem="g96-NM-ylK" secondAttribute="trailing" type="default" id="izd-Y7-5f8"/>
-                                    <constraint firstItem="wXB-PW-CrM" firstAttribute="top" secondItem="IEt-UR-gyt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jS9-iL-NV6"/>
                                     <constraint firstItem="AN9-kb-Usw" firstAttribute="leading" secondItem="zoa-lB-J7E" secondAttribute="leading" constant="10" id="lhc-ac-usH"/>
+                                    <constraint firstItem="hV6-y8-JPU" firstAttribute="bottom" secondItem="IEt-UR-gyt" secondAttribute="bottom" type="default" id="lyc-Iy-pBm"/>
                                     <constraint firstItem="RT1-bC-F86" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="497" id="pOh-8o-veE"/>
                                     <constraint firstItem="AN9-kb-Usw" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="13" id="tc4-22-3sM"/>
                                     <constraint firstItem="NsC-wk-UIx" firstAttribute="centerX" secondItem="2u8-kC-SwK" secondAttribute="centerX" type="default" id="ujG-Ri-i8B"/>
@@ -1285,14 +1283,15 @@ McKeen Center Goals
                                     <constraint firstItem="Kcw-Th-B4r" firstAttribute="centerX" secondItem="Tob-FF-XmE" secondAttribute="centerX" type="default" id="uod-gn-ZJZ"/>
                                     <constraint firstItem="Lgs-Sg-1ro" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="6" id="vdM-fY-WcG"/>
                                     <constraint firstItem="g96-NM-ylK" firstAttribute="top" secondItem="zoa-lB-J7E" secondAttribute="top" constant="255" id="vmK-wP-G1e"/>
+                                    <constraint firstAttribute="bottom" secondItem="Whu-lr-lif" secondAttribute="bottom" constant="15" id="wRi-sB-F7p"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="zoa-lB-J7E" firstAttribute="top" secondItem="Egx-EX-WyE" secondAttribute="top" type="default" id="9Mb-GW-n3J"/>
                             <constraint firstItem="zoa-lB-J7E" firstAttribute="leading" secondItem="Egx-EX-WyE" secondAttribute="leading" type="default" id="Dxb-Ga-79H"/>
                             <constraint firstItem="h42-sB-MYm" firstAttribute="leading" secondItem="Egx-EX-WyE" secondAttribute="leading" type="default" id="JcG-1Y-FCK"/>
-                            <constraint firstItem="zoa-lB-J7E" firstAttribute="bottom" secondItem="Egx-EX-WyE" secondAttribute="bottom" type="default" id="Rt5-n2-6eh"/>
+                            <constraint firstItem="zoa-lB-J7E" firstAttribute="bottom" secondItem="Egx-EX-WyE" secondAttribute="bottom" type="default" id="NCf-O4-e7e"/>
+                            <constraint firstItem="zoa-lB-J7E" firstAttribute="top" secondItem="Egx-EX-WyE" secondAttribute="top" type="default" id="Y4Q-Ii-tYU"/>
                             <constraint firstItem="zoa-lB-J7E" firstAttribute="trailing" secondItem="Egx-EX-WyE" secondAttribute="trailing" type="default" id="Z6Y-kE-Oqv"/>
                             <constraint firstItem="h42-sB-MYm" firstAttribute="top" secondItem="Egx-EX-WyE" secondAttribute="top" type="default" id="uL4-TU-Hlq"/>
                             <constraint firstItem="h42-sB-MYm" firstAttribute="trailing" secondItem="Egx-EX-WyE" secondAttribute="trailing" type="default" id="v9E-Jc-kMF"/>
@@ -1419,6 +1418,87 @@ McKeen Center Goals
         <image name="sseames contact.jpg" width="165" height="190"/>
         <image name="third.png" width="30" height="30"/>
     </resources>
+    <classes>
+        <class className="McKContactViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKContactViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="phoneButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="McKEventInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKEventInfoViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="signUp:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="eventDetails" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="eventSubtitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="eventTitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="McKFifthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFifthViewController.h"/>
+        </class>
+        <class className="McKFirstViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFirstViewController.h"/>
+        </class>
+        <class className="McKFourthViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFourthViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelButton:" candidateClass="UIButton"/>
+                <relationship kind="action" name="submitButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="feedbackTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="fourthView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="programTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="throughMkC" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="McKLocationSelector" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKLocationSelector.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locationPicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="McKOpportunityInfo" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKOpportunityInfo.h"/>
+            <relationships>
+                <relationship kind="action" name="signUpButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="opportunityInformation" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="opportunitySubtitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="opportunityTitle" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="McKPartnershipsTableView" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKPartnershipsTableView.h"/>
+        </class>
+        <class className="McKSecondViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKSecondViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleModeButton:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="toggleButtonOutlet" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="McKStaffViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKStaffViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="emailButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="staffScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="McKThirdViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKThirdViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="servicePicker" candidateClass="UIPickerView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
