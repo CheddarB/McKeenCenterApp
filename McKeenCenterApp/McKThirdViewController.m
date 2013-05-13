@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     serviceIssuesArray = [[NSMutableArray alloc]init];
 	
 	//contruct file location on server

@@ -145,7 +145,7 @@
     
     // iterate through NSArray to make dictionary with first letter as Key
     NSString * mostRecentlyAddedProgramTitle = NULL;
-    for (int i = 0; i < programTitles.count; i++){
+    for (int i = 0; i < programTitles.count-1; i++){
         if (([self socialIssueShouldBeDisplayedFor:specificSocialIssueKey forString:
               [programTitles objectAtIndex:i]] && [self locationShouldBeDisplayedFor:specificLocationKey forString:[programTitles objectAtIndex: i]])){
             if (mostRecentlyAddedProgramTitle){
