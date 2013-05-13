@@ -7,7 +7,10 @@
 //
 
 #import "McKContactViewController.h"
+#import "McKUtilities.h"
+
 #define STARTING_DELTA .004
+
 @interface McKContactViewController ()
 
 @end
@@ -28,24 +31,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    mapView.mapType = MKMapTypeHybrid;
+    
+}
 
+- (void)viewWillLayoutSubviews{
+	[super viewWillLayoutSubviews];
+	
+	mapView.mapType = MKMapTypeHybrid;
+	
     CLLocationCoordinate2D myCoordinate = {43.908266, -69.961828};
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+	
+	MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.title = @"McKeen Center for the Common Good";
     point.subtitle = @"South Side of the Chapel";
     point.coordinate = myCoordinate;
-    [self.mapView addAnnotation:point];
-    MKCoordinateRegion region;
+    
+	[self.mapView addAnnotation:point];
+    
+	MKCoordinateRegion region;
     //Set Zoom level using Span
     MKCoordinateSpan span;
     region.center=myCoordinate;
     span.latitudeDelta=STARTING_DELTA;
     span.longitudeDelta=STARTING_DELTA;
     region.span=span;
-	NSLog(@"region:%f,%f",region.center.latitude, region.center.longitude);
+
     [mapView setRegion:region animated:TRUE];
-	NSLog(@"map:%f,%f",mapView.centerCoordinate.latitude, mapView.centerCoordinate.longitude);
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +66,6 @@
 }
 
 - (IBAction)phoneButton:(UIButton *)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://2077894113"]];
+	[McKUtilities callPhoneNumber:@"2077894113"];
 }
 @end

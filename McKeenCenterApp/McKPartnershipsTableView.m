@@ -11,6 +11,7 @@
 #import "McKPartnershipsTableView.h"
 #import "PartnerInfoFetcher.h"
 #import "McKFileRetriever.h"
+#import "McKUtilities.h"
 
 
 @interface McKPartnershipsTableView ()
@@ -323,8 +324,7 @@
 			[self sendEmail];
         } else if ([programPhoneNumber length]){
 			//call
-			NSURL * phoneNumber = [NSURL URLWithString:@"tel://8608827388"];
-			[[UIApplication sharedApplication] openURL:phoneNumber];
+			[McKUtilities callPhoneNumber:programPhoneNumber];
         } else if ([programWebsite length]){
 			//open site
 			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
@@ -333,6 +333,7 @@
         if (![programEmail length]){
             if (buttonIndex == 0){
 				//*phone*
+				[McKUtilities callPhoneNumber:programPhoneNumber];
             } else{
 				//open site
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
@@ -351,6 +352,7 @@
 				[self sendEmail];
             } else{
 				//*phone*
+				[McKUtilities callPhoneNumber:programPhoneNumber];
 			}
         }
     } else if (actionSheetMode == 7){
@@ -359,9 +361,8 @@
 			[self sendEmail];
         } else if (buttonIndex == 1){
 			//*phone*
-            printf("actionsheet phone\n");
+			[McKUtilities callPhoneNumber:programPhoneNumber];
         } else {
-			printf("actionsheet website\n %s",[programWebsite UTF8String]);
 			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
 		}
     }
@@ -498,4 +499,6 @@
 		NSLog(@"Device is unable to send email in its current state.");
 	}
 }
+
+
 @end

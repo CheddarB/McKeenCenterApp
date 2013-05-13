@@ -26,9 +26,6 @@
 		208B77D617170CC900E9511B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 208B77D417170CC900E9511B /* InfoPlist.strings */; };
 		208B77D817170CC900E9511B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77D717170CC900E9511B /* main.m */; };
 		208B77DC17170CC900E9511B /* McKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77DB17170CC900E9511B /* McKAppDelegate.m */; };
-		208B77DE17170CC900E9511B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77DD17170CC900E9511B /* Default.png */; };
-		208B77E017170CC900E9511B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77DF17170CC900E9511B /* Default@2x.png */; };
-		208B77E217170CC900E9511B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B77E117170CC900E9511B /* Default-568h@2x.png */; };
 		208B77E517170CC900E9511B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208B77E317170CC900E9511B /* MainStoryboard.storyboard */; };
 		208B77FE1717107D00E9511B /* McKThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77FD1717107D00E9511B /* McKThirdViewController.m */; };
 		208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B780017173F1E00E9511B /* McKFourthViewController.m */; };
@@ -58,6 +55,12 @@
 		316593BF172096710099BC22 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 316593BC172096710099BC22 /* README.md */; };
 		316593C11720A3D30099BC22 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 316593C01720A3D30099BC22 /* libxml2.dylib */; };
 		31668AC7173B40020078F45F /* McKFileRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = 31668AC6173B40020078F45F /* McKFileRetriever.m */; };
+		31E4AAC317406F0D00B11F90 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E4AAC117406E5800B11F90 /* Default.png */; };
+		31E4AAC517406FCA00B11F90 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E4AAC417406FCA00B11F90 /* Default@2x.png */; };
+		31E4AAC71740708F00B11F90 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E4AAC61740708F00B11F90 /* Default-568h@2x.png */; };
+		31E4AACA1740724D00B11F90 /* McKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E4AAC91740724D00B11F90 /* McKUtilities.m */; };
+		31E4AACC17407A9300B11F90 /* retina_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E4AACB17407A9300B11F90 /* retina_icon.png */; };
+		31E4AACE17407DE800B11F90 /* default_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 31E4AACD17407DE800B11F90 /* default_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,9 +92,6 @@
 		208B77D917170CC900E9511B /* McKeenCenterApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "McKeenCenterApp-Prefix.pch"; sourceTree = "<group>"; };
 		208B77DA17170CC900E9511B /* McKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = McKAppDelegate.h; sourceTree = "<group>"; };
 		208B77DB17170CC900E9511B /* McKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = McKAppDelegate.m; sourceTree = "<group>"; };
-		208B77DD17170CC900E9511B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		208B77DF17170CC900E9511B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		208B77E117170CC900E9511B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		208B77E417170CC900E9511B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		208B77FC1717107D00E9511B /* McKThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKThirdViewController.h; sourceTree = "<group>"; };
 		208B77FD1717107D00E9511B /* McKThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKThirdViewController.m; sourceTree = "<group>"; };
@@ -132,6 +132,13 @@
 		316593C01720A3D30099BC22 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		31668AC5173B40020078F45F /* McKFileRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKFileRetriever.h; sourceTree = "<group>"; };
 		31668AC6173B40020078F45F /* McKFileRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKFileRetriever.m; sourceTree = "<group>"; };
+		31E4AAC117406E5800B11F90 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		31E4AAC417406FCA00B11F90 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		31E4AAC61740708F00B11F90 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		31E4AAC81740724D00B11F90 /* McKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKUtilities.h; sourceTree = "<group>"; };
+		31E4AAC91740724D00B11F90 /* McKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKUtilities.m; sourceTree = "<group>"; };
+		31E4AACB17407A9300B11F90 /* retina_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = retina_icon.png; path = ../retina_icon.png; sourceTree = "<group>"; };
+		31E4AACD17407DE800B11F90 /* default_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_icon.png; path = ../default_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,9 +218,13 @@
 				208B77D417170CC900E9511B /* InfoPlist.strings */,
 				208B77D717170CC900E9511B /* main.m */,
 				208B77D917170CC900E9511B /* McKeenCenterApp-Prefix.pch */,
-				208B77DD17170CC900E9511B /* Default.png */,
-				208B77DF17170CC900E9511B /* Default@2x.png */,
-				208B77E117170CC900E9511B /* Default-568h@2x.png */,
+				31E4AACB17407A9300B11F90 /* retina_icon.png */,
+				31E4AACD17407DE800B11F90 /* default_icon.png */,
+				31E4AAC117406E5800B11F90 /* Default.png */,
+				31E4AAC417406FCA00B11F90 /* Default@2x.png */,
+				31E4AAC61740708F00B11F90 /* Default-568h@2x.png */,
+				31E4AAC81740724D00B11F90 /* McKUtilities.h */,
+				31E4AAC91740724D00B11F90 /* McKUtilities.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -378,9 +389,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				208B77D617170CC900E9511B /* InfoPlist.strings in Resources */,
-				208B77DE17170CC900E9511B /* Default.png in Resources */,
-				208B77E017170CC900E9511B /* Default@2x.png in Resources */,
-				208B77E217170CC900E9511B /* Default-568h@2x.png in Resources */,
 				208B77E517170CC900E9511B /* MainStoryboard.storyboard in Resources */,
 				208B780E17174A3500E9511B /* fifth@2x.png in Resources */,
 				208B781517174C0C00E9511B /* second@2x.png in Resources */,
@@ -404,6 +412,11 @@
 				20CFAF6F1739478200BF8529 /* CCallahan1.jpg in Resources */,
 				20CFAF701739478200BF8529 /* lmondello contact.jpg in Resources */,
 				20CFAF711739478200BF8529 /* nancy-jennings contact.jpg in Resources */,
+				31E4AAC317406F0D00B11F90 /* Default.png in Resources */,
+				31E4AAC517406FCA00B11F90 /* Default@2x.png in Resources */,
+				31E4AAC71740708F00B11F90 /* Default-568h@2x.png in Resources */,
+				31E4AACC17407A9300B11F90 /* retina_icon.png in Resources */,
+				31E4AACE17407DE800B11F90 /* default_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +444,7 @@
 				20CFAF731739490400BF8529 /* McKContactViewController.m in Sources */,
 				20CFAF7617394A2300BF8529 /* McKStaffViewController.m in Sources */,
 				31668AC7173B40020078F45F /* McKFileRetriever.m in Sources */,
+				31E4AACA1740724D00B11F90 /* McKUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
