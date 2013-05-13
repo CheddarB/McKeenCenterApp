@@ -31,8 +31,6 @@
 {
     [super viewDidLoad];
     serviceIssuesArray = [[NSMutableArray alloc]init];
-
-    //NSString* path = [[NSBundle mainBundle] pathForResource:@"social_issues" ofType:@"txt"];
 	
 	//contruct file location on server
 	NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
@@ -73,8 +71,6 @@
     return [serviceIssuesArray objectAtIndex:row];
 }
 - (void)pickerView:(UIPickerView *)thePickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    
-  //  NSLog(@"Selected service: %@.", [serviceIssuesArray objectAtIndex:row]);
     serviceType = [serviceIssuesArray objectAtIndex:row];
 }
 
@@ -89,7 +85,6 @@
         locationSelectorVC = (McKLocationSelector*)segue.destinationViewController;
         locationSelectorVC->socialIssue = serviceType;
     }
-
 }
 
 @end

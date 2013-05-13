@@ -41,9 +41,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    //toggleButtonOutlet.backgroundColor = [UIColor colorWithRed: 160/255.0 green: 250/255.0 blue:160/255.0 alpha: 1.0];
-    
+    [super viewDidLoad];    
     [self buildArraysOfJobsAndConferences];
     
 }
@@ -70,7 +68,6 @@
         
 		NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"~"];
         
-        printf("###%d###", [nonMutableArrayOfJobs count]);
 		//make arrayOfEvents a 2D array
         arrayOfObjects = [nonMutableArrayOfJobs mutableCopy];
         for (int i = 0; i < [arrayOfObjects count]; i++){
@@ -155,7 +152,7 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.detailTextLabel.textColor = [UIColor blackColor];
     
-    //set alternating grey backgrounds
+    //set alternating green backgrounds
     UIView* backgroundView = [[UIView alloc]initWithFrame:CGRectZero ];
     if (indexPath.row %2){
         backgroundView.backgroundColor = [UIColor colorWithRed: Red1/255.0 green: Green1/255.0 blue: Blue1/255.0 alpha: 1.0];

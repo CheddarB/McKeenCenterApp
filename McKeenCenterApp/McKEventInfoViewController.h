@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface McKEventInfoViewController : UIViewController
+@interface McKEventInfoViewController : UIViewController<MFMailComposeViewControllerDelegate>
 
 @property (nonatomic) int cellSelected;
 @property (nonatomic) NSMutableArray * eventInfo;

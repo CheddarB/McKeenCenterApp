@@ -46,14 +46,13 @@
     if ([[eventInfo objectAtIndex:cellSelected]count] > 2){
         [eventDetails setText: [[eventInfo objectAtIndex:cellSelected]objectAtIndex:2]];
     } else [eventDetails setText:@"There is no additional information about this event. Please contact the McKeenCenter for more information."];
+    //
     if ([[eventInfo objectAtIndex:cellSelected]objectAtIndex:2]){
         char buttonMode = [[[eventInfo objectAtIndex:cellSelected]objectAtIndex:3]characterAtIndex:0];
         if ((buttonMode == 'y') || (buttonMode == 'Y')){
             signupButton.hidden = NO;
         } else signupButton.hidden = YES;
     } else signupButton.hidden = YES;
-
-
 }
 
 - (void)didReceiveMemoryWarning

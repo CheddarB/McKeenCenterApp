@@ -63,14 +63,6 @@
         NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
         [arrayOfEvents replaceObjectAtIndex:i withObject:subArray];
     }
-/*
-    for (int i = 0; i < [arrayOfEvents count]; i++){
-        for (int j = 0; j < [[arrayOfEvents objectAtIndex:i] count]; j++){
-            printf("(%d, %d) %s\n",i,j, [[[arrayOfEvents objectAtIndex:i] objectAtIndex:j ] UTF8String]);
-        }
-        printf("\n");
-    }
-*/
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,32 +72,31 @@
 }
 
 #pragma mark - Table view data source
-
+// always set to one section
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
-
+// number of cells is the number of objects in array of events
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [arrayOfEvents count];
 }
-
+// format the cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"EventCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-    
+    // set title and subtitle
     cell.textLabel.text = [[arrayOfEvents objectAtIndex: indexPath.row]objectAtIndex:0];
     cell.detailTextLabel.text = [[arrayOfEvents objectAtIndex: indexPath.row]objectAtIndex:1];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.detailTextLabel.textColor = [UIColor blackColor];
 
-    //set alternating grey backgrounds
+    //set alternating grey backgrounds for asthetics
     UIView* backgroundView = [[UIView alloc]initWithFrame:CGRectZero ];
     if (indexPath.row %2){
         backgroundView.backgroundColor = [UIColor colorWithRed: Red1/255.0 green: Green1/255.0 blue:Blue1/255.0 alpha: 1.0];
@@ -114,14 +105,12 @@
     cell.backgroundView = backgroundView;
     for ( UIView* view in cell.contentView.subviews )
     {
-        
         view.backgroundColor = [ UIColor clearColor ];
     }
    
-
     return cell;
 }
-
+// called when a cell is selected, segway declared in storyboard
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"eventInfo"]){

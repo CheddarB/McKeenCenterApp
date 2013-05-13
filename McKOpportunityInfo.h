@@ -10,7 +10,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface McKOpportunityInfo : UIViewController
+@interface McKOpportunityInfo : UIViewController<MFMailComposeViewControllerDelegate>
 
 @property (nonatomic) int cellSelected;
 @property (nonatomic) NSMutableArray * oppInfo;
