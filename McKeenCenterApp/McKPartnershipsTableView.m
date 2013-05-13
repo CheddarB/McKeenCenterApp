@@ -257,7 +257,9 @@
 	
 	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:urlID];
 	
-    numberOfButtons = 0;
+    //reset number of buttons and actionsheet mode
+	numberOfButtons = 0;
+	actionSheetMode = 0;
     
     
     programEmail = infoFetcher.email;
