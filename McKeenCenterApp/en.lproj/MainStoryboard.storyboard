@@ -703,25 +703,9 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" id="nTY-ZX-aju">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <color key="tintColor" red="0.70588237047195435" green="0.86274516582489014" blue="0.78431379795074463" alpha="1" colorSpace="deviceRGB"/>
-                            <state key="normal" title="view conferences">
-                                <color key="titleColor" red="0.37421414780867701" green="0.5345982142857143" blue="0.4687777567596193" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <state key="highlighted">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="toggleModeButton:" destination="4ah-Qi-Wuw" eventType="touchUpInside" id="bJW-2x-r5a"/>
-                            </connections>
-                        </button>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="4" indentationWidth="0.0" reuseIdentifier="OpportunityCell" textLabel="33f-9H-M0e" detailTextLabel="uAy-ft-FF1" rowHeight="81" style="IBUITableViewCellStyleSubtitle" id="c2q-9i-J2I">
-                                <rect key="frame" x="0.0" y="68" width="320" height="83"/>
+                                <rect key="frame" x="0.0" y="46" width="320" height="83"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="10" y="1" width="280" height="80"/>
@@ -749,10 +733,17 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Professional Opportunities" id="i4L-DW-Df1"/>
+                    <navigationItem key="navigationItem" title="Professional Opportunities" id="i4L-DW-Df1">
+                        <barButtonItem key="rightBarButtonItem" title="conferences" id="skT-h2-bES">
+                            <connections>
+                                <action selector="toggleModeButton:" destination="4ah-Qi-Wuw" id="zDH-PL-RZJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="toggleButtonOutlet" destination="nTY-ZX-aju" id="dYe-k7-Ney"/>
+                        <outlet property="toggleButtonOutlet" destination="skT-h2-bES" id="ycY-gZ-ftY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFN-fd-8v6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1488,8 +1479,8 @@ McKeen Center Goals
         <class className="McKSecondViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/McKSecondViewController.h"/>
             <relationships>
-                <relationship kind="action" name="toggleModeButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="toggleButtonOutlet" candidateClass="UIButton"/>
+                <relationship kind="action" name="toggleModeButton:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="toggleButtonOutlet" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="McKStaffViewController" superclassName="UIViewController">
@@ -1516,8 +1507,8 @@ McKeen Center Goals
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Ua3-yi-iXF"/>
-        <segue reference="GDz-2H-9mK"/>
         <segue reference="VSE-Ri-cDe"/>
-        <segue reference="dP9-Wp-Gbo"/>
+        <segue reference="GDz-2H-9mK"/>
+        <segue reference="coh-xO-NAd"/>
     </inferredMetricsTieBreakers>
 </document>

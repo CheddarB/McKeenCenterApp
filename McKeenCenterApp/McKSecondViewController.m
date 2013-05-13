@@ -18,6 +18,7 @@
 #define Green2 200
 
 
+
 @interface McKSecondViewController ()
 
 @end
@@ -48,8 +49,9 @@
 }
 - (void)buildArraysOfJobsAndConferences
 {
-    if ([toggleButtonOutlet.currentTitle isEqual:@"view conferences"]){
-        self.navigationItem.title = @"Jobs and Opportunities";
+    
+    if ([toggleButtonOutlet.title isEqual:@"conferences"]){
+        self.navigationItem.title = @"Jobs Opportunities";
 
         //contruct file location on server
 		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
@@ -182,12 +184,22 @@
         oppInfoVC.cellSelected = self.tableView.indexPathForSelectedRow.row;
     }
 }
-- (IBAction)toggleModeButton:(UIButton *)sender {
-    if ([toggleButtonOutlet.currentTitle isEqual:@"view conferences"]){
-        [toggleButtonOutlet setTitle:@"view jobs and opportunities" forState:UIControlStateNormal];
-    } else [toggleButtonOutlet setTitle:@"view conferences" forState:UIControlStateNormal];
+//- (IBAction)toggleModeButton:(UIButton *)sender {
+   // }
+- (IBAction)toggleModeButton:(UIBarButtonItem *)sender {
+    if ([toggleButtonOutlet.title isEqual:@"conferences"]){
+        toggleButtonOutlet.title = @"job opps";
+        self.navigationItem.leftBarButtonItem = toggleButtonOutlet;
+        self.navigationItem.rightBarButtonItem = nil;
+    } else {
+    toggleButtonOutlet.title = @"conferences";
+        self.navigationItem.rightBarButtonItem = toggleButtonOutlet;
+        self.navigationItem.leftBarButtonItem = nil;
+    }
+
     [self buildArraysOfJobsAndConferences];
     [self.tableView reloadData];
+    
 
 }
 @end

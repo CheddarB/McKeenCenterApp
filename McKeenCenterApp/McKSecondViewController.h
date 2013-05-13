@@ -14,7 +14,9 @@
 @property (nonatomic) NSMutableArray * arrayOfObjects;
 @property (strong, nonatomic) McKOpportunityInfo * oppInfoVC;
 
-- (IBAction)toggleModeButton:(UIButton *)sender;
-@property (strong, nonatomic) IBOutlet UIButton *toggleButtonOutlet;
+//- (IBAction)toggleModeButton:(UIButton *)sender;
+//@property (strong, nonatomic) IBOutlet UIButton *toggleButtonOutlet;
+- (IBAction)toggleModeButton:(UIBarButtonItem *)sender;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *toggleButtonOutlet;
 
 @end
