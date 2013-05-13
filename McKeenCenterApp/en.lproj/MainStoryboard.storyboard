@@ -939,16 +939,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="305" id="ot7-dR-fU9"/>
                                 </constraints>
-                                <string key="text">Mission
+                                <mutableString key="text">Mission
 									
-									The Joseph McKeen Center for the Common Good provides opportunities for students to discover the ways in which their talents, passions and academic pursuits can be used for the benefit of society through public engagement.  By linking diverse activities in order to compound their meaningfulness, the McKeen Center serves as a vibrant and central source of information, events and activities related to public engagement for faculty and staff as well as students, and connects departments, programs and individuals with similar interests to enhance both learning and impact in the community.
+The Joseph McKeen Center for the Common Good provides opportunities for students to discover the ways in which their talents, passions and academic pursuits can be used for the benefit of society through public engagement.  By linking diverse activities in order to compound their meaningfulness, the McKeen Center serves as a vibrant and central source of information, events and activities related to public engagement for faculty and staff as well as students, and connects departments, programs and individuals with similar interests to enhance both learning and impact in the community.
 									
 									The McKeen Center offers students opportunities to explore themes of community responsibility, active citizenship and informed leadership through service and community engagement at the local, national and international levels.  The Center encourages and assists faculty members in connecting their teaching, research and artistic endeavors to issues of the public good. It creates avenues for community partners, alumni and staff to educate students by action and example.  In addition, the McKeen Center coordinates and supports public events that challenge all members of the Bowdoin community to consider both the historical and contemporary meanings of the common good and to debate issues of broad public concern. Faculty Fellows appointed to work with the McKeen Center help shape the Center’s educational vision and its connection to the academic program, while student leaders of community service programs focus the Center’s work on those initiatives that are most current and compelling.
 									
 									McKeen Center Goals
 									• Enhance student learning and leadership skills through reflective public engagement in the curriculum and co-curriculum while cultivating lifelong commitments to improving the well-being of society;
 									• Encourage and support publicly engaged teaching, research and artistic work;
-									• Promote public engagement throughout the Bowdoin community by fostering discussion of the common good in campus-wide events that address issues of broad public concern.</string>
+									• Promote public engagement throughout the Bowdoin community by fostering discussion of the common good in campus-wide events that address issues of broad public concern.</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -956,11 +956,11 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="z82-s1-3ip" firstAttribute="bottom" secondItem="EfU-6s-zrw" secondAttribute="bottom" type="default" id="3nr-Yl-SeE"/>
-                            <constraint firstItem="z82-s1-3ip" firstAttribute="leading" secondItem="EfU-6s-zrw" secondAttribute="leading" constant="7" id="3rt-vg-krJ"/>
                             <constraint firstItem="sa9-9d-2Hf" firstAttribute="trailing" secondItem="EfU-6s-zrw" secondAttribute="trailing" type="default" id="6kq-y1-95F"/>
                             <constraint firstItem="sa9-9d-2Hf" firstAttribute="leading" secondItem="EfU-6s-zrw" secondAttribute="leading" type="default" id="BOK-8Y-AA6"/>
                             <constraint firstItem="z82-s1-3ip" firstAttribute="top" secondItem="EfU-6s-zrw" secondAttribute="top" type="default" id="XQY-aR-WbE"/>
                             <constraint firstItem="sa9-9d-2Hf" firstAttribute="top" secondItem="EfU-6s-zrw" secondAttribute="top" type="default" id="YIp-ni-JUp"/>
+                            <constraint firstItem="z82-s1-3ip" firstAttribute="centerX" secondItem="sa9-9d-2Hf" secondAttribute="centerX" type="default" id="e4I-2S-eqk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="fifth.png" id="chs-Ux-BE6"/>
