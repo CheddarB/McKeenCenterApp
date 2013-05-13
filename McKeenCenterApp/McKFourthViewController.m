@@ -20,6 +20,7 @@
 @synthesize feedbackTextView;
 @synthesize throughMkC;
 @synthesize scrollView;
+@synthesize savedScrollFrame;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +37,13 @@
     nameTextField.delegate = self;
     [scrollView setScrollEnabled:YES];
     [scrollView setContentSize:CGSizeMake(320, 600)];
+	
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(keyboardDidShow)
+												 name:UIKeyboardDidShowNotification
+											   object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide) name:UIKeyboardDidHideNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -43,22 +51,29 @@
     [super didReceiveMemoryWarning];
 }
 
--(void)textFieldDidBeginEditing:(UITextField *)textField
-{
-
+- (void)viewDidAppear:(BOOL)animated{
+	savedScrollFrame = scrollView.frame;
 }
 
-- (IBAction)cancelButton:(UIButton *)sender
-{
-        if ([feedbackTextView isFirstResponder])
-            [feedbackTextView resignFirstResponder];
-        else if ([nameTextField isFirstResponder])
-            [nameTextField resignFirstResponder];
-        else if ([dateTextField isFirstResponder])
-            [dateTextField resignFirstResponder];
-        else if ([programTextField isFirstResponder])
-            [programTextField resignFirstResponder];
-    
+
+- (void)keyboardDidShow{
+	scrollView.frame = CGRectMake(scrollView.frame.origin.x, scrollView.frame.origin.y, scrollView.frame.size.width, scrollView.frame.size.height-165);
+}
+
+- (void)keyboardDidHide{
+	scrollView.frame = savedScrollFrame;
+	[scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+}
+
+- (IBAction)cancelButton:(UIButton *)sender{
+	if ([feedbackTextView isFirstResponder])
+		[feedbackTextView resignFirstResponder];
+	else if ([nameTextField isFirstResponder])
+		[nameTextField resignFirstResponder];
+	else if ([dateTextField isFirstResponder])
+		[dateTextField resignFirstResponder];
+	else if ([programTextField isFirstResponder])
+		[programTextField resignFirstResponder];
 }
 
 - (IBAction)submitButton:(UIButton *)sender
@@ -93,10 +108,10 @@
 	if (result==MFMailComposeResultSent) {
 		
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sent!"
-																										message:@"Your message was sent successfully"
-																									 delegate:nil
-																					cancelButtonTitle:@"OK"
-																					otherButtonTitles:nil];
+														message:@"Your message was sent successfully"
+													   delegate:nil
+											  cancelButtonTitle:@"OK"
+											  otherButtonTitles:nil];
 		[alert show];
 	}
 	[self dismissViewControllerAnimated:YES completion:nil];
