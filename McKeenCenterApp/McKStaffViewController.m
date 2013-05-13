@@ -38,9 +38,8 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)viewWillLayoutSubviews{
-	[super viewWillLayoutSubviews];
-	
+
+- (void)viewDidAppear:(BOOL)animated{
 	[staffScrollView setScrollEnabled:YES];
     [staffScrollView setContentSize:CGSizeMake(320, 731)];
 }
@@ -53,7 +52,7 @@
 
 - (IBAction)emailButton:(UIButton *)sender {
     printf("%s\n", [[sender currentTitle] UTF8String]);
-    if ([sender.titleLabel isEqual:@"email sarah"]){
+    if ([[sender currentTitle] isEqual:@"email sarah"]){
         staffName = @"Sarah";
         staffEmail = @"sseames@bowdoin.edu";
     } else if ([[sender currentTitle] isEqual:@"email caitlin"]){
@@ -83,11 +82,9 @@
 		
         //present mail interface
         [self presentViewController:mailViewController animated:YES completion:nil];
-    }else {
-        
+    } else{
         NSLog(@"Device is unable to send email in its current state.");
     }
-
 }
 
 //MFMailComposeViewControllerDelegate method
@@ -101,7 +98,11 @@
                                               otherButtonTitles:nil];
 		[alert show];
 	}
+	
+	//reset scroll position and hide email window
+	[staffScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 	[self dismissViewControllerAnimated:YES completion:nil];
+	
 }
 
 @end

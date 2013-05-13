@@ -1079,7 +1079,7 @@ McKeen Center Goals
                                             <constraint firstAttribute="width" constant="100" id="g4v-ek-ypD"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Caitlin Callahan '11, Assistent Director of the McKeen Center" translatesAutoresizingMaskIntoConstraints="NO" id="joO-8b-ZdS">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Caitlin Callahan '11, Assistant Director of the McKeen Center" translatesAutoresizingMaskIntoConstraints="NO" id="joO-8b-ZdS">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="69" id="XJl-gT-YGT"/>
                                         </constraints>
@@ -1149,7 +1149,7 @@ McKeen Center Goals
                                             <constraint firstAttribute="height" constant="100" id="xrv-lO-3RV"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Luke Mondello '10, Assistent Director" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-wk-UIx">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Luke Mondello '10, Assistant Director" translatesAutoresizingMaskIntoConstraints="NO" id="NsC-wk-UIx">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="hHY-SD-aQY"/>
                                         </constraints>
@@ -1163,7 +1163,7 @@ McKeen Center Goals
                                             <constraint firstAttribute="height" constant="35" id="j9d-VE-RZx"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <state key="normal" title="email sara">
+                                        <state key="normal" title="email sarah">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
