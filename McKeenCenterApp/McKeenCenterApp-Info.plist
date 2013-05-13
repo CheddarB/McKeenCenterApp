@@ -15,6 +15,7 @@
 			<key>CFBundleIconFiles</key>
 			<array>
 				<string>retina_icon.png</string>
+				<string>default_icon.png</string>
 			</array>
 		</dict>
 	</dict>
