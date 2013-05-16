@@ -50,7 +50,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setToolbarTitle];
+    [self setToolbarTitleAndArrayOfObjects];
     if ([toggleButtonOutlet.title isEqual:@"Conferences"]){
         self.navigationItem.title = @"Job Opportunities";
     } else self.navigationItem.title = @"Conferences";
@@ -75,17 +75,22 @@
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     conferencesPath = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    [self setToolbarTitleAndArrayOfObjects];
 
-    arrayOfObjects = [McKOpportunityModel buildArraysOfJobsAndConferencesWithMode:[toggleButtonOutlet.title isEqual:@"Conferences"] withJobsPath:jobsPath andConferencesPath:conferencesPath];
     
     self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
 }
 
-- (void) setToolbarTitle
+- (void) setToolbarTitleAndArrayOfObjects
 {
     if ([toggleButtonOutlet.title isEqual:@"Conferences"]){
         self.navigationItem.title = @"Job Opportunities";
-    } else self.navigationItem.title = @"Conferences";
+        arrayOfObjects = [McKArrayMakerModel getArrayFromString:jobsPath];
+
+    } else {
+        self.navigationItem.title = @"Conferences";
+        arrayOfObjects = [McKArrayMakerModel getArrayFromString:conferencesPath];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -133,7 +138,6 @@
         view.backgroundColor = [ UIColor clearColor ];
     }
     
-    
     return cell;
 }
 
@@ -162,8 +166,7 @@
         self.navigationItem.leftBarButtonItem = nil;
     }
     
-    arrayOfObjects = [McKOpportunityModel buildArraysOfJobsAndConferencesWithMode:[toggleButtonOutlet.title isEqual:@"Conferences"] withJobsPath:jobsPath andConferencesPath:conferencesPath];
-    [self setToolbarTitle];
+    [self setToolbarTitleAndArrayOfObjects];
     [self.tableView reloadData];
 }
 @end

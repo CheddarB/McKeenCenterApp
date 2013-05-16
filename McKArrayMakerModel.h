@@ -1,5 +1,5 @@
 //
-//  McKEventsModel.h
+//  McKArrayMakerModel.h
 //  McKeenCenterApp
 //
 //  Created by Evan Hoyt on 5/16/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface McKEventsModel : NSObject
+@interface McKArrayMakerModel : NSObject
 
 +(NSMutableArray *)getArrayFromString:(NSString *) path;
 

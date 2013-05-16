@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "McKEventInfoViewController.h"
-#import "McKEventsModel.h"
+#import "McKArrayMakerModel.h"
 
 @interface McKFirstViewController : UITableViewController
 

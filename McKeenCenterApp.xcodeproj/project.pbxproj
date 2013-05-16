@@ -12,8 +12,7 @@
 		203A261417375AC2007F39D9 /* McKEventInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261317375AC2007F39D9 /* McKEventInfoViewController.m */; };
 		203A261A17380431007F39D9 /* McKSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261917380431007F39D9 /* McKSecondViewController.m */; };
 		203A261D173804EC007F39D9 /* McKOpportunityInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 203A261C173804EC007F39D9 /* McKOpportunityInfo.m */; };
-		204906781745514D0098BA40 /* McKOpportunityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 204906771745514D0098BA40 /* McKOpportunityModel.m */; };
-		2049067B174558C20098BA40 /* McKEventsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049067A174558C20098BA40 /* McKEventsModel.m */; };
+		2049067E17455D830098BA40 /* McKArrayMakerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2049067D17455D830098BA40 /* McKArrayMakerModel.m */; };
 		207AF0FB171E23790001DCBC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207AF0FA171E23790001DCBC /* MessageUI.framework */; };
 		20866D1F171CEAA800DC0147 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1D171CEAA800DC0147 /* third.png */; };
 		20866D20171CEAA800DC0147 /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20866D1E171CEAA800DC0147 /* third@2x.png */; };
@@ -76,10 +75,8 @@
 		203A261917380431007F39D9 /* McKSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKSecondViewController.m; sourceTree = "<group>"; };
 		203A261B173804EC007F39D9 /* McKOpportunityInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKOpportunityInfo.h; path = ../McKOpportunityInfo.h; sourceTree = "<group>"; };
 		203A261C173804EC007F39D9 /* McKOpportunityInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKOpportunityInfo.m; path = ../McKOpportunityInfo.m; sourceTree = "<group>"; };
-		204906761745514D0098BA40 /* McKOpportunityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKOpportunityModel.h; sourceTree = "<group>"; };
-		204906771745514D0098BA40 /* McKOpportunityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKOpportunityModel.m; sourceTree = "<group>"; };
-		20490679174558C20098BA40 /* McKEventsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKEventsModel.h; sourceTree = "<group>"; };
-		2049067A174558C20098BA40 /* McKEventsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKEventsModel.m; sourceTree = "<group>"; };
+		2049067C17455D830098BA40 /* McKArrayMakerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKArrayMakerModel.h; path = ../McKArrayMakerModel.h; sourceTree = "<group>"; };
+		2049067D17455D830098BA40 /* McKArrayMakerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKArrayMakerModel.m; path = ../McKArrayMakerModel.m; sourceTree = "<group>"; };
 		207AF0FA171E23790001DCBC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		20866D1D171CEAA800DC0147 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = third.png; sourceTree = "<group>"; };
 		20866D1E171CEAA800DC0147 /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
@@ -212,8 +209,6 @@
 				20CFAF651739471900BF8529 /* Staff Photos */,
 				209858BE171F331F008CE9EC /* JPGs */,
 				208B77D217170CC900E9511B /* Supporting Files */,
-				31668AC5173B40020078F45F /* McKFileRetriever.h */,
-				31668AC6173B40020078F45F /* McKFileRetriever.m */,
 			);
 			path = McKeenCenterApp;
 			sourceTree = "<group>";
@@ -231,6 +226,10 @@
 				31E4AAC61740708F00B11F90 /* Default-568h@2x.png */,
 				31E4AAC81740724D00B11F90 /* McKUtilities.h */,
 				31E4AAC91740724D00B11F90 /* McKUtilities.m */,
+				2049067C17455D830098BA40 /* McKArrayMakerModel.h */,
+				2049067D17455D830098BA40 /* McKArrayMakerModel.m */,
+				31668AC5173B40020078F45F /* McKFileRetriever.h */,
+				31668AC6173B40020078F45F /* McKFileRetriever.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -257,8 +256,6 @@
 			children = (
 				203A261817380431007F39D9 /* McKSecondViewController.h */,
 				203A261917380431007F39D9 /* McKSecondViewController.m */,
-				204906761745514D0098BA40 /* McKOpportunityModel.h */,
-				204906771745514D0098BA40 /* McKOpportunityModel.m */,
 				203A261B173804EC007F39D9 /* McKOpportunityInfo.h */,
 				203A261C173804EC007F39D9 /* McKOpportunityInfo.m */,
 				208B781417174C0B00E9511B /* second.png */,
@@ -272,8 +269,6 @@
 			children = (
 				203A260B17373C3A007F39D9 /* McKFirstViewController.h */,
 				203A260C17373C3A007F39D9 /* McKFirstViewController.m */,
-				20490679174558C20098BA40 /* McKEventsModel.h */,
-				2049067A174558C20098BA40 /* McKEventsModel.m */,
 				203A261217375AC2007F39D9 /* McKEventInfoViewController.h */,
 				203A261317375AC2007F39D9 /* McKEventInfoViewController.m */,
 				208B781717174DAF00E9511B /* first.png */,
@@ -455,8 +450,7 @@
 				20CFAF7617394A2300BF8529 /* McKStaffViewController.m in Sources */,
 				31668AC7173B40020078F45F /* McKFileRetriever.m in Sources */,
 				31E4AACA1740724D00B11F90 /* McKUtilities.m in Sources */,
-				204906781745514D0098BA40 /* McKOpportunityModel.m in Sources */,
-				2049067B174558C20098BA40 /* McKEventsModel.m in Sources */,
+				2049067E17455D830098BA40 /* McKArrayMakerModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #include "McKOpportunityInfo.h"
-#include "McKOpportunityModel.h"
+#include "McKArrayMakerModel.h"
 
 @interface McKSecondViewController : UITableViewController
 

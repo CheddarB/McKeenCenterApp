@@ -55,7 +55,7 @@
 	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	
-    arrayOfEvents = [McKEventsModel getArrayFromString:path];
+    arrayOfEvents = [McKArrayMakerModel getArrayFromString:path];
 }
 
 - (void)didReceiveMemoryWarning

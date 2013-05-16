@@ -11,6 +11,7 @@
 #import "PartnerInfoFetcher.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import "McKUtilities.h"
 
 @interface McKPartnershipsTableView : UITableViewController<UIActionSheetDelegate, MFMailComposeViewControllerDelegate>{
 @public

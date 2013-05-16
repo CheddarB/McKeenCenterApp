@@ -1524,8 +1524,8 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
                 <relationship kind="outlet" name="throughMkC" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
-        <class className="McKLocationSelector" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKLocationSelector.h"/>
+        <class className="McKLocationSelectorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKLocationSelectorViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="locationPicker" candidateClass="UIPickerView"/>
             </relationships>

@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
+
 
 @interface McKUtilities : NSObject
 
 + (void)callPhoneNumber:(NSString *)number;
++ (void)sendEmailWithDelegate:(UIViewController<MFMailComposeViewControllerDelegate>*)delegateController toEmailAddress:(NSString *) address withContent:(NSString *)content andSubject:(NSString *)subject;
 @end

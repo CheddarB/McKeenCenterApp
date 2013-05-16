@@ -1,14 +1,14 @@
 //
-//  McKEventsModel.m
+//  McKArrayMakerModel.m
 //  McKeenCenterApp
 //
 //  Created by Evan Hoyt on 5/16/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
 
-#import "McKEventsModel.h"
+#import "McKArrayMakerModel.h"
 
-@implementation McKEventsModel
+@implementation McKArrayMakerModel
 
 +(NSMutableArray *)getArrayFromString:(NSString *) path
 {
@@ -29,5 +29,4 @@
     }
     return arrayOfEvents;
 }
-
 @end

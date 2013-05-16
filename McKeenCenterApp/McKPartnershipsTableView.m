@@ -323,7 +323,7 @@
 	}else if ((actionSheetMode > 0) && (actionSheetMode < 4)){
         if ([programEmail length]){
             //email
-			[self sendEmail];
+			[McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
         } else if ([programPhoneNumber length]){
 			//call
 			[McKUtilities callPhoneNumber:programPhoneNumber];
@@ -343,7 +343,7 @@
         } else if (![programPhoneNumber length]){
             if (buttonIndex == 0){
 				//email
-				[self sendEmail];
+                [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
             } else{
 				//open site
 				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
@@ -351,7 +351,7 @@
         } else if (![programWebsite length]){
             if (buttonIndex == 0){
 				//email
-				[self sendEmail];
+                [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
             } else{
 				//*phone*
 				[McKUtilities callPhoneNumber:programPhoneNumber];
@@ -360,7 +360,7 @@
     } else if (actionSheetMode == 7){
         if (buttonIndex == 0){
 			//email
-			[self sendEmail];
+            [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
         } else if (buttonIndex == 1){
 			//*phone*
 			[McKUtilities callPhoneNumber:programPhoneNumber];
@@ -484,23 +484,6 @@
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
-//open window to send an email to programEmail
-- (void)sendEmail{
-	if ([MFMailComposeViewController canSendMail]) {
-		//setup mailViewController
-		MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-		mailViewController.mailComposeDelegate = self;
-		
-		//set fields of message
-		NSArray *toRecipients = [[NSArray alloc]initWithObjects:programEmail, nil];
-		[mailViewController setToRecipients:toRecipients];
-		
-		//present mail interface
-		[self presentViewController:mailViewController animated:YES completion:nil];
-	}else {
-		NSLog(@"Device is unable to send email in its current state.");
-	}
-}
 
 
 @end
