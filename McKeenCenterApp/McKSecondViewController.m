@@ -5,10 +5,18 @@
 //  Created by Evan Hoyt on 5/6/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
+/*
+ *  This is the View Controller for the second tab page: Opportunities. It is a UITableViewController
+ *  and reads from the "conferences" and "jobs" files on the server, making a cell for each event.
+ *  It segues to McKOpportunityInfo when a cell is pressed.
+ */
+
+
 
 #import "McKSecondViewController.h"
 #import "McKFileRetriever.h"
 
+//constants to set cell colors, alternating shades of blue
 #define Red1 180
 #define Green1 220
 #define Blue1 200
@@ -16,8 +24,6 @@
 #define Red2 150
 #define Blue2 180
 #define Green2 200
-
-
 
 @interface McKSecondViewController ()
 
@@ -27,6 +33,8 @@
 
 @synthesize arrayOfObjects;
 @synthesize oppInfoVC;
+@synthesize jobsPath;
+@synthesize conferencesPath;
 
 @synthesize toggleButtonOutlet;
 
@@ -41,71 +49,45 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];    
-    [self buildArraysOfJobsAndConferences];
-    self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-
-    
-}
-- (void)buildArraysOfJobsAndConferences
-{
-    
+    [super viewDidLoad];
+    [self setToolbarTitle];
     if ([toggleButtonOutlet.title isEqual:@"Conferences"]){
-        self.navigationItem.title = @"Jobs Opportunities";
+        self.navigationItem.title = @"Job Opportunities";
+    } else self.navigationItem.title = @"Conferences";
 
-        //contruct file location on server
-		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
-		NSString * fileName = @"jobs.txt";
-		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
-		
-		//retrieve the file and get its path
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-		NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-		
-		//grab the contents of the file
-		NSString *content = [NSString stringWithContentsOfFile:path
-													  encoding:NSUTF8StringEncoding
-														 error:NULL];
-        
-		NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"~"];
-        
-		//make arrayOfEvents a 2D array
-        arrayOfObjects = [nonMutableArrayOfJobs mutableCopy];
-        for (int i = 0; i < [arrayOfObjects count]; i++){
-            NSString *eventInfo = [arrayOfObjects objectAtIndex:i];
-            NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
-            [arrayOfObjects replaceObjectAtIndex:i withObject:subArray];
-        }
+    //toggleButtonOutlet.title isEqual:@"Conferences"
+    //contruct file location on server
+    NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
+    NSString * fileName = @"jobs.txt";
+    NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+    
+    //retrieve the file and get its path
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    jobsPath = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+    
+    //do the same for the conferencs file
+    serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
+    fileName = @"conferences.txt";
+    fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
+    
+    //retrieve the file and get its path
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    conferencesPath = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 
-         
-    } else {
-        self.navigationItem.title = @"Conferences";
-		NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
-		NSString * fileName = @"conferences.txt";
-		NSString * fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
-		
-		//retrieve the file and get its path
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-		NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
-		[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-		
-		//grab the contents of the file
-		NSString *content = [NSString stringWithContentsOfFile:path
-													  encoding:NSUTF8StringEncoding
-														 error:NULL];
-		//put conferences into array
-        NSArray *nonMutableArrayOfJobs = [content componentsSeparatedByString:@"~"];
-        //make arrayOfEvents a 2D array
-        arrayOfObjects = [nonMutableArrayOfJobs mutableCopy];
-        for (int i = 0; i < [arrayOfObjects count]; i++){
-            NSString *eventInfo = [arrayOfObjects objectAtIndex:i];
-            NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
-            [arrayOfObjects replaceObjectAtIndex:i withObject:subArray];
-        }
-
-    }
+    arrayOfObjects = [McKOpportunityModel buildArraysOfJobsAndConferencesWithMode:[toggleButtonOutlet.title isEqual:@"Conferences"] withJobsPath:jobsPath andConferencesPath:conferencesPath];
+    
+    self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
 }
+
+- (void) setToolbarTitle
+{
+    if ([toggleButtonOutlet.title isEqual:@"Conferences"]){
+        self.navigationItem.title = @"Job Opportunities";
+    } else self.navigationItem.title = @"Conferences";
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -179,10 +161,9 @@
         self.navigationItem.rightBarButtonItem = toggleButtonOutlet;
         self.navigationItem.leftBarButtonItem = nil;
     }
-
-    [self buildArraysOfJobsAndConferences];
-    [self.tableView reloadData];
     
-
+    arrayOfObjects = [McKOpportunityModel buildArraysOfJobsAndConferencesWithMode:[toggleButtonOutlet.title isEqual:@"Conferences"] withJobsPath:jobsPath andConferencesPath:conferencesPath];
+    [self setToolbarTitle];
+    [self.tableView reloadData];
 }
 @end
