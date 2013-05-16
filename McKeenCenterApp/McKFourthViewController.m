@@ -134,9 +134,6 @@
                          stringByAppendingString:throughMcKCenter]
                         stringByAppendingString:@"\n\n"];
     emailMessageBody = [emailMessageBody stringByAppendingString:feedbackTextView.text];
-/*
-    printf("%s\n", [emailMessageBody UTF8String]);
- */
     return emailMessageBody;
     
 }

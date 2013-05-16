@@ -30,7 +30,6 @@
 		208B77E517170CC900E9511B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208B77E317170CC900E9511B /* MainStoryboard.storyboard */; };
 		208B77FE1717107D00E9511B /* McKThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B77FD1717107D00E9511B /* McKThirdViewController.m */; };
 		208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B780017173F1E00E9511B /* McKFourthViewController.m */; };
-		208B780417173FA100E9511B /* McKFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 208B780317173FA100E9511B /* McKFifthViewController.m */; };
 		208B780E17174A3500E9511B /* fifth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B780D17174A3500E9511B /* fifth@2x.png */; };
 		208B781517174C0C00E9511B /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781317174C0B00E9511B /* second@2x.png */; };
 		208B781617174C0C00E9511B /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781417174C0B00E9511B /* second.png */; };
@@ -100,8 +99,6 @@
 		208B77FD1717107D00E9511B /* McKThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKThirdViewController.m; sourceTree = "<group>"; };
 		208B77FF17173F1E00E9511B /* McKFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKFourthViewController.h; sourceTree = "<group>"; };
 		208B780017173F1E00E9511B /* McKFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKFourthViewController.m; sourceTree = "<group>"; };
-		208B780217173FA100E9511B /* McKFifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKFifthViewController.h; sourceTree = "<group>"; };
-		208B780317173FA100E9511B /* McKFifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKFifthViewController.m; sourceTree = "<group>"; };
 		208B780D17174A3500E9511B /* fifth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fifth@2x.png"; sourceTree = "<group>"; };
 		208B781317174C0B00E9511B /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		208B781417174C0B00E9511B /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
@@ -291,8 +288,6 @@
 		209858BD171F3300008CE9EC /* About Section */ = {
 			isa = PBXGroup;
 			children = (
-				208B780217173FA100E9511B /* McKFifthViewController.h */,
-				208B780317173FA100E9511B /* McKFifthViewController.m */,
 				20948EEA171C9A3800E194CE /* McKContactViewController.h */,
 				20CFAF721739490400BF8529 /* McKContactViewController.m */,
 				20CFAF7417394A2300BF8529 /* McKStaffViewController.h */,
@@ -436,7 +431,6 @@
 				208B77DC17170CC900E9511B /* McKAppDelegate.m in Sources */,
 				208B77FE1717107D00E9511B /* McKThirdViewController.m in Sources */,
 				208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */,
-				208B780417173FA100E9511B /* McKFifthViewController.m in Sources */,
 				20A4786A171B16FD0017E940 /* McKPartnershipsTableViewController.m in Sources */,
 				20948EE3171C826C00E194CE /* McKLocationSelectorViewController.m in Sources */,
 				31659346171F80100099BC22 /* PartnerInfoFetcher.m in Sources */,

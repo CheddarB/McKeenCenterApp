@@ -5,7 +5,10 @@
 //  Created by Evan Hoyt on 4/14/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
-
+/*
+ *  This is the .h file for the partership table view controller. It contains properties and the delegate declaration.
+ 
+ */
 #import <UIKit/UIKit.h>
 #import "McKThirdViewController.h"
 #import "PartnerInfoFetcher.h"

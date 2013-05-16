@@ -11,15 +11,6 @@
 @implementation PartnerInfoFetcher
 
 
-
-/*
--(id)initWithURL:(NSURL *)url{
-	self = [super init];
-	self.path = url;
-	return self;
-}
- */
-
 -(id)initWithURLPath:(NSString *)url andID:(int)orgID{
 	self = [super init];
 	

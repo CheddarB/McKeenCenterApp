@@ -5,7 +5,10 @@
 //  Created by Evan Hoyt on 5/5/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
-
+/*
+ *  This is the header file for the event information controller.
+ *  It includes relevent properties and outlets.
+ */
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>

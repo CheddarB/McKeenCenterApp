@@ -5,7 +5,10 @@
 //  Created by Evan Hoyt on 4/15/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
-
+/*
+ *  This is the .m file for the second view controller of the Partnerships sections.
+ *  Similar to the first it provides a picker to narrow your search.
+ */
 #import "McKLocationSelectorViewController.h"
 #import "McKFileRetriever.h"
 
@@ -25,7 +28,7 @@
     }
     return self;
 }
-
+// opens locations file from server and builds array.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -83,6 +86,7 @@
     location = [locationsArray objectAtIndex:row];
 }
 
+//called when table view is ready to push, sends it relevent information for what to display.
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     McKPartnershipsTableViewController *tableDelegate;

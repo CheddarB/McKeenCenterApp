@@ -5,7 +5,13 @@
 //  Created by Evan Hoyt on 4/11/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
-// <a href="http://thenounproject.com/noun/handshake/#icon-No767" target="_blank">Handshake</a> designed by <a href="http://thenounproject.com/Jake_Nelsen" target="_blank">Jake Nelsen</a> from The Noun Project
+// image used for tab bar selector borrowed with permission from <a href="http://thenounproject.com/noun/handshake/#icon-No767" target="_blank">Handshake</a> designed by <a href="http://thenounproject.com/Jake_Nelsen" target="_blank">Jake Nelsen</a> from The Noun Project
+
+/*
+ *  This is the view controller for the first page that loads in the PArtner Programs section.
+ *  It provides a picker to pick the service type to browse for. 
+ */
+
 #import "McKThirdViewController.h"
 #import "McKFileRetriever.h"
 
@@ -26,7 +32,7 @@
     }
     return self;
 }
-
+// opens the social issues file and buids an array
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -53,8 +59,7 @@
     [serviceIssuesArray addObject:@"all social issues"];
     for (int i = 0; i < forDictionary.count; i++){
         [serviceIssuesArray addObject:[forDictionary objectAtIndex:i]];
-    }
-	
+    }	
 	//set default service type to any
     serviceType = @"any";
 }

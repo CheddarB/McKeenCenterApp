@@ -6,7 +6,14 @@
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
 
-// helpful tutorial http://www.iosdevnotes.com/2011/10/uitableview-tutorial/
+//
+/*
+ *  This a monster view controller main file for the partnership table view.
+ *  It displays the correct partnerships, based on what the user chose to see.
+ *  Each cell, when pressed pops up an actionsheet with the correct buttons, 
+ *  each a link to an email, phone number, or website that was found in the
+ *  online description of the program.
+ */
 
 #import "McKPartnershipsTableViewController.h"
 #import "PartnerInfoFetcher.h"
@@ -87,10 +94,6 @@
     
 	socialIssues = [content componentsSeparatedByString:@"\n"];
 	
-	
-    
-    //read locations in the array locations
-	
 	//contruct file location on server
 	fileName = @"locations.txt";
 	fileOnServer = [serverDirectory stringByAppendingPathComponent:fileName];
@@ -116,8 +119,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
+//makes dictionaries to be read by the cell contructors so that the sections have headers (the first letter of the program name).
 - (void)initDictionaryAndFinishInit
 {
     NSMutableArray *keys = [[NSMutableArray alloc]init];
@@ -188,9 +190,9 @@
 {
     return [allPrograms count];
     //returned the number of keys in the dictionary (max 26 if file is alphabetical)
-    
 }
 
+//tells table view to read the heads are the keys of the dictionary created above
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     
@@ -198,12 +200,13 @@
     
 }
 
-
+// sets number of rows in each section to be the number of dictionary objects for the corresponding key
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [[allPrograms objectForKey:[[[allPrograms allKeys] sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)] objectAtIndex:section]] count];    
 }
 
+//formats each cell of the table view
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"ProgramCell";
@@ -217,11 +220,13 @@
     NSString * headerTitle = [self tableView:tableView titleForHeaderInSection:indexPath.section];
     NSString * programName = [[allPrograms valueForKey:headerTitle] objectAtIndex:indexPath.row];
     
+    //find location and social issue identifier
     int socialIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-9, 2)] intValue];
     int locationIdentifier = [[programName substringWithRange:NSMakeRange(programName.length-6, 2)] intValue];
     NSString *socialIssue = [[NSString alloc]init];
     NSString *location = [[NSString alloc]init];
     
+    // set subtitle based on identifiers
     if ([programName characterAtIndex:programName.length-4] == ','){
         socialIssue = [socialIssues objectAtIndex:(socialIdentifier-1)];
         location = [locations objectAtIndex:locationIdentifier-1];
@@ -231,18 +236,14 @@
     } else cell.detailTextLabel.text = @"";
     
     
-    
+    // set cell title to program title
     programName = [programName substringToIndex:(programName.length-10)];
     cell.textLabel.text = programName;
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    
     return cell;
 }
-
-#pragma mark - Table view delegate
-
 
 //make uiaction sheet for selected program
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -273,9 +274,7 @@
     programWebsite = [programWebsite stringByReplacingOccurrencesOfString:@" " withString:@""];
     programWebsite = [infoFetcher getSite];
     
-    
-    printf("email, phone, web: \nE: %s\nP: %s\nWS: --%s--\n", [programEmail UTF8String], [programPhoneNumber UTF8String], [programWebsite UTF8String]);
-    
+    // determine type of action sheet to be made (0-8)
     if ([programEmail length]){
         numberOfButtons ++;
         actionSheetMode = 1;
@@ -304,71 +303,15 @@
             actionSheetMode = 7;
         }
     }
-    
-    printf("number of button: %d in mode %d\n", numberOfButtons, actionSheetMode);
-    
+    //make actionsheet
     UIActionSheet *actionSheet = [self buildActionSheetWithProgramTitle:programName];
-
-    
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
     
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
 }
--(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    printf("button index: %d\n", buttonIndex);
-	if (buttonIndex == numberOfButtons) {
-		[actionSheet showInView:[self.view window]];
-	}else if ((actionSheetMode > 0) && (actionSheetMode < 4)){
-        if ([programEmail length]){
-            //email
-			[McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
-        } else if ([programPhoneNumber length]){
-			//call
-			[McKUtilities callPhoneNumber:programPhoneNumber];
-        } else if ([programWebsite length]){
-			//open site
-			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
-        }
-    } else if ((actionSheetMode > 3) && (actionSheetMode < 7)){
-        if (![programEmail length]){
-            if (buttonIndex == 0){
-				//*phone*
-				[McKUtilities callPhoneNumber:programPhoneNumber];
-            } else{
-				//open site
-				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
-			}
-        } else if (![programPhoneNumber length]){
-            if (buttonIndex == 0){
-				//email
-                [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
-            } else{
-				//open site
-				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
-			}
-        } else if (![programWebsite length]){
-            if (buttonIndex == 0){
-				//email
-                [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
-            } else{
-				//*phone*
-				[McKUtilities callPhoneNumber:programPhoneNumber];
-			}
-        }
-    } else if (actionSheetMode == 7){
-        if (buttonIndex == 0){
-			//email
-            [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
-        } else if (buttonIndex == 1){
-			//*phone*
-			[McKUtilities callPhoneNumber:programPhoneNumber];
-        } else {
-			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
-		}
-    }
-}
+
+//called to build one of eight actionsheets, based on th mode. There could
+// be 8 possible action sheets because of missing information (emails, phone #, websites...)
 -(UIActionSheet*) buildActionSheetWithProgramTitle:(NSString *)title
 {
     UIActionSheet *actionSheet = [[UIActionSheet alloc]
@@ -442,6 +385,63 @@
     return actionSheet;
 }
 
+
+//responds when a button is pressed on the action sheet, based on the index and the which actionsheet was built
+-(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    printf("button index: %d\n", buttonIndex);
+	if (buttonIndex == numberOfButtons) {
+		[actionSheet showInView:[self.view window]];
+	}else if ((actionSheetMode > 0) && (actionSheetMode < 4)){
+        if ([programEmail length]){
+            //email
+			[McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
+        } else if ([programPhoneNumber length]){
+			//call
+			[McKUtilities callPhoneNumber:programPhoneNumber];
+        } else if ([programWebsite length]){
+			//open site
+			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
+        }
+    } else if ((actionSheetMode > 3) && (actionSheetMode < 7)){
+        if (![programEmail length]){
+            if (buttonIndex == 0){
+				//*phone*
+				[McKUtilities callPhoneNumber:programPhoneNumber];
+            } else{
+				//open site
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
+			}
+        } else if (![programPhoneNumber length]){
+            if (buttonIndex == 0){
+				//email
+                [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
+            } else{
+				//open site
+				[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
+			}
+        } else if (![programWebsite length]){
+            if (buttonIndex == 0){
+				//email
+                [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
+            } else{
+				//*phone*
+				[McKUtilities callPhoneNumber:programPhoneNumber];
+			}
+        }
+    } else if (actionSheetMode == 7){
+        if (buttonIndex == 0){
+			//email
+            [McKUtilities sendEmailWithDelegate:self toEmailAddress:programEmail withContent:nil andSubject:nil];
+        } else if (buttonIndex == 1){
+			//phone
+			[McKUtilities callPhoneNumber:programPhoneNumber];
+        } else {
+			[[UIApplication sharedApplication] openURL:[NSURL URLWithString:programWebsite]];
+		}
+    }
+}
+
+// called by the table view delegate to determine whether or not a program should be displayed based on its social issue identifier
 - (BOOL) socialIssueShouldBeDisplayedFor: (int)socialIssueIdentifier forString:(NSString *)theProgram
 {
     if (socialIssueIdentifier){
@@ -456,6 +456,8 @@
         return false;
     } else return true;
 }
+// called by the table view delegate to determine whether or not a program should be displayed based on its location identifier
+
 - (BOOL) locationShouldBeDisplayedFor: (int)locationIdentifier forString:(NSString *)theProgram
 {
     if (locationIdentifier){
@@ -483,7 +485,5 @@
 	}
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 
 @end

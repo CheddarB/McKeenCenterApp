@@ -5,7 +5,9 @@
 //  Created by Evan Hoyt on 5/5/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
-
+/*
+ *  This is the View Controller for the envent information view. It appears when you click on a cell.
+ */
 #import "McKEventInfoViewController.h"
 
 @interface McKEventInfoViewController ()
@@ -23,20 +25,11 @@
 @synthesize eventDetails;
 @synthesize signupButton;
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     signupButton.hidden = YES;
+    // set text to tiles and subtitles
     [eventTitle setText: [[eventInfo objectAtIndex:cellSelected]objectAtIndex:0 ]];
     [eventSubtitle setText: [[eventInfo objectAtIndex:cellSelected]objectAtIndex:1 ]];
 
@@ -46,7 +39,7 @@
     if ([[eventInfo objectAtIndex:cellSelected]count] > 2){
         [eventDetails setText: [[eventInfo objectAtIndex:cellSelected]objectAtIndex:2]];
     } else [eventDetails setText:@"There is no additional information about this event. Please contact the McKeenCenter for more information."];
-    //
+    // determine whether or not there should be a signup button
     if ([[eventInfo objectAtIndex:cellSelected]objectAtIndex:2]){
         char buttonMode = [[[eventInfo objectAtIndex:cellSelected]objectAtIndex:3]characterAtIndex:0];
         if ((buttonMode == 'y') || (buttonMode == 'Y')){
@@ -55,12 +48,7 @@
     } else signupButton.hidden = YES;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
+//called when the signup button is pressed. Pops up alert which allows you to send an email.
 - (IBAction)signUp:(UIButton *)sender {
     NSString *fourthLine = [[NSString alloc]init];
     if ([eventInfo count] > 3){
@@ -76,6 +64,8 @@
     [alert show];
 
 }
+
+//alert view that allows user to send email
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1){
         if ([MFMailComposeViewController canSendMail]) {

@@ -32,15 +32,7 @@
 @synthesize arrayOfEvents;
 @synthesize eventInfoVC;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
+// called when the page loads, reads the events file from server and calls the array maker
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -54,27 +46,23 @@
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-	
+    
+	// calls model method to set array that is used to make table view
     arrayOfEvents = [McKArrayMakerModel getArrayFromString:path];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
 // always set to one section
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
+
 // number of cells is the number of objects in array of events
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [arrayOfEvents count];
 }
+
 // format the cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
