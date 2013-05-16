@@ -5,10 +5,16 @@
 //  Created by Evan Hoyt on 5/5/13.
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
+/*
+ *  This is the View Controller for the first tab page: Events. It is a UITableViewController
+ *  and reads from the "events" file on the server, making a cell for each event. It segues
+ *  to McKEventInfoViewController when a cell is pressed.
+ */
 
 #import "McKFirstViewController.h"
 #import "McKFileRetriever.h"
 
+//constants to set cell colors, alternating shades of blue
 #define Red1 180
 #define Green1 200
 #define Blue1 220

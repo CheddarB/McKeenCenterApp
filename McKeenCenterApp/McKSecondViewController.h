@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #include "McKOpportunityInfo.h"
+#include "McKOpportunityModel.h"
 
 @interface McKSecondViewController : UITableViewController
 
 @property (nonatomic) NSMutableArray * arrayOfObjects;
+@property (nonatomic) NSString * jobsPath;
+@property (nonatomic) NSString * conferencesPath;
+
 @property (strong, nonatomic) McKOpportunityInfo * oppInfoVC;
+
 
 - (IBAction)toggleModeButton:(UIBarButtonItem *)sender;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *toggleButtonOutlet;
