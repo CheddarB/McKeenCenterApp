@@ -66,7 +66,7 @@
                                     <segue destination="dLB-2Z-JHp" kind="push" identifier="next" id="GS1-Te-sIg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yre-qM-ojU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yre-qM-ojU">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" type="user" id="pvX-mb-anB"/>
                                 </constraints>
@@ -78,8 +78,11 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="dLB-2Z-JHp" kind="push" identifier="next" id="sPA-Sj-EIv"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-uE-ODV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-uE-ODV">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,6 +91,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browseAll" id="k0H-Jw-v5V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -161,7 +167,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bql-rN-zgy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2072" y="638"/>
+            <point key="canvasLocation" x="2268" y="549"/>
         </scene>
         <!--Navigation Controller - Partnerships-->
         <scene sceneID="d2z-O2-Fcg">
@@ -1025,7 +1031,7 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
                                     <segue destination="7fH-QK-kh1" kind="push" identifier="browse2" id="coh-xO-NAd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-sx-Jzt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Si6-sx-Jzt">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1034,8 +1040,11 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browse2" id="V44-Be-weh"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08e-EY-h5w">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08e-EY-h5w">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1044,6 +1053,9 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browseAll2" id="kmE-Dh-kwq"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="narrow your search to one location or" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XJp-Oe-z4Z">
                                 <constraints>
@@ -1093,7 +1105,7 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </objects>
-            <point key="canvasLocation" x="1617" y="638"/>
+            <point key="canvasLocation" x="1666" y="584"/>
         </scene>
         <!--McK Staff View Controller - About-->
         <scene sceneID="2Td-FA-xz5">
@@ -1561,9 +1573,10 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="dP9-Wp-Gbo"/>
-        <segue reference="Ua3-yi-iXF"/>
+        <segue reference="GS1-Te-sIg"/>
         <segue reference="VSE-Ri-cDe"/>
+        <segue reference="Ua3-yi-iXF"/>
         <segue reference="GDz-2H-9mK"/>
+        <segue reference="kmE-Dh-kwq"/>
     </inferredMetricsTieBreakers>
 </document>
