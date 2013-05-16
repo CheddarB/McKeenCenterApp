@@ -71,20 +71,10 @@
         staffName = @"Luke";
         staffEmail = @"lmondell@bowdoin.edu";
     }
-    if ([MFMailComposeViewController canSendMail]) {
-        //setup mailViewController
-        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-        mailViewController.mailComposeDelegate = self;
-        
-        //set fields of message
-        NSArray *toRecipients = [[NSArray alloc]initWithObjects:staffEmail, nil];
-        [mailViewController setToRecipients:toRecipients];
-		
-        //present mail interface
-        [self presentViewController:mailViewController animated:YES completion:nil];
-    } else{
-        NSLog(@"Device is unable to send email in its current state.");
-    }
+
+	//send email
+	[McKUtilities sendEmailWithDelegate:self toEmailAddress:staffEmail withContent:nil andSubject:nil];
+	
 }
 
 //MFMailComposeViewControllerDelegate method

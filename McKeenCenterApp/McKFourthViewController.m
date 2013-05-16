@@ -78,28 +78,16 @@
 
 - (IBAction)submitButton:(UIButton *)sender
 {
-    if ([MFMailComposeViewController canSendMail]) {
-			//setup mailViewController
-			MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-			mailViewController.mailComposeDelegate = self;
-			
-			//set fields of message
-			NSArray *toRecipients = [[NSArray alloc]initWithObjects:@"andrew.daniels714@gmail.com", nil];
-			[mailViewController setToRecipients:toRecipients]; //don't forget to change this
-			[mailViewController setSubject:@"Service Report from Mobile App"];
-			[mailViewController setMessageBody:[self composeEmailBody] isHTML:NO];
-			
-			//present mail interface
-			[self presentViewController:mailViewController animated:YES completion:nil];
-    }else {
-        
-        NSLog(@"Device is unable to send email in its current state.");
-    }
-       // [feedbackTextView setText:@"Thank You!"];
-        feedbackTextView.text = @"Thank You!";
-        nameTextField.text = @"";
-        dateTextField.text = @"";
-        programTextField.text = @"";
+	//send email
+	[McKUtilities sendEmailWithDelegate:self toEmailAddress:@"jjaffe@bowdoin.edu" withContent:[self composeEmailBody] andSubject:@"Service Report from Mobile App"];
+	
+	//reset form fields
+	feedbackTextView.text = @"Thank You!";
+	nameTextField.text = @"";
+	dateTextField.text = @"";
+	programTextField.text = @"";
+	
+	//hide keyboard
     [self cancelButton:sender];
 }
 
@@ -124,7 +112,7 @@
     if (!throughMkC.selectedSegmentIndex)
         throughMcKCenter = @"through the McKeen Center.";
     else throughMcKCenter = @"service not affiliated with the McKeen Center.";
-    emailMessageBody = [@"The following message has been submitted through the McKeen Center Mobile App;\n\nName: " stringByAppendingString:nameTextField.text];
+    emailMessageBody = [@"The following message has been submitted through the McKeen Center Mobile App:\n\nName: " stringByAppendingString:nameTextField.text];
     emailMessageBody = [[[[[[[emailMessageBody
                               stringByAppendingString:@"\nProgram date: "]
                              stringByAppendingString:dateTextField.text]
