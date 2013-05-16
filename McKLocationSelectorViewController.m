@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Andrew Daniels and Evan Hoyt. All rights reserved.
 //
 
-#import "McKLocationSelector.h"
+#import "McKLocationSelectorViewController.h"
 #import "McKFileRetriever.h"
 
-@interface McKLocationSelector ()
+@interface McKLocationSelectorViewController ()
 
 @end
 
-@implementation McKLocationSelector
+@implementation McKLocationSelectorViewController
 @synthesize locationsArray;
 @synthesize location;
 
@@ -30,13 +30,6 @@
 {
     [super viewDidLoad];
     locationsArray = [[NSMutableArray alloc]init];
-    
-	/*
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"locations"
-                                                     ofType:@"txt"];
-    NSString *content = [NSString stringWithContentsOfFile:path
-                                                  encoding:NSUTF8StringEncoding
-                                                     error:NULL]; */
 	
 	//contruct file location on server
 	NSString * serverDirectory = @"http://mobileapps.bowdoin.edu/hoyt_daniels_2013";
@@ -53,21 +46,20 @@
 												  encoding:NSUTF8StringEncoding
                                                      error:NULL];
 	
-	//create dictionary for raw locations from file
+	//parse locations from the file
 	NSArray *forDictionary = [content componentsSeparatedByString:@"\n"];
     
+	//add option for all locations to locations list 
 	[locationsArray addObject:@"all locations"];
+	
+	//add all locations to locations list
     for (int i = 0; i < forDictionary.count; i++){
         [locationsArray addObject:[forDictionary objectAtIndex:i]];
     }
     location = NULL;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)thePickerView {
     return 1;
 }

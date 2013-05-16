@@ -38,7 +38,7 @@
 		208B781D17174EC300E9511B /* fourth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781B17174EC300E9511B /* fourth.png */; };
 		208B781E17174EC300E9511B /* fourth@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781C17174EC300E9511B /* fourth@2x.png */; };
 		208B78201717501F00E9511B /* fifth.png in Resources */ = {isa = PBXBuildFile; fileRef = 208B781F1717501F00E9511B /* fifth.png */; };
-		20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EE2171C826C00E194CE /* McKLocationSelector.m */; };
+		20948EE3171C826C00E194CE /* McKLocationSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20948EE2171C826C00E194CE /* McKLocationSelectorViewController.m */; };
 		20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */; };
 		20CFAF6C1739478200BF8529 /* sseames contact.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CFAF661739478200BF8529 /* sseames contact.jpg */; };
 		20CFAF6D1739478200BF8529 /* janice-jaffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20CFAF671739478200BF8529 /* janice-jaffee.jpg */; };
@@ -107,8 +107,8 @@
 		208B781B17174EC300E9511B /* fourth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fourth.png; sourceTree = "<group>"; };
 		208B781C17174EC300E9511B /* fourth@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fourth@2x.png"; sourceTree = "<group>"; };
 		208B781F1717501F00E9511B /* fifth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fifth.png; sourceTree = "<group>"; };
-		20948EE1171C826C00E194CE /* McKLocationSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKLocationSelector.h; path = ../McKLocationSelector.h; sourceTree = "<group>"; };
-		20948EE2171C826C00E194CE /* McKLocationSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKLocationSelector.m; path = ../McKLocationSelector.m; sourceTree = "<group>"; };
+		20948EE1171C826C00E194CE /* McKLocationSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = McKLocationSelectorViewController.h; path = ../McKLocationSelectorViewController.h; sourceTree = "<group>"; };
+		20948EE2171C826C00E194CE /* McKLocationSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = McKLocationSelectorViewController.m; path = ../McKLocationSelectorViewController.m; sourceTree = "<group>"; };
 		20948EEA171C9A3800E194CE /* McKContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKContactViewController.h; sourceTree = "<group>"; };
 		20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = McKPartnershipsTableView.h; sourceTree = "<group>"; };
 		20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = McKPartnershipsTableView.m; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 			children = (
 				208B77FC1717107D00E9511B /* McKThirdViewController.h */,
 				208B77FD1717107D00E9511B /* McKThirdViewController.m */,
-				20948EE1171C826C00E194CE /* McKLocationSelector.h */,
-				20948EE2171C826C00E194CE /* McKLocationSelector.m */,
+				20948EE1171C826C00E194CE /* McKLocationSelectorViewController.h */,
+				20948EE2171C826C00E194CE /* McKLocationSelectorViewController.m */,
 				20A47868171B16FD0017E940 /* McKPartnershipsTableView.h */,
 				20A47869171B16FD0017E940 /* McKPartnershipsTableView.m */,
 				20866D1D171CEAA800DC0147 /* third.png */,
@@ -433,7 +433,7 @@
 				208B780117173F1E00E9511B /* McKFourthViewController.m in Sources */,
 				208B780417173FA100E9511B /* McKFifthViewController.m in Sources */,
 				20A4786A171B16FD0017E940 /* McKPartnershipsTableView.m in Sources */,
-				20948EE3171C826C00E194CE /* McKLocationSelector.m in Sources */,
+				20948EE3171C826C00E194CE /* McKLocationSelectorViewController.m in Sources */,
 				31659346171F80100099BC22 /* PartnerInfoFetcher.m in Sources */,
 				316593BD172096710099BC22 /* HTMLNode.m in Sources */,
 				316593BE172096710099BC22 /* HTMLParser.m in Sources */,

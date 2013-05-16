@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #include "McKPartnershipsTableView.h"
-@interface McKLocationSelector : UIViewController{
+@interface McKLocationSelectorViewController : UIViewController{
     @public
     NSString *socialIssue;
     
 }
+
 @property (strong, nonatomic) IBOutlet UIPickerView *locationPicker;
 @property (nonatomic) NSMutableArray* locationsArray;
 @property (nonatomic) NSString * location;
