@@ -55,20 +55,7 @@
 	NSString * path = [McKFileRetriever getDataFrom:fileOnServer forFile:fileName];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	
-    //grab the contents of the file
-	NSString *content = [NSString stringWithContentsOfFile:path
-												  encoding:NSUTF8StringEncoding
-                                                     error:NULL];
-	//populate array of events
-	NSArray *nonMutableArrayOfEvents = [content componentsSeparatedByString:@"~"];
-	 
-    //make arrayOfEvents a 2D array
-    arrayOfEvents = [nonMutableArrayOfEvents mutableCopy];
-    for (int i = 0; i < [arrayOfEvents count]; i++){
-        NSString *eventInfo = [arrayOfEvents objectAtIndex:i];
-        NSArray *subArray = [eventInfo componentsSeparatedByString:@"\n"];
-        [arrayOfEvents replaceObjectAtIndex:i withObject:subArray];
-    }
+    arrayOfEvents = [McKEventsModel getArrayFromString:path];
 }
 
 - (void)didReceiveMemoryWarning
