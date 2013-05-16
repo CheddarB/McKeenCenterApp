@@ -13,7 +13,7 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import "McKUtilities.h"
 
-@interface McKPartnershipsTableView : UITableViewController<UIActionSheetDelegate, MFMailComposeViewControllerDelegate>{
+@interface McKPartnershipsTableViewController : UITableViewController<UIActionSheetDelegate, MFMailComposeViewControllerDelegate>{
 @public
     NSString *specificSocialIssue;
     NSString *specificLocation;

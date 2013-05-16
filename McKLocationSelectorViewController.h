@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "McKPartnershipsTableView.h"
+#include "McKPartnershipsTableViewController.h"
 @interface McKLocationSelectorViewController : UIViewController{
     @public
     NSString *socialIssue;

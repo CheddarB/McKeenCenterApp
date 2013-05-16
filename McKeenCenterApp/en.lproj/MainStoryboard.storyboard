@@ -79,7 +79,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dLB-2Z-JHp" kind="push" identifier="next" id="sPA-Sj-EIv"/>
+                                    <segue destination="dLB-2Z-JHp" kind="push" identifier="nextDisclosure" id="sPA-Sj-EIv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-uE-ODV">
@@ -92,7 +92,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browseAll" id="k0H-Jw-v5V"/>
+                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browseAllDisclosure" id="k0H-Jw-v5V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="1181" y="638"/>
         </scene>
-        <!--McK Partnerships Table View - Partner Programs-->
+        <!--McK Partnerships Table View Controller - Partner Programs-->
         <scene sceneID="7OP-7s-7UA">
             <objects>
-                <tableViewController id="7fH-QK-kh1" customClass="McKPartnershipsTableView" sceneMemberID="viewController">
+                <tableViewController id="7fH-QK-kh1" customClass="McKPartnershipsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5KE-Ux-SM7">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1041,7 +1041,7 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browse2" id="V44-Be-weh"/>
+                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browse2Disclosure" id="V44-Be-weh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08e-EY-h5w">
@@ -1054,7 +1054,7 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browseAll2" id="kmE-Dh-kwq"/>
+                                    <segue destination="7fH-QK-kh1" kind="push" identifier="browseAll2Disclosure" id="kmE-Dh-kwq"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="narrow your search to one location or" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XJp-Oe-z4Z">
@@ -1540,8 +1540,8 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
                 <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
             </relationships>
         </class>
-        <class className="McKPartnershipsTableView" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKPartnershipsTableView.h"/>
+        <class className="McKPartnershipsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKPartnershipsTableViewController.h"/>
         </class>
         <class className="McKSecondViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/McKSecondViewController.h"/>
@@ -1573,10 +1573,10 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="V44-Be-weh"/>
         <segue reference="GS1-Te-sIg"/>
-        <segue reference="VSE-Ri-cDe"/>
-        <segue reference="Ua3-yi-iXF"/>
         <segue reference="GDz-2H-9mK"/>
-        <segue reference="kmE-Dh-kwq"/>
+        <segue reference="Ua3-yi-iXF"/>
+        <segue reference="VSE-Ri-cDe"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -81,14 +81,14 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-	McKPartnershipsTableView *programTableVC;
+	McKPartnershipsTableViewController *programTableVC;
     McKLocationSelectorViewController *locationSelectorVC;
 	
 	//set options depending on what will be presented
-    if ([segue.identifier isEqualToString:@"browseAll"]){
-        programTableVC = (McKPartnershipsTableView*)segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"browseAll"] || [segue.identifier isEqualToString:@"browseAllDisclosure"]){
+        programTableVC = (McKPartnershipsTableViewController *)segue.destinationViewController;
         programTableVC->specificSocialIssue = NULL;
-    } else if ([segue.identifier isEqualToString:@"next"]){
+    } else if ([segue.identifier isEqualToString:@"next"] || [segue.identifier isEqualToString:@"nextDisclosure"]){
         locationSelectorVC = (McKLocationSelectorViewController*)segue.destinationViewController;
         locationSelectorVC->socialIssue = serviceType;
     }

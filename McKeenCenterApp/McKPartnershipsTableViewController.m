@@ -8,17 +8,17 @@
 
 // helpful tutorial http://www.iosdevnotes.com/2011/10/uitableview-tutorial/
 
-#import "McKPartnershipsTableView.h"
+#import "McKPartnershipsTableViewController.h"
 #import "PartnerInfoFetcher.h"
 #import "McKFileRetriever.h"
 #import "McKUtilities.h"
 
 
-@interface McKPartnershipsTableView ()
+@interface McKPartnershipsTableViewController ()
 
 @end
 
-@implementation McKPartnershipsTableView
+@implementation McKPartnershipsTableViewController
 
 @synthesize actionSheetMode;
 @synthesize numberOfButtons;
