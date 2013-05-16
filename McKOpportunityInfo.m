@@ -79,23 +79,13 @@
 }
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1){
-        if ([MFMailComposeViewController canSendMail]) {
-			//setup mailViewController
-			MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-			mailViewController.mailComposeDelegate = self;
-			
-			//set fields of message
-			NSArray *toRecipients = [[NSArray alloc]initWithObjects:emailAddress, nil];
-			[mailViewController setToRecipients:toRecipients]; //don't forget to change this
-			[mailViewController setSubject:[@"Mobile App: " stringByAppendingString:[[oppInfo objectAtIndex:cellSelected]objectAtIndex:0]]];
-            
-			
-			//present mail interface
-			[self presentViewController:mailViewController animated:YES completion:nil];
-        }else {
-            
-            NSLog(@"Device is unable to send email in its current state.");
-        }
+		//send email
+		NSString * subject = [@"Mobile App: " stringByAppendingString:[[oppInfo objectAtIndex:cellSelected]objectAtIndex:0]];
+		[McKUtilities sendEmailWithDelegate:self
+							 toEmailAddress:emailAddress
+								withContent:nil
+								 andSubject:subject];
+		
     }
 }
 //MFMailComposeViewControllerDelegate method
