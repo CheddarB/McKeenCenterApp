@@ -256,24 +256,20 @@
     if ([programName characterAtIndex:programName.length-4] == ',')
         programName = [programName substringToIndex:(programName.length-9)];
 	
+	//set up info fetcher for given partner id
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 	PartnerInfoFetcher * infoFetcher = [[PartnerInfoFetcher alloc] initWithURLPath:@"http://flattop.bowdoin.edu/mckeen-bridges/partners/Agency.aspx?id=" andID:urlID];
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+
+	//get program info from fetcher
+	programEmail = infoFetcher.email;
+    programPhoneNumber = infoFetcher.phone;
+    programWebsite = infoFetcher.site;
 	
     //reset number of buttons and actionsheet mode
 	numberOfButtons = 0;
 	actionSheetMode = 0;
-    
-    
-    programEmail = infoFetcher.email;
-    programEmail = [infoFetcher getEmail];
-    [programEmail stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    programPhoneNumber = infoFetcher.phone;
-    [programPhoneNumber stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    programWebsite = infoFetcher.site;
-    [programWebsite stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    programWebsite = [programWebsite stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    programWebsite = [programWebsite stringByReplacingOccurrencesOfString:@" " withString:@""];
-    programWebsite = [infoFetcher getSite];
-    
+
     // determine type of action sheet to be made (0-8)
     if ([programEmail length]){
         numberOfButtons ++;

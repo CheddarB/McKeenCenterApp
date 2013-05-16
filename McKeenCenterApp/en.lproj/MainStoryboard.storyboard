@@ -944,7 +944,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="305" id="ot7-dR-fU9"/>
                                 </constraints>
-                                <mutableString key="text">Mission
+                                <string key="text">Mission
 									
 The Joseph McKeen Center for the Common Good provides opportunities for students to discover the ways in which their talents, passions and academic pursuits can be used for the benefit of society through public engagement.  By linking diverse activities in order to compound their meaningfulness, the McKeen Center serves as a vibrant and central source of information, events and activities related to public engagement for faculty and staff as well as students, and connects departments, programs and individuals with similar interests to enhance both learning and impact in the community.
 									
@@ -953,7 +953,7 @@ The McKeen Center offers students opportunities to explore themes of community r
 									McKeen Center Goals
 									• Enhance student learning and leadership skills through reflective public engagement in the curriculum and co-curriculum while cultivating lifelong commitments to improving the well-being of society;
 									• Encourage and support publicly engaged teaching, research and artistic work;
-									• Promote public engagement throughout the Bowdoin community by fostering discussion of the common good in campus-wide events that address issues of broad public concern.</mutableString>
+									• Promote public engagement throughout the Bowdoin community by fostering discussion of the common good in campus-wide events that address issues of broad public concern.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1486,84 +1486,6 @@ The McKeen Center offers students opportunities to explore themes of community r
         <image name="sseames contact.jpg" width="165" height="190"/>
         <image name="third.png" width="30" height="30"/>
     </resources>
-    <classes>
-        <class className="McKContactViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKContactViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="phoneButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
-            </relationships>
-        </class>
-        <class className="McKEventInfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKEventInfoViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="signUp:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="eventDetails" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="eventSubtitle" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="eventTitle" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="McKFirstViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFirstViewController.h"/>
-        </class>
-        <class className="McKFourthViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKFourthViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelButton:" candidateClass="UIButton"/>
-                <relationship kind="action" name="submitButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="feedbackTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="fourthView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="programTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="throughMkC" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="McKLocationSelectorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKLocationSelectorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="locationPicker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="McKOpportunityInfo" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKOpportunityInfo.h"/>
-            <relationships>
-                <relationship kind="action" name="signUpButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="opportunityInformation" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="opportunitySubtitle" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="opportunityTitle" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="signupButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="McKPartnershipsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKPartnershipsTableViewController.h"/>
-        </class>
-        <class className="McKSecondViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKSecondViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="toggleModeButton:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="toggleButtonOutlet" candidateClass="UIBarButtonItem"/>
-            </relationships>
-        </class>
-        <class className="McKStaffViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKStaffViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="emailButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="staffScrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="McKThirdViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/McKThirdViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="servicePicker" candidateClass="UIPickerView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

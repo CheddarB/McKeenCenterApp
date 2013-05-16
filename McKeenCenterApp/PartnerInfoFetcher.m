@@ -11,6 +11,7 @@
 @implementation PartnerInfoFetcher
 
 
+//grabs html from url with id, and sets info fields if possible
 -(id)initWithURLPath:(NSString *)url andID:(int)orgID{
 	self = [super init];
 	
@@ -32,14 +33,11 @@
 	section = [section children][1];
 	section = [section children][1];
 		
-	//grab data
-	//site
-	
+	//grab data	
 	NSMutableArray * data = [NSMutableArray arrayWithCapacity:6];
 	
 	if([section children] && [[section children] count] >= 1){
 		HTMLNode * siteNode = [section children][0];
-		//self.site = [siteNode allContents];
 		
 		//add to data array if not nil
 		if ([siteNode allContents]) {
@@ -52,7 +50,6 @@
 			if([addressNode children] && [[addressNode children] count] >= 1){
 				//name
 				HTMLNode * nameNode = [addressNode children][0];
-				//self.name = [nameNode contents];
 				
 				if ([nameNode contents]) {
 					[data addObject:[nameNode contents]];
@@ -61,7 +58,6 @@
 				if([nameNode children] && [[nameNode children] count] >= 2){
 					//street
 					HTMLNode * streetNode = [nameNode children][1];
-					//self.street = [streetNode contents];
 					if ([streetNode contents]) {
 						[data addObject:[streetNode contents]];
 					}
@@ -71,7 +67,6 @@
 					if([streetNode children] && [[streetNode children] count] >= 3){
 						//town
 						HTMLNode * townNode = [streetNode children][2];
-						//self.town = [PartnerInfoFetcher fixTown:[townNode allContents]];
 						
 						if ([townNode allContents]) {
 							[data addObject:[townNode allContents]];
@@ -80,7 +75,6 @@
 						if ([[streetNode children] count] >= 5) {
 							//phone
 							HTMLNode * emailNode = [streetNode children][4];
-							//self.email = [emailNode allContents];
 							
 							if ([emailNode allContents]) {
 								[data addObject:[emailNode allContents]];
@@ -89,7 +83,6 @@
 							if ([[streetNode children] count] >= 7) {
 								//phone
 								HTMLNode * phoneNode = [streetNode children][6];
-								//self.phone = [phoneNode allContents];
 								
 								if ([phoneNode allContents]) {
 									[data addObject:[phoneNode allContents]];
@@ -131,87 +124,7 @@
 	return self;
 }
 
--(NSString *)getAllInfo{
-	
-	NSString * infoString = @"";
-	
-	//compose final string
-	if(self.site){
-		infoString = self.site;
-		infoString = [infoString stringByAppendingString:@"\n"];
-		
-		if(self.name){
-			infoString = [infoString stringByAppendingString:self.name];
-			infoString = [infoString stringByAppendingString:@"\n"];
-			
-			if(self.street){
-				infoString = [infoString stringByAppendingString:self.street];
-				infoString = [infoString stringByAppendingString:@"\n"];
-				
-				if(self.town){
-					infoString = [infoString stringByAppendingString:self.town];
-					infoString = [infoString stringByAppendingString:@"\n"];
-					
-					if(self.email){
-						infoString = [infoString stringByAppendingString:self.email];
-						infoString = [infoString stringByAppendingString:@"\n"];
-
-						if (self.phone) {
-							infoString = [infoString stringByAppendingString:self.phone];
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	return infoString;
-}
-
-- (NSString *)getSite{
-	NSString * site = nil;
-	
-	
-	if (self.site) {
-		site = self.site;
-	}
-	
-	return site;
-}
-
-- (NSString *)getEmail{
-	NSString * email = nil;
-	
-	if (self.email) {
-		email = self.email;
-	}
-
-	return email;
-}
-
-- (NSString *)getPhone{
-	
-	NSString * phone = nil;
-	
-	if (self.phone) {
-		phone = self.phone;
-	}
-	
-	return phone;
-}
-
-
-+ (NSString *)fixTown:(NSString *)town{
-	NSArray * townParts = [town componentsSeparatedByString:@"\r\n"];
-	if ([townParts count] >= 2) {
-		town = townParts[0];
-		NSString * zip = [townParts[1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-		town = [town stringByAppendingString:@" "];
-		town = [town stringByAppendingString:zip];
-	}
-	return town;
-}
-
+//check if something is a phone number
 + (NSString *)isPhoneNumber:(NSString *)number{
 	NSCharacterSet * nums = [NSCharacterSet decimalDigitCharacterSet];
 	NSString * numberFinal = @"";

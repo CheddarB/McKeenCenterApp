@@ -11,21 +11,8 @@
 
 @interface PartnerInfoFetcher : NSObject
 
-//-(id)initWithURL:(NSURL *)url;
 
 -(id)initWithURLPath:(NSString *)url andID:(int)orgID;
-
-//all info formatted in single string
-- (NSString *)getAllInfo;
-
-//returns string for site url if available, nil if not
-- (NSString *)getSite;
-
-//returns string for email address if available, nil if not
-- (NSString *)getEmail;
-
-//returns string for phone number if available, nil if not
-- (NSString *)getPhone;
 
 
 @property (nonatomic) NSString * site;
