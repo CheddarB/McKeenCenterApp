@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 //#include "McKPartnershipsTableView.h"
-#include "McKLocationSelector.h"
+#include "McKLocationSelectorViewController.h"
 
 @interface McKThirdViewController : UIViewController{
 }

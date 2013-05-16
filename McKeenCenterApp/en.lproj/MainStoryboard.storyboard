@@ -977,10 +977,10 @@ The Joseph McKeen Center for the Common Good provides opportunities for students
             </objects>
             <point key="canvasLocation" x="1910" y="1448"/>
         </scene>
-        <!--McK Location Selector - Browse Partner Programs-->
+        <!--McK Location Selector View Controller - Browse Partner Programs-->
         <scene sceneID="GxM-fg-HeU">
             <objects>
-                <viewController id="dLB-2Z-JHp" customClass="McKLocationSelector" sceneMemberID="viewController">
+                <viewController id="dLB-2Z-JHp" customClass="McKLocationSelectorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QZf-bV-gb9">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
